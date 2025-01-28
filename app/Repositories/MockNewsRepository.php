@@ -19,6 +19,16 @@ class MockNewsRepository implements NewsRepositoryInterface {
             'image' => '/images/Bioclimatic-indicators-dataset.png',
             'document' => 'https://www.nature.com/articles/s41597-024-04134-x.pdf'
         ],
+        [
+            'id' => 1,
+            'tags' => array(),
+            'title' => 'Votación de la imagen corporativa oficial',
+            'short_description' => 'Con motivo de la Primera reunión de partenariado les invitamos a todos los socios votar la imagen corporativa',
+            'date' => '28/01/2025',
+            'description' => 'Con motivo de la Primera reunión de partenariado les invitamos a votar la imagen corporativa',
+            'image' => '/images/PLANCLIMAC IMAGEN CORPORATIVA.png',
+            'document' => 'https://docs.google.com/forms/d/e/1FAIpQLSdHSWreSIg9SpYDB6oh_TXaG287EOcmjrLQ1h4GaEXeptmVew/viewform?usp=header'
+        ]
         // [
         //     'id' => 1,
         //     'title' => 'Evolution of warm nights in the Canary Islands (1950 - 2023): evidence for climate change in the Southeastern North Atlantic',

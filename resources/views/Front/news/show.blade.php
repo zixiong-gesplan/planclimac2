@@ -21,12 +21,16 @@
             <p class="text-blue-400">
                 Publicada el {{$post['date']}}
             </p>
-            <p>
-                Temas:
-                @foreach( $post['tags'] as $tag )
-                    <a href="" class="capitalize after:content-[','] p-">{{$tag}}</a>
-                @endforeach
-            </p>
+            @if( count($post['tags']) == 0)
+                <p></p>
+            @else
+                <p>
+                    Temas:
+                    @foreach( $post['tags'] as $tag )
+                        <a href="" class="capitalize after:content-[','] p-">{{$tag}}</a>
+                    @endforeach
+                </p>
+            @endif
         </div>
     </div>
 
