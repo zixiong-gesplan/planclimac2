@@ -28,6 +28,19 @@ class MockNewsRepository implements NewsRepositoryInterface {
             'description' => 'Con motivo de la Primera reunión de partenariado les invitamos a votar la imagen corporativa',
             'image' => '/images/PLANCLIMAC IMAGEN CORPORATIVA.png',
             'document' => 'https://docs.google.com/forms/d/e/1FAIpQLSdHSWreSIg9SpYDB6oh_TXaG287EOcmjrLQ1h4GaEXeptmVew/viewform?usp=header'
+        ],
+        [
+            'id' => 2,
+            'tags' => array(),
+            'title' => 'Identification of the Synoptic Causes of Torrential Rainfall Events in the Canary Islands (1950–2020)',
+            'short_description' =>"Publicación del articulo Identification of the Synoptic Causes of Torrential Rainfall Events in the Canary Islands (1950–2020) del grupo  IOCAG de la Universidad de Las Palmas de Gran Canaria",
+            'date' => '22/12/2024',
+            'description' => 'Este estudio analiza episodios de lluvias torrenciales (≥200 mm/día) en Canarias entre 1950 y 2020 desde un enfoque sinóptico. Se recopilaron datos de precipitaciones diarias, seleccionando 88 días tras un filtrado de errores. Se estudiaron las configuraciones isobáricas en superficie y a 500 hPa mediante los métodos de clasificación de Jenkinson y Collinson (1977) y Jorge Olcina (1994).
+
+            Los resultados muestran que el 63,4% de los eventos estuvieron asociados a DANAs y vaguadas con advección de aire polar (36,5%). Según Jenkinson y Collinson, el 50% de los días fueron ciclónicos o híbridos, el 37,5% advectivos puros o direccionales, y cinco fueron indeterminados. Solo un evento (23/11/1954) se relacionó con una perturbación tropical con frentes nubosos desde el sur de Canarias.',
+            'image' => '/images/póster-1 3.jpg',
+            'document' => '/documents/atmosphere-15-01537 2.pdf'
+           
         ]
         // [
         //     'id' => 1,
