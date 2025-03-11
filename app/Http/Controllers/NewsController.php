@@ -3,16 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Interfaces\NewsRepositoryInterface;
+use App\Services\NewsService;
 
 use Illuminate\Http\Request;
+
+use App\Models\News;
+
 
 class NewsController extends Controller
 {
 
-    private NewsRepositoryInterface $newsRepository;
+    private $news;
 
-    public function __construct(NewsRepositoryInterface $newsRepository) {
-        $this->newsRepository = $newsRepository;
+    public function __construct(NewsService $news) {
+        $this->news = $news;
     }
     /**
      * Display a listing of the resource.
@@ -20,24 +24,39 @@ class NewsController extends Controller
     public function index()
     {
         //
-        return view('Front.news.index', ['news' => $this->newsRepository->getAll()]);
+        $news = $this->news->index();
+        return view('Front.news.index', ['news' => $news]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    // public function create()
-    // {
-    //     //
-    // }
+    public function create()
+    {
+        //
+        return view('Back.news.create');
+    }
 
     /**
      * Store a newly created resource in storage.
      */
-    // public function store(Request $request)
-    // {
-    //     //
-    // }
+    public function store(Request $request)
+    {
+        //
+        // dd($request->all());
+        $data = $request->all();
+        $news = News::create([
+            'tags' => [],
+            'title' => $data['title'],
+            'short_description' => $data['short_description'] ?? 'No aparece short_description',
+            'description' => $data['description'] ?? 'No aparece description',
+            'image' => $data['image'] ?? 'No aparece image',
+            'document' => $data['document'] ?? 'No aparece document',
+        ]);
+        // $news->increment('');
+        $news->save();
+        return view('Front.news.index', ['news' => News::all()]);
+    }
 
     /**
      * Display the specified resource.
@@ -45,7 +64,7 @@ class NewsController extends Controller
     public function show(int $id)
     {
         //
-        return view('Front.news.show', ['post' => $this->newsRepository->getById($id)]);
+        return view('Front.news.show', ['post' => $this->news->show($id)]);
     }
 
     /**

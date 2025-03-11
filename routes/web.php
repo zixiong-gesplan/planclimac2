@@ -131,6 +131,10 @@ Route::get('/', function (Request $request) {
 
 Route::resource('/news', NewsController::class);
 
+Route::get('/crear-noticia', function(){
+    return view('Back.news.create');
+});
+
 Route::get('/statistics', function(){
     $indicators = array(
         [

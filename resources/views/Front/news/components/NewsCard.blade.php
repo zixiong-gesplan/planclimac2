@@ -12,7 +12,7 @@
             @endforeach
         </div>
         <p class="text-sm md:text-md text-balance md:text-wrap">
-            {{ $description}}
+            {{ $description }}
         </p>
         <a href="/news/{{$id}}" class="mt-2 border border-lime-500 text-lime-500 px-4 rounded-sm w-28">Leer más</a>
     </aside>

@@ -4,8 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-use App\Interfaces\NewsRepositoryInterface;
-use App\Repositories\MockNewsRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -15,7 +13,6 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
-        $this->app->bind(NewsRepositoryInterface::class, MockNewsRepository::class);
     }
 
     /**

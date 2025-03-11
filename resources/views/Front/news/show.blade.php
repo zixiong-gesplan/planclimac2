@@ -12,14 +12,14 @@
     <img src="{{$post['image']}}" alt="" class="w-1/3 mx-auto my-4 border border border-gray-500">
     <div class="w-2/3 mx-auto">
         <p class="mt-8 text-md mb-4">
-            {{$post['description']}}
+            {!! $post['description'] !!}
         </p>
 
         <a target="_blank" href="{{$post['document']}}" class="text-lg text-white px-4 py-2 bg-lime-500 rounded my-4">Ver documento</a>
 
         <div class="mt-4">
             <p class="text-blue-400">
-                Publicada el {{$post['date']}}
+                Publicada el {{ date_format($post['created_at'], "d/m/Y")}}
             </p>
             @if( count($post['tags']) == 0)
                 <p></p>
