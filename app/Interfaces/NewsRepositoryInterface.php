@@ -5,13 +5,13 @@ namespace App\Interfaces;
 interface NewsRepositoryInterface 
 {
     
-    public function getAll();
+    public function index();
 
-    public function getById($id);
+    public function show($id);
 
-    public function create($data);
+    public function store($data);
 
-    public function update($id, $data);
+    public function update($data,$id);
 
-    public function delete($id);
+    public function destroy($id);
 }

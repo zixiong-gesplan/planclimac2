@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Http\Request;
 use App\Models\Visitor;
+use App\Http\Middleware\AuthSession;
 
 Route::get('/', function (Request $request) {
     $ip = $request->ip();
@@ -284,4 +286,18 @@ Route::get('/results', function(){
 
 Route::get('/contact', function(){
     return view('Front.contact.index');
+});
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::middleware(AuthSession::class)->group(function() {
+    Route::get('/admin', function(){
+        return view('Back.home.index');
+    });
+
+    Route::get('/admin/crear-noticia', function(){
+        return view('Back.news.create');
+    });    
 });
