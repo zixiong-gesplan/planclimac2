@@ -37,13 +37,12 @@
 </section>
 
 <section class="my-4 w-full lg:w-3/4 lg:mx-auto">
-
     @foreach($news as $n)
         <x-NewsCard
             src="{{ $n['image'] }}"
             title="{{ $n['title'] }}"
-            date="{{ $n['date'] }}"
-            description="{{$n['short_description']}}"
+            created_at="{{ $n['created_at'] }}"
+            description="{{ $n['short_description']}}"
             id="{{ $n['id'] }}"
             :tags="$n['tags']"
         />

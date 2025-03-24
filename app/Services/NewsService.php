@@ -14,7 +14,7 @@ class NewsService{
     public function index()
     {
         $news = $this->news->index();
-        return $news;
+        return $news->reverse()->values();
     }
     
     public function store($data)

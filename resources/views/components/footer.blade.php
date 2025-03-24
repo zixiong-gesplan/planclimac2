@@ -1,5 +1,5 @@
 <div class="flex flex-col border-t-2 border-lime-500 gap-8">
-    <div class="flex flex-col sm:flex-row gap-16 mt-8">
+    {{-- <div class="flex flex-col sm:flex-row gap-16 mt-8">
         <div class="w-full sm:w-2/3 place-self-center">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae quaerat error repellat quibusdam commodi veritatis asperiores iure cumque, quos non ab, laboriosam nisi eaque totam blanditiis maiores eveniet id molestias?
         </div>
@@ -21,8 +21,8 @@
             </div>
         </div>
 
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-16">
+    </div> --}}
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-16 pt-4">
         @foreach ($partners as $p)
             <x-footer-card 
                 title=" {{ $p['title'] }} "

@@ -6,7 +6,7 @@ use App\Interfaces\NewsRepositoryInterface;
 use App\Services\NewsService;
 
 use Illuminate\Http\Request;
-
+// use Illuminate\Http\UploadFile;
 use App\Models\News;
 
 
@@ -42,20 +42,38 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        // dd($request->all());
+
+        $request->validate([
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
         $data = $request->all();
+        $thumbnail = $request->file('thumbnail');
+
+        $thumbnailName = $thumbnail->getClientOriginalName();
+        $thumbnailExtension = $thumbnail->getClientOriginalExtension();
+        $thumbnailPath = $thumbnail->storeAs('/public/images',$thumbnailName);
+        $attachment = $request->file('document');
+
+        $attachmentPath = null;
+        if($attachment != null){
+            $attachmentName = $attachment->getClientOriginalName();
+            $attachmentExtension = $attachment->getClientOriginalExtension();
+            $attachmentPath = $attachment->storeAs('/public/documents',$attachmentName);
+            //TO FIXME:
+            //Se hace esta asignación por que a veces el pdf no se sube
+        }
+    
         $news = News::create([
             'tags' => [],
             'title' => $data['title'],
-            'short_description' => $data['short_description'] ?? 'No aparece short_description',
-            'description' => $data['description'] ?? 'No aparece description',
-            'image' => $data['image'] ?? 'No aparece image',
-            'document' => $data['document'] ?? 'No aparece document',
+            'short_description' => $data['short_description'],
+            'description' => $data['description'],
+            'image' => '/storage/'.$thumbnailPath,
+            'document' => $attachmentPath ? '/storage/'.$attachmentPath : null,
         ]);
-        // $news->increment('');
+
         $news->save();
-        return view('Front.news.index', ['news' => News::all()]);
+        return back()->with('success', 'La noticia esta creada');
     }
 
     /**

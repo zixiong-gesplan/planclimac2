@@ -28,7 +28,14 @@ export default {
             },
         },
     },
+    corePlugins: {
+        aspectRatio: false,
+    },
     plugins: [
         require('@tailwindcss/aspect-ratio'),
     ],
+    safelist: [
+        'list-decimal',
+        'list-disc'
+    ]
 };
