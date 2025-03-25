@@ -11,12 +11,15 @@ class NewsService{
     }
 
  
-    public function index()
+    public function index(int $page)
     {
-        $news = $this->news->index();
-        return $news->reverse()->values();
+        $news = $this->news->index($page);
+        return $news->values();
     }
-    
+    public function count()
+    {
+        return  $this->news->count();
+    }
     public function store($data)
     {
         $news = $this->news->store($data);

@@ -48,5 +48,22 @@
         />
     @endforeach
 </section>
-
+<section class="my-4 w-full lg:w-3/4 lg:mx-auto flex gap-4">
+    <a
+        href="/news?page=1"
+        @class([
+            'min-w-9 rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2',
+            'min-w-9 rounded-md bg-green-800 py-2 px-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2' => 1 == request()->query('page') || request()->query('page') == null
+        ])
+    >1</a>
+    @for ($i = 2; $i <=$count+1;$i++)
+        <a
+            href="/news?page={{$i}}"
+            @class([
+                'min-w-9 rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2',
+                'min-w-9 rounded-md bg-green-800 py-2 px-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2' => $i == request()->query('page')
+            ])
+        >{{$i}}</a>
+    @endfor
+</section>
 @endsection
