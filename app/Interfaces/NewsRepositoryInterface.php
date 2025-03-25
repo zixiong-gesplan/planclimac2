@@ -5,7 +5,7 @@ namespace App\Interfaces;
 interface NewsRepositoryInterface 
 {
     
-    public function index();
+    public function index(int $page);
 
     public function show($id);
 

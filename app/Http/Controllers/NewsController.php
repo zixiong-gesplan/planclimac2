@@ -21,11 +21,21 @@ class NewsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        $news = $this->news->index();
-        return view('Front.news.index', ['news' => $news]);
+        $page = $request->query('page');
+
+        if ($page) {
+            $page = (int) $page;
+        } else {
+            $page = 1;
+        }
+        $news = $this->news->index($page);
+        $count = $this->news->count();
+        return view('Front.news.index', [
+            'news' => $news,
+            'count' => $count/10
+        ]);
     }
 
     /**

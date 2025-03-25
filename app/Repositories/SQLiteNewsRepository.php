@@ -14,11 +14,14 @@ class SQLiteNewsRepository implements NewsRepositoryInterface
         $this->news = $news;
     }
 
-    public function index()
+    public function index(int $page)
     {
-        return $this->news::all();
+        return $this->news::all()->sortByDesc('created_at')->forPage($page, 10);
     }
-
+    public function count()
+    {
+        return $this->news::count();
+    }
     public function show($id)
     {
         return $this->news::findOrFail($id);
