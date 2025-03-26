@@ -150,7 +150,7 @@
     <div class="w-full">
         <h1 class="w-full text-center text-lg md:text-2xl font-semibold my-4">Indicadores del proyecto</h1>
         <p class="w-full text-center text-md md:text-xl">
-            En el proyecto <span class="text-lime-500 font-semibold">PLANCLIMAC2</span> nos centramos en la innovación del desarrollo a largo plazo con la vigilancia en el cambio climatico y el impacto del mismo la Macaronesia con los siguentes indicadores.
+            En el proyecto <span class="text-emerald-500 font-semibold">PLANCLIMAC2</span> nos centramos en la innovación del desarrollo a largo plazo con la vigilancia en el cambio climatico y el impacto del mismo la Macaronesia con los siguentes indicadores.
         </p>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-8">

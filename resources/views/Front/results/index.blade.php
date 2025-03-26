@@ -6,7 +6,7 @@
 
 <section class="mt-8 mb-4 mx-auto w-full md:w-2/3">
 
-    <h1 class="w-full text-center text-3xl font-semibold text-lime-500 mt-4">
+    <h1 class="w-full text-center text-3xl font-semibold text-emerald-500 mt-4">
         Resultados
     </h1>
     

@@ -1,4 +1,4 @@
-<div class="flex flex-col border-t-2 border-lime-500 gap-8">
+<div class="flex flex-col border-t-2 border-emerald-500 gap-8">
     {{-- <div class="flex flex-col sm:flex-row gap-16 mt-8">
         <div class="w-full sm:w-2/3 place-self-center">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae quaerat error repellat quibusdam commodi veritatis asperiores iure cumque, quos non ab, laboriosam nisi eaque totam blanditiis maiores eveniet id molestias?

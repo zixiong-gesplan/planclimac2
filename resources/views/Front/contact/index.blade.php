@@ -6,7 +6,7 @@
 <section class="my-4 w-full mx-auto">
     <div class="w-full md:w-10/12 mx-auto">
         
-        <h1 class="w-full text-center text-3xl font-semibold text-lime-500 mt-4">
+        <h1 class="w-full text-center text-3xl font-semibold text-emerald-500 mt-4">
             Contacto
         </h1>
 

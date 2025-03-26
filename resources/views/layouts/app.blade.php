@@ -15,6 +15,9 @@
         <meta property="og:title" content="Proyecto PLANCLIMAC2" />
         <meta property="og:description" content="Un proyecto COFINANCIADO AL 85% con fondos FEDER y cuyo presupuesto asciende hasta 3.045.442,75 €.  Nos hemos enmarcado en este reto de cambio climatico bajo la PRIORIDAD 2 - MAC VERDE - Transición ecológica, apoyo al desarrollo de una economía verde y azul, lucha contra el cambio climático, prevención y gestion de riesgos y emergencias durante los 48 meses de ejecución del proyecto 2025-2028." />
         <meta property="og:image" content="/images/PLANCLIMAC2.png" />
+        <meta property="og:image:width" content="828" />
+        <meta property="og:image:height" content="828" />
+        <meta property="og:site_name" content="Proyecto PLANCLIMAC2" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />

@@ -14,7 +14,7 @@
             {!! $post['description'] !!}
         </p>
         @if( $post['document'] != null)
-            <a target="_blank" href="{{$post['document']}}" class="text-lg text-white px-4 py-2 bg-lime-500 rounded my-4">Ver documento</a>
+            <a target="_blank" href="{{$post['document']}}" class="text-lg text-white px-4 py-2 bg-emerald-500 rounded my-4">Ver documento</a>
         @endif
 
         <div class="mt-4">
