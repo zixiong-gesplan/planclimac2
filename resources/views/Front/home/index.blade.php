@@ -1,41 +1,68 @@
 @extends('layouts.app')
 
-@section('title', 'Página de inicio')
+@section('title', 'PLANCLIMAC2 (1/MAC/2/2.4/0006)')
 
 @section('content')
+<section class="w-full md:w-10/12 mx-auto my-8 md:mb-16 flex flex-col md:flex-row gap-8">
+    <div class="w-full md:w-1/2">
+        <img src="/images/PLANCLIMAC2_AMARILLO.svg" alt="Logo PLANCLIMAC2" class="w-10/12 mb-2">
+        <h1 class="text-lg md:text-3xl font-extrabold capitalize mb4 text-yellow-400 md:ml-4">(1/MAC/2/2.4/0006)</h1>
+        <h2 class="text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance">
+            DESARROLLO Y MONITORIZACIÓN DE ACTUACIONES COORDINADAS EN LA REGIÓN MACARONESIA EN MATERIA DE RIESGOS Y AMENZADAS DEL CAMBIO CLIMÁTICO
+        </h1>
+        <img src="https://interregmac.org/wp-content/uploads/2023/07/Group-9.jpg" alt="" class="w-full">
+    </div>
+    <div class="w-full md:w-1/2 h-full">
+        <img src="/images/HERO.jpg" alt="" class="w-full rounded-lg aspect-video my-auto shadow-lg">
+    </div>
+</section>
 
-<section class="w-full my-8 md:mb-16 text-center">
-    <img src="/images/PLANCLIMAC2.png" alt="Logo PLANCLIMAC2" class="mx-auto my-4 w-48">
-    <p class="w-10/12 text-center text-md md:text-xl font-semibold text-gray-500 uppercase mx-auto">
-        DESARROLLO Y MONITORIZACIÓN DE  ACTUACIONES COORDINADAS EN LA REGIÓN MACARONESIA EN MATERIA DE RIESGOS Y AMENZADAS DEL CAMBIO CLIMÁTICO
-    </p>
-    <img src="https://interregmac.org/wp-content/uploads/2023/07/Group-9.jpg" alt="" class="mx-auto my-4 w-full md:w-6/12">
-    <!-- <p class="w-10/12 text-center text-md md:text-xl font-semibold text-gray-500 mx-auto">
-        Un proyecto COFINANCIADO AL 85% con fondos FEDER y cuyo presupuesto asciende hasta 3.045.442,75 €. 
-    </p>
-    <p class="w-10/12 text-center text-md md:text-xl font-semibold text-gray-500 mx-auto text-balance">
-        Nos hemos enmarcado en este reto de cambio climatico bajo la PRIORIDAD 2 - MAC VERDE - Transición ecológica, apoyo al desarrollo de una economía verde y azul,
-        lucha contra el cambio climático, prevención y gestion de riesgos y emergencias durante los 48 meses de ejecución del proyecto 2025-2028.
-    </p> -->
+<section class="w-10/12 mt-2 gap-4 lg:gap-6 justify-center grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-auto">
+    <div class="bg-emerald-50 p-4 rounded-lg shadow-lg">
+        <h1 class="w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500">
+            3.045.442,75 €
+        </h1>
+        <p class="text-slate text-base font-semibold">
+            Presupuesto de ejecución
+        </p>
+    </div>
+    <div class="bg-sky-50 p-4 rounded-lg shadow-lg">
+        <h1 class="w-full text-2xl font-extrabold capitalize mb-2 text-sky-800">
+            48 Meses
+        </h1>
+        <p class="text-stale-900 text-base font-semibold">
+            Duración del proyecto 2025-2028
+        </p>
+    </div>
+    <div class="bg-emerald-50 p-4 rounded-lg shadow-lg">
+        <h1 class="w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500">
+            85%
+        </h1>
+        <p class="text-stale-900 text-base font-semibold">
+            Co-financiación por el Programa de Cooperacion Interreg Madeira-Azores-Canarias (MAC) 2021-2027
+        </p>
+    </div>
+    <div class="bg-sky-50 p-4 rounded-lg shadow-lg">
+        <h1 class="w-full text-xl font-extrabold capitalize mb-2 text-sky-800">
+            Prioridad 2 - MAC Verde   
+        </h1>
+        <p class="text-stale-900 text-base font-semibold">
+            Transición ecológica, apoyo al desarrollo de una economía verde y azul, lucha contra el cambio climático, prevención y gestion de riesgos y emergencias
+        </p>
+    </div>
 </section>
-<section class="w-10/12 mt-2 gap-4 justify-center grid  grid-cols-1 sm:grid-cols-2 mx-auto">
-    @foreach($labelCards as $l )
-        <x-Label
-            label="{{ $l['label'] }}"
-            description="{{ $l['description'] }}"
-        />
-    @endforeach
-</section>
-<section class="mt-8 w-10/12 mx-auto">
-    <h1 class="w-full text-center text-2xl font-extrabold capitalize mb-4">
-        Parternariado
+
+
+<section class="mt-16 w-10/12 mx-auto">
+    <h1 class="w-full text-center text-4xl font-extrabold capitalize mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+        Siete regiones disintas.... Un mismo objetivo... 
     </h1>
     <p class="text-lg text-center text-balance">
         Bajo el marco del proyecto PLANCLIMAC2 (1/MAC/2/2.4/0006) se ha construido un grupo de trabajo 
         multidisciplinar e interregional que actua en todo el espacio de cooperación 
         del Programa INTERREG VI-D MAC 2021-2027.
     </p>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 gap-y-8 p-8">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 gap-y-8 py-8">
         <x-PartnerCard 
             src="https://www.gobiernodecanarias.org/gcc/img/logos/logo.svg"
             alt="Gobierno de Canarias"
@@ -150,7 +177,7 @@
     <div class="w-full">
         <h1 class="w-full text-center text-lg md:text-2xl font-semibold my-4">Indicadores del proyecto</h1>
         <p class="w-full text-center text-md md:text-xl">
-            En el proyecto <span class="text-lime-500 font-semibold">PLANCLIMAC2</span> nos centramos en la innovación del desarrollo a largo plazo con la vigilancia en el cambio climatico y el impacto del mismo la Macaronesia con los siguentes indicadores.
+            En el proyecto <span class="text-sky-800 font-semibold">PLANCLIMAC2</span> nos centramos en la innovación del desarrollo a largo plazo con la vigilancia en el cambio climatico y el impacto del mismo la Macaronesia con los siguentes indicadores.
         </p>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-8">

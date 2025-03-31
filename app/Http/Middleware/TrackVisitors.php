@@ -17,10 +17,11 @@ class TrackVisitors
     public function handle(Request $request, Closure $next): Response
     {
         $ip = $request->ip();
-        $visitor = Visitor::firstOrCreate(['ip_address' => $ip]);
-        $visitor->increment('visits');
-        $visitor->save();
-    
+        if($ip != '127.0.0.1'){
+            $visitor = Visitor::firstOrCreate(['ip_address' => $ip]);
+            $visitor->increment('visits');
+            $visitor->save();
+        }
         return $next($request);
     }
 }

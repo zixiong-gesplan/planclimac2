@@ -42,6 +42,10 @@ class Footer extends Component
             ],[
                 'title'=>"GHANA",
                 'location'=>"HR22+HVQ, Starlets 91 Rd, Accra"
+            ],
+            [
+                'title'=>"COSTA DE MÁRFIL",
+                'location'=>"06 BP 426 Abidjan 06"
             ]
         );
         
