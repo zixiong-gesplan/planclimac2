@@ -77,7 +77,7 @@
             href="https://portal.azores.gov.pt/"
         />
         <x-PartnerCard 
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaDgdQAuqJx-4z6rhYS_bB-cSRyoUc1ttKaX_ZOuzyInHbxbWnjatrN7Zd0hApCwD0eQ&usqp=CAU"
+            src="/images/LOGO_MADEIRA.png"
             alt="Gobierno de Madeira"
             caption="Administración Pública"
             href="https://www.madeira.gov.pt/"
