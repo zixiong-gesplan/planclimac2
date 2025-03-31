@@ -42,9 +42,9 @@
             </h2>
             <section>
                 @include('/Front/contact/components/card', [
-                    "name" => "Pedro Sepúlveda Monteiro",
+                    "name" => "Henrique Paulo dos Santos Rodrigues",
                     "organization" => "Secretaria Regional de Agricultura, Pescas e Ambiente",
-                    "email" => "pedro.sepulvera@madeira.gov.pt",
+                    "email" => "henrique.rodrigues@madeira.gov.pt",
                 ])
             </section>
 
