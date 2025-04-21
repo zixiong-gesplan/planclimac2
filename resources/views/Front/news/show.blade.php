@@ -8,7 +8,7 @@
     <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white text-center">
         {{ $post['title'] }}
     </h1>
-    <img src="{{$post['image']}}" alt="" class="w-1/2 my-4 border border border-gray-500 rounded-lg aspect-video">
+    <img src="{{$post['image']}}" alt="" class="w-1/2 my-4 border border-gray-500 rounded-lg aspect-video">
     <div class="w-2/3 mx-auto ">
         <p class="mt-8 text-md mb-4">
             {!! $post['description'] !!}
