@@ -117,7 +117,7 @@
         />
 
         <x-PartnerCard 
-            src="https://www.inmg.gov.cv/images/screen-shot-2019-09-22-at-6.00.12-pm.png"
+            src="/images/LOGO_INMG.webp"
             alt="INMG"
             caption="Tercer Pais"
             href="https://www.inmg.gov.cv/"
