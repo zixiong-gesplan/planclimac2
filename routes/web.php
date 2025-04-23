@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Http\Request;
 use App\Models\Visitor;
 use App\Http\Middleware\AuthSession;
+use App\Http\Middleware\TrackVisitors;
 
 Route::middleware(TrackVisitors::class)->group(function (){
     Route::get('/', function (Request $request) {
