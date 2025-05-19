@@ -50,7 +50,7 @@ class TrackVisitors
     private function hasVisitedThisWeek(string $ip, Carbon $now): bool {
         return Visitor::where('ip_address', $ip)
                     ->whereYear('updated_at', $now->year)
-                    ->where(DB::raw('WEEK(updated_at, 1)'), $now->isoWeek)
+                    // ->where(DB::raw('WEEK(updated_at, 1)'), $now->isoWeek)
                     ->exists();
     }
 }
