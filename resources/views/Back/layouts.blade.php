@@ -6,7 +6,7 @@
     <title>Backoffice</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <x-styles-imports/>
+    <link rel="stylesheet" href="/build/assets/app.css">
 </head>
 <body class="bg-gray-100 font-figtree w-full flex gap-4">
     @include('Back.components.sidebar')

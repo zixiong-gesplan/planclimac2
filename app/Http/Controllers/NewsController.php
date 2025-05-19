@@ -8,7 +8,7 @@ use App\Services\NewsService;
 use Illuminate\Http\Request;
 // use Illuminate\Http\UploadFile;
 use App\Models\News;
-
+use App\Events\NewsCreated;
 
 class NewsController extends Controller
 {
@@ -82,7 +82,10 @@ class NewsController extends Controller
             'document' => $attachmentPath ? '/storage/'.$attachmentPath : null,
         ]);
 
-        $news->save();
+        // $news->save();
+
+        event(new NewsCreated($news));
+
         return back()->with('success', 'La noticia esta creada');
     }
 

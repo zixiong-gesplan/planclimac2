@@ -54,7 +54,7 @@ class AuthController extends Controller
             return Auth::attempt($credentials);
         }
 
-        return $credentials['user'] == "admin@proyectoplanclimac2.org" && $credentials['pwd'] == "planclimac2115.";
+        return $credentials['user'] == "admin@proyectoplanclimac2.org" && $credentials['pwd'] == "planclimac21150.";
     }
 
     // Cerrar sesión

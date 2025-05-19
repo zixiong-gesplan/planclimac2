@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\NewsCreated;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -17,6 +18,10 @@ class News extends Model
         'document', //Done
         'tags', 
     ];
+
+    // protected $dispatchesEvents = [
+    //     'created' => NewsCreated::class
+    // ];
 
     protected function casts(): array{
         return [

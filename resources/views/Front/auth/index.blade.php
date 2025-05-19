@@ -11,7 +11,8 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <x-styles-imports/>
+        <link rel="stylesheet" href="/build/assets/app.css">
+
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50 p-8">
         <main class="w-full h-full">
