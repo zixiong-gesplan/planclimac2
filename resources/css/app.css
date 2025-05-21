@@ -75,10 +75,12 @@
     @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4;
   }
   
-  .post-content a {
+  .post-content a[target="_blank"]{
     @apply text-blue-600 hover:underline;
   }
-  
+  .post-content a#document-link {
+    @apply text-lg text-white px-4 py-2 bg-sky-800 rounded my-4;
+  }
   .post-content img {
     @apply w-1/2 rounded-lg my-4 shadow-md  mx-auto;
   }

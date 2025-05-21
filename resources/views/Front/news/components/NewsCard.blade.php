@@ -18,7 +18,7 @@
     </aside>
     <div class="w-full md:w-1/2 "> 
         <a href="/news/{{$id}}" class="bg-white rounded-lg overflow-hidden flex flex-col items-center shadow-lg mx-auto size-72">
-            <img src="{{asset($src)}}" alt="" class="rounded-lg w-full h-full" width="160" height="160"/>
+            <img src="{{$src}}" alt="" class="rounded-lg w-full h-full" width="160" height="160"/>
         </a>
     </div>
 
