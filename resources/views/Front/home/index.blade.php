@@ -8,7 +8,7 @@
         <img src="/images/PLANCLIMAC2_AMARILLO.svg" alt="Logo PLANCLIMAC2" class="w-10/12 mb-2">
         <h1 class="text-lg md:text-3xl font-extrabold capitalize mb4 text-yellow-400 md:ml-4">(1/MAC/2/2.4/0006)</h1>
         <h2 class="text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance">
-            DESARROLLO Y MONITORIZACIÓN DE ACTUACIONES COORDINADAS EN LA REGIÓN MACARONESIA EN MATERIA DE RIESGOS Y AMENZADAS DEL CAMBIO CLIMÁTICO
+            DESARROLLO Y MONITORIZACIÓN DE ACTUACIONES COORDINADAS EN LA REGIÓN MACARONÉSICA EN MATERIA DE RIESGOS Y AMENZADAS DEL CAMBIO CLIMÁTICO
         </h1>
         <img src="https://interregmac.org/wp-content/uploads/2023/07/Group-9.jpg" alt="" class="w-full">
     </div>
@@ -55,7 +55,7 @@
 
 <section class="mt-16 w-10/12 mx-auto">
     <h1 class="w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
-        Siete regiones disintas, un mismo objetivo. 
+        Siete regiones distintas, un mismo objetivo. 
     </h1>
     <p class="text-lg text-center text-balance">
         Bajo el marco del proyecto PLANCLIMAC2 (1/MAC/2/2.4/0006) se ha construido un grupo de trabajo 
