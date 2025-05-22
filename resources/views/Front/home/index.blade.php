@@ -54,8 +54,8 @@
 
 
 <section class="mt-16 w-10/12 mx-auto">
-    <h1 class="w-full text-center text-4xl font-extrabold capitalize mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
-        Siete regiones disintas.... Un mismo objetivo... 
+    <h1 class="w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+        Siete regiones disintas, un mismo objetivo. 
     </h1>
     <p class="text-lg text-center text-balance">
         Bajo el marco del proyecto PLANCLIMAC2 (1/MAC/2/2.4/0006) se ha construido un grupo de trabajo 
@@ -119,27 +119,27 @@
         <x-PartnerCard 
             src="/images/LOGO_INMG.webp"
             alt="INMG"
-            caption="Tercer Pais"
+            caption="Tercer Pais - Cabo Verde"
             href="https://www.inmg.gov.cv/"
         />
 
         <x-PartnerCard 
             src="/images/LOGO_SAO_TOME.png"
             alt="DGAAG"
-            caption="Tercer Pais"
+            caption="Tercer Pais - Santo Tomé y Príncipe"
             href="https://www.facebook.com/dga.stp/"
         />
 
         <x-PartnerCard 
             src="https://delivery-tracker-staging.s3.amazonaws.com/282bf19c-2857-4959-85a8-ad2242d0a7d9"
             alt="Ministerio de recursos naturales"
-            caption="Tercer Pais"
+            caption="Tercer Pais - Ghana"
             href="https://mlnr.gov.gh/"
         />
         <x-PartnerCard 
             src="/images/LOGO_COSTA_MARFIL.png"
             alt="Ministerio de recursos naturales"
-            caption="Tercer Pais"
+            caption="Tercer Pais - Costa Marfil"
             href="#"
         />
     </div>
