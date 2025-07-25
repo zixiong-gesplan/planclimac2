@@ -80,7 +80,7 @@
             src="/images/LOGO_MADEIRA.png"
             alt="Gobierno de Madeira"
             caption="Administración Pública"
-            href="https://www.madeira.gov.pt/"
+            href="https://www.madeira.gov.pt/draac/"
         />
 
         <x-PartnerCard 
