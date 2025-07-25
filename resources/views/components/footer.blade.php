@@ -11,13 +11,6 @@
                 </a>
             </div>
             <div>
-                <p class="text-sm font-semibold text-gray-400">
-                No vender ni compartir mis datos personales
-
-                </p>
-                <!-- <p class="text-sm font-semibold text-gray-400">
-                    Configuración de cookies
-                </p> -->
                 <p class="font-bold text-sky-800">
                     © 2025 Planclimac2.
                 </p>
