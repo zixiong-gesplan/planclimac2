@@ -38,7 +38,7 @@ class Footer extends Component
                 'location'=>"Edificio do Ministério das Infraestruturas Ponta Belém, CP -114, Plateau, Ciudad Praia"
             ],[
                 'title'=>"SANTO TOMÉ Y PRÍNCIPE",
-                'location'=>"S. Tomé, Avenida Marginal 12 de Julho, Edificio do INAE, CP. 1023 São Tome"
+                'location'=>"Edifício do SAAR SEGUROS 2º Andar - Avenida Amílcar Cabral, Caixa Postal nº 1023"
             ],[
                 'title'=>"GHANA",
                 'location'=>"HR22+HVQ, Starlets 91 Rd, Accra"
