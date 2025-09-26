@@ -1,13 +1,15 @@
 @extends('Back/layouts')
 
 @section('content')
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+
 <div class="w-3/4 mx-auto">
 
 
-    <form action="{{route('news.store')}}" method="post" enctype="multipart/form-data" class="">
+    <form action="{{route('news.store')}}" method="post" enctype="multipart/form-data" class="" novalidate>
         @csrf
-        <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-            <div class="sm:col-span-2">
+        <div class="grid gap-4">
+            <div class="">
                 <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titulo</label>
                 <input required type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Título de la noticia" required="">
             </div>
@@ -23,7 +25,13 @@
                     </div>
                     <input name="thumbnail" id="thumbnail" type="file" class="hidden" accept="image/*" required/>
                 </label>
-            </div> 
+            </div>
+            <div class="mt-4 w-full">
+                <img id="thumbnailPreview" alt="Preview" class="hidden w-full object-cover rounded-lg border mx-auto">
+                {{-- Mensaje cuando no hay imagen --}}
+                <p id="thumbnailEmpty" class="text-xs text-gray-500 text-center">No hay imagen seleccionada</p>
+            </div>
+
             <div class="flex items-center justify-center w-full">
                 <label for="document" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                     PDF
@@ -40,12 +48,14 @@
         </div>
 
         <div class="flex-col md:flex w-full gap-4 pb-20">
-            <div class="md:w-2/3 overflow-none w-full">
+            <div class="w-full">
                 <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción</label>
-                <textarea required name="description" id="description" rows="8" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Texto de la noticia"></textarea>
+                <div id="editor-description">
+                </div>
+                <textarea required  name="description" id="description" rows="8" class="hidden p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Texto de la noticia"></textarea>
             </div>
             
-            <div class="md:w-1/3 w-full">
+            <div class="w-full">
                 <label for="short_description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción Corta</label>
                 <textarea required name="short_description" id="short_description" rows="4" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Descripción corta de la noticia"></textarea>
             </div>
@@ -55,5 +65,57 @@
         </button>
     </form>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
 
+<script>
+    const input = document.getElementById('thumbnail');
+    const preview = document.getElementById('thumbnailPreview');
+    const emptyMsg = document.getElementById('thumbnailEmpty');
+
+    const updatePreview = (file) => {
+            if (!file) {
+                preview.src = '';
+                preview.classList.add('hidden');
+                emptyMsg.classList.remove('hidden');
+                return;
+            }
+            // Solo imágenes
+            if (!file.type.startsWith('image/')) {
+                alert('El archivo seleccionado no es una imagen válida.');
+                input.value = '';
+                preview.src = '';
+                preview.classList.add('hidden');
+                emptyMsg.classList.remove('hidden');
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                preview.src = e.target.result;
+                preview.classList.remove('hidden');
+                emptyMsg.classList.add('hidden');
+            };
+            reader.readAsDataURL(file);
+        };
+
+        input.addEventListener('change', (e) => {
+            const file = e.target.files && e.target.files[0];
+            updatePreview(file);
+        });
+
+        const quill = new Quill('#editor-description', {
+            theme: 'snow'
+        });
+        quill.on('text-change', () => {
+            const html = quill.root.innerHTML;
+            document.getElementById('description').value = html;
+        });
+
+        const quill2 = new Quill('#editor-short_description', {
+            theme: 'snow'
+        });
+        quill2.on('text-change', () => {
+            const html = quill2.root.innerHTML;
+            document.getElementById('short_description').value = html;
+        });
+</script>
 @endsection

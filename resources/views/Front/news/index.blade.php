@@ -42,7 +42,7 @@
             src="{{ $n['image'] }}"
             title="{{ $n['title'] }}"
             created_at="{{ $n['created_at'] }}"
-            description="{{ $n['short_description']}}"
+            description="{!! $n['short_description'] !!}"
             id="{{ $n['id'] }}"
             :tags="$n['tags']"
         />
