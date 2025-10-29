@@ -64,14 +64,14 @@
     </p>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 gap-y-8 py-8">
         <x-PartnerCard 
-            src="https://www.gobiernodecanarias.org/gcc/img/logos/logo.svg"
+            src="/images/LOGO_GOBIERNO_CANARIAS.svg"
             alt="Gobierno de Canarias"
             caption="Socio Principal"
             href="https://www.gobiernodecanarias.org/transicionecologica/index.html"
         />
 
         <x-PartnerCard 
-            src="https://www.lifebeetlesazores.com/wp-content/uploads/2021/11/logo-govDRACC.png"
+            src="/images/LOGO_AZORES.png"
             alt="Gobierno de Azores"
             caption="Administración Pública"
             href="https://portal.azores.gov.pt/"
@@ -91,7 +91,7 @@
         />
 
         <x-PartnerCard 
-            src="https://www.iter.es/wp-content/uploads/2016/05/logo_retina.png"
+            src="/images/LOGO_ITER.png"
             alt="ITER"
             caption="Empresa Pública"
             href="https://www.iter.es/"
@@ -103,14 +103,14 @@
             href="https://www.itccanarias.org/web/es/"
         />
         <x-PartnerCard 
-            src="https://www.ulpgc.es/sites/default/files/ArchivosULPGC/identidad-corporativa/NuevoLogo/logo_ulpgc_version_vertical_positiva_uso_cotidiano_2_tintas.svg"
+            src="/images/LOGO_ULPGC.png"
             alt="ULPGC"
             caption="Universidad"
-            href="https://www.itccanarias.org/web/es/"
+            href="https://www10.ulpgc.es/"
         />
 
         <x-PartnerCard 
-            src="https://www.rankingcyd.org/assets/img/logoUnis2/1284.png"
+            src="/images/LOGO_ULL.png"
             alt="ULL"
             caption="Universidad"
             href="https://www.ull.es/"
@@ -131,7 +131,7 @@
         />
 
         <x-PartnerCard 
-            src="https://delivery-tracker-staging.s3.amazonaws.com/282bf19c-2857-4959-85a8-ad2242d0a7d9"
+            src="/images/LOGO_GHANA.jpg"
             alt="Ministerio de recursos naturales"
             caption="Tercer Pais - Ghana"
             href="https://mlnr.gov.gh/"

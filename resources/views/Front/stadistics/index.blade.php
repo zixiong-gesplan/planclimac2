@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Estadísticas')
+@section('title','PLANCLIMAC2 (1/MAC/2/2.4/0006) | Estadísticas')
 
 @section('content')
 <section class="mt-8 mb-4 mx-auto w-full md:w-2/3">

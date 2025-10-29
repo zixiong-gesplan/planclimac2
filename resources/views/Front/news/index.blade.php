@@ -1,6 +1,6 @@
 @extends('layouts.app')
  
-@section('title', 'Noticias de PLANCLIMAC2')
+@section('title', 'PLANCLIMAC2 (1/MAC/2/2.4/0006) | Noticias')
 
 @section('content')
 
