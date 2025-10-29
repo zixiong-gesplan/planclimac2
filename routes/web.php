@@ -47,7 +47,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 ])
             ],[
                 'title' => 'Objetivo especifico 2 del proyecto',
-                'description' => 'Evaluar el alcance, intensidad y riesgo asociados a la erosión costera: resultados cuantitativos y cualitativos sobre el impacto social, económico y ecosistémico',
+                'description' => 'Evaluar la evolución de los indicadores regionales de cambio climático en la región macaronésica (desde la atmósfera hasta el océano). Impactos y acciones de adaptación vinculadas a la vulnerabilidad de los ecosistemas y la sociedad.',
                 'activities' => array([
                     'id'=> '2.1',
                     'description' =>'Desarrollo de regionalizaciones climáticas dinámicas usando los diferentes escenarios y los indicadores consolidados en todo el área de actuación.'
