@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Resultados')
+@section('title', 'PLANCLIMAC2 (1/MAC/2/2.4/0006) | Resultados')
 
 @section('content')
 
@@ -42,9 +42,7 @@ por el cambio climático en la región macaronésica y terceros países."
 
     <div class="mt-8">
         <x-Objetive 
-            subtitle="Evaluar la evolución de los indicadores regionales de cambio climático en la región
-macaronésica (desde la atmósfera hasta el océano). Impactos y acciones de
-adaptación vinculadas a la vulnerabilidad de los ecosistemas y la sociedad."
+            subtitle="Evaluar la evolución de los indicadores regionales de cambio climático en la región macaronésica (desde la atmósfera hasta el océano). Impactos y acciones de adaptación vinculadas a la vulnerabilidad de los ecosistemas y la sociedad."
         >
             Objetivo Específico 2
         </x-Objetive>
