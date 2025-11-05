@@ -12,7 +12,7 @@ class Progress extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public string $title,
+        public array $title,
         public string $progress,
         public string $target
     )

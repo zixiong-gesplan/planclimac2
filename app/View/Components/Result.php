@@ -8,13 +8,13 @@ use Illuminate\View\Component;
 
 class Result extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct(
-    )
+    public array $text;
+
+    public function __construct(array|string $text = [])
     {
-        //
+        $this->text = is_array($text)
+            ? $text
+            : ['es'=>$text, 'pt'=>$text, 'en'=>$text, 'fr'=>$text];
     }
 
     /**

@@ -6,13 +6,53 @@
     <section class="my-4 w-full mx-auto">
         <div class="w-full md:w-10/12 mx-auto">
             
-            <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4">
+        <div data-container="translator">
+            <h1 
+                class="w-full text-center text-3xl font-semibold text-sky-800 mt-4" 
+                data-lang="es">
                 Contacto
             </h1>
+            <h1 
+                class="hidden w-full text-center text-3xl font-semibold text-sky-800 mt-4" 
+                data-lang="pt">
+                Contato
+            </h1>
+            <h1 
+                class="hidden w-full text-center text-3xl font-semibold text-sky-800 mt-4" 
+                data-lang="en">
+                Contact
+            </h1>
+            <h1 
+                class="hidden w-full text-center text-3xl font-semibold text-sky-800 mt-4" 
+                data-lang="fr">
+                Contact
+            </h1>
+        </div>
 
-            <h2 class="w-full text-xl text-green-700 mt-2">
+
+        <div data-container="translator">
+            <h2 
+                class="w-full text-xl text-green-700 mt-2" 
+                data-lang="es">
                 Canarias
             </h2>
+            <h2 
+                class="hidden w-full text-xl text-green-700 mt-2" 
+                data-lang="pt">
+                Canárias
+            </h2>
+            <h2 
+                class="hidden w-full text-xl text-green-700 mt-2" 
+                data-lang="en">
+                Canary Islands
+            </h2>
+            <h2 
+                class="hidden w-full text-xl text-green-700 mt-2" 
+                data-lang="fr">
+                Îles Canaries
+            </h2>
+        </div>
+
 
             <section class="flex gap-4">
                 @include('/Front/contact/components/card', [
@@ -26,9 +66,29 @@
                     "email" => "jgonnav@gesplan.es",
                 ])
             </section>
-            <h2 class="w-full text-xl text-green-700 mt-2">
-                Azores
-            </h2>
+            <div data-container="translator">
+                <h2 
+                    class="w-full text-xl text-green-700 mt-2" 
+                    data-lang="es">
+                    Azores
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="pt">
+                    Açores
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="en">
+                    Azores
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="fr">
+                    Açores
+                </h2>
+            </div>
+
             <section>
                 @include('/Front/contact/components/card', [
                     "name" => "Ana C. Pereira Rodrigues",
@@ -48,9 +108,29 @@
                 ])
             </section>
 
-            <h2 class="w-full text-xl text-green-700 mt-2">
-                Cabo Verde
-            </h2>
+            <div data-container="translator">
+                <h2 
+                    class="w-full text-xl text-green-700 mt-2" 
+                    data-lang="es">
+                    Cabo Verde
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="pt">
+                    Cabo Verde
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="en">
+                    Cape Verde
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="fr">
+                    Cap-Vert
+                </h2>
+            </div>
+
             <section>
                 @include('/Front/contact/components/card', [
                     "name" => "Denise Semedo de Pina",
@@ -59,9 +139,29 @@
                 ])
             </section>
 
-            <h2 class="w-full text-xl text-green-700 mt-2">
-                Santo Tomé y Principe
-            </h2>
+            <div data-container="translator">
+                <h2 
+                    class="w-full text-xl text-green-700 mt-2" 
+                    data-lang="es">
+                    Santo Tomé y Príncipe
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="pt">
+                    São Tomé e Príncipe
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="en">
+                    São Tomé and Príncipe
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="fr">
+                    São Tomé-et-Principe
+                </h2>
+            </div>
+
             <section>
                 @include('/Front/contact/components/card', [
                     "name" => "Sulisa Signo Bom Jesus Quaresma",
@@ -70,9 +170,29 @@
                 ])
             </section>
 
-            <h2 class="w-full text-xl text-green-700 mt-2">
-                Ghana
-            </h2>
+            <div data-container="translator">
+                <h2 
+                    class="w-full text-xl text-green-700 mt-2" 
+                    data-lang="es">
+                    Ghana
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="pt">
+                    Gana
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="en">
+                    Ghana
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="fr">
+                    Ghana
+                </h2>
+            </div>
+
             <section>
                 @include('/Front/contact/components/card', [
                     "name" => "Patrick K. Agbesinyale",
@@ -81,9 +201,29 @@
                 ])
             </section>
 
-            <h2 class="w-full text-xl text-green-700 mt-2">
-                Costa de Marfil
-            </h2>
+            <div data-container="translator">
+                <h2 
+                    class="w-full text-xl text-green-700 mt-2" 
+                    data-lang="es">
+                    Costa de Marfil
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="pt">
+                    Costa do Marfim
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="en">
+                    Ivory Coast
+                </h2>
+                <h2 
+                    class="hidden w-full text-xl text-green-700 mt-2" 
+                    data-lang="fr">
+                    Côte d’Ivoire
+                </h2>
+            </div>
+
             <section>
                 @include('/Front/contact/components/card', [
                     "name" => "Ange Patricia Adiko",

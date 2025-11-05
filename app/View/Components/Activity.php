@@ -10,15 +10,17 @@ class activity extends Component
 {
     /**
      * Create a new component instance.
+     *
+     * @param  array<string,string>  $description  Mapa de textos por idioma (ej: ['es'=>'Título', 'en'=>'Title'])
      */
     public function __construct(
         public string $id,
-        public string $description
-    )
-    {
+        public array $description
+    ) {
         //
     }
 
+    
     /**
      * Get the view / contents that represent the component.
      */
