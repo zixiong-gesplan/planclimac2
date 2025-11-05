@@ -55,16 +55,16 @@
 
         <div class="mt-4">
             <div data-container="translator">
-                <p class="font-bold text-gray-800">
+                <p class="font-bold text-gray-800" data-lang="es">
                     Publicada el {{ date_format($post['created_at'], "d/m/Y")}}
                 </p>
-                <p class="font-bold text-gray-800">
+                <p class="font-bold text-gray-800 hidden" data-lang="pt">
                     Publicada em {{ date_format($post['created_at'], "d/m/Y")}}
                 </p>
-                <p class="font-bold text-gray-800">
+                <p class="font-bold text-gray-800 hidden" data-lang="en">
                     Published on {{ date_format($post['created_at'], "d/m/Y")}}
                 </p>
-                <p class="font-bold text-gray-800 hidden" data-lang="pt">
+                <p class="font-bold text-gray-800 hidden" data-lang="fr">
                     Publié le {{ date_format($post['created_at'], "d/m/Y")}}
                 </p>
             </div>
