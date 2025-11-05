@@ -10,13 +10,14 @@ class BlueCard extends Component
 {
     /**
      * Create a new component instance.
+     *
+     * @param  array<string,string>  $title  Mapa de textos por idioma (ej: ['es'=>'Título', 'en'=>'Title'])
      */
     public function __construct(
-        public string $title,
+        public array $title,
         public int $progress,
-        public int $target
-    )
-    {
+        public int $target,
+    ) {
         //
     }
 

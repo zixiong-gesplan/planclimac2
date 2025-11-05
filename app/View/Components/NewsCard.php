@@ -13,9 +13,10 @@ class NewsCard extends Component
      */
     public function __construct(
         public string $src,
-        public string $title,
+        public array $title,
         // string $created_at,
-        public string $description,
+
+        public array $description,
         public string $id,
         // public array $tags
     )
