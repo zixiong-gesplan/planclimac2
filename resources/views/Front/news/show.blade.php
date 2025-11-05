@@ -37,13 +37,38 @@
             </div>
         </div>
         @if( $post['document'] != null)
-            <a target="_blank" id="document-link" href="{{$post['document']}}" class="text-lg text-white px-4 py-2 bg-sky-800 rounded my-4">Ver documento</a>
+            <div data-container="translator">
+                <a target="_blank" id="document-link" href="{{$post['document']}}" class="text-lg text-white px-4 py-2 bg-sky-800 rounded my-4" data-lang="es">
+                    Ver documento
+                </a>
+                <a target="_blank" id="document-link" href="{{$post['document']}}" class="text-lg text-white px-4 py-2 bg-sky-800 rounded my-4 hidden" data-lang="pt">
+                    Ver documento
+                </a>
+                <a target="_blank" id="document-link" href="{{$post['document']}}" class="text-lg text-white px-4 py-2 bg-sky-800 rounded my-4 hidden" data-lang="en">
+                    Check document
+                </a>                
+                <a target="_blank" id="document-link" href="{{$post['document']}}" class="text-lg text-white px-4 py-2 bg-sky-800 rounded my-4 hidden" data-lang="fr">
+                    Voir le document
+                </a>
+            </div>
         @endif
 
         <div class="mt-4">
-            <p class="font-bold text-gray-800">
-                Publicada el {{ date_format($post['created_at'], "d/m/Y")}}
-            </p>
+            <div data-container="translator">
+                <p class="font-bold text-gray-800">
+                    Publicada el {{ date_format($post['created_at'], "d/m/Y")}}
+                </p>
+                <p class="font-bold text-gray-800">
+                    Publicada em {{ date_format($post['created_at'], "d/m/Y")}}
+                </p>
+                <p class="font-bold text-gray-800">
+                    Published on {{ date_format($post['created_at'], "d/m/Y")}}
+                </p>
+                <p class="font-bold text-gray-800 hidden" data-lang="pt">
+                    Publié le {{ date_format($post['created_at'], "d/m/Y")}}
+                </p>
+            </div>
+
             {{-- @if( count($post['tags']) == 0)
                 <p></p>
             @else
