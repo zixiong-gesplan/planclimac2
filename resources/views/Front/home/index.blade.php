@@ -398,7 +398,7 @@
                 'es' => 'Tercer Pais - Costa de Marfil',
                 'pt' => 'Terceiro País - Costa do Marfim',
                 'en' => 'Third Countryis - Ivory Coast',
-                'fr' => \"Pays tiers - Côte d'Ivoire\"
+                'fr' => 'Pays tiers - Côte d\'Ivoire'
             ]"
             href="#"
         />
