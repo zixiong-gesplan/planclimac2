@@ -397,7 +397,7 @@
             :caption="[
                 'es' => 'Tercer Pais - Costa de Marfil',
                 'pt' => 'Terceiro País - Costa do Marfim',
-                'en' => 'Third Countryis - Ivory Coast',
+                'en' => 'Third Country - Ivory Coast',
                 'fr' => 'Pays tiers - Côte Ivoire'
             ]"
             href="#"
