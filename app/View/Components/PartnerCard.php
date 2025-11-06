@@ -14,7 +14,7 @@ class PartnerCard extends Component
     public function __construct(
         public string $src,
         public string $alt,
-        public string $caption,
+        public array $caption,
         public string $href
     )
     {

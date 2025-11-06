@@ -29,7 +29,12 @@
             </p>
         </div>
 
-        <a href="/news/{{$id}}" class="mt-2 text-sky-900 p-4 rounded-sm font-bold">Leer más ></a>
+        <a href="/news/{{$id}}" class="mt-2 text-sky-900 p-4 rounded-sm font-bold" data-container="translator">
+            <p data-lang="es">Leer más ></p>
+            <p class="hidden" data-lang="pt">Leia mais ></p>
+            <p class="hidden" data-lang="en">Read more ></p>
+            <p class="hidden" data-lang="fr">Lire la suite ></p>
+        </a>
     </aside>
     <div class="w-full md:w-1/2 "> 
         <a href="/news/{{$id}}" class="bg-white rounded-lg overflow-hidden flex flex-col items-center shadow-lg mx-auto size-72">

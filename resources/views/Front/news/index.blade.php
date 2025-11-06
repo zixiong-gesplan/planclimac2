@@ -5,9 +5,21 @@
 @section('content')
 
 <section class="my-4 w-full mx-auto">
-    <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4">
-        Noticias
-    </h1>
+
+    <div data-container="translator">
+        <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4" data-lang="es">
+            Noticias
+        </h1>
+        <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4 hidden" data-lang="pt">
+            Notícias
+        </h1>
+        <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4 hidden" data-lang="en">
+            News
+        </h1>
+        <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4 hidden" data-lang="fr">
+            Actualité
+        </h1>
+    </div>
     <div class="flex gap-4 w-full justify-center mt-4 flex-col lg:flex-row">
         <!-- <div class="flex flex-col md:flex-row gap-2 justify-between">
             <x-QueryLink

@@ -37,7 +37,7 @@
                             News
                         </p>
                         <p class="hidden" data-lang="fr">
-                            Actualités
+                            Actualité
                         </p>
                     </div>
                 </x-NavLink>

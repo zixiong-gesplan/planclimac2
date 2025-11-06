@@ -34,41 +34,41 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'title' => [
                     'es' => 'Objetivo específico 1 del proyecto',
                     'pt' => 'Objetivo específico 1 do projeto',
-                    'en' => 'Specific objective 1 of the project',
+                    'en' => 'Project Specific Objective 1',
                     'fr' => 'Objectif spécifique 1 du projet',
                 ],
                 'description' => [
-                    'es' => 'Evaluar el alcance, intensidad y riesgo asociados a las inundaciones costeras: resultados cuantitativos y cualitativos sobre el impacto social, económico y ecosistémico.',
-                    'pt' => 'Avaliar o alcance, a intensidade e o risco associados às inundações costeiras: resultados quantitativos e qualitativos sobre o impacto social, económico e ecossistémico.',
-                    'en' => 'Assess the extent, intensity and risk associated with coastal flooding: quantitative and qualitative results on social, economic and ecosystem impacts.',
-                    'fr' => 'Évaluer l’étendue, l’intensité et le risque associés aux inondations côtières : résultats quantitatifs et qualitatifs sur les impacts sociaux, économiques et écosystémiques.',
+                    'es' => 'Consolidar el Observatorio de Cambio Climático (OCC) de la Macaronesia. Este ente permitirá analizar y promover las medidas de adaptación al cambio climático y establecer un marco de cooperación en la gestión de riesgos naturales provocados por el cambio climático en la región macaronésica y terceros países.',
+                    'pt' => 'Consolidar o Observatório de Alterações Climáticas (OCC) da Macaronésia. Este organismo permitirá analisar e promover medidas de adaptação às alterações climáticas e estabelecer um quadro de cooperação na gestão de riscos naturais provocados pelas alterações climáticas na região macaronésica e em países terceiros.',
+                    'en' => 'Consolidate the Macaronesian Climate Change Observatory (OCC). This body will enable the analysis and promotion of climate change adaptation measures and establish a cooperation framework for managing natural risks caused by climate change in the Macaronesian region and third countries.',
+                    'fr' => 'Consolider l’Observatoire du Changement Climatique (OCC) de la Macaronésie. Cet organisme permettra d’analyser et de promouvoir les mesures d’adaptation au changement climatique et d’établir un cadre de coopération pour la gestion des risques naturels induits par le changement climatique dans la région macaronésienne et les pays tiers.',
                 ],
                 'activities' => [
                     [
                         'id' => '1.1',
                         'description' => [
-                            'es' => 'Estudio de la evolución de la línea de costa en la región de cooperación a partir de técnicas remotas e inteligencia artificial.',
-                            'pt' => 'Estudo da evolução da linha de costa na região de cooperação com base em técnicas remotas e inteligência artificial.',
-                            'en' => 'Study of shoreline evolution in the cooperation region using remote techniques and artificial intelligence.',
-                            'fr' => 'Étude de l’évolution du trait de côte dans la région de coopération à l’aide de techniques à distance et d’intelligence artificielle.',
+                            'es' => 'Desarrollo de una Estrategia Macaronésica de Adaptación al CC impulsada desde el OCC a través de buenas prácticas: integración de Terceros Países.',
+                            'pt' => 'Desenvolvimento de uma Estratégia Macaronésica de Adaptação às AC, promovida pelo OCC com base em boas práticas: integração de Países Terceiros.',
+                            'en' => 'Development of a Macaronesian Climate Change Adaptation Strategy led by the OCC through good practices: integration of third countries.',
+                            'fr' => 'Élaboration d’une stratégie macaronésienne d’adaptation au changement climatique, pilotée par l’OCC à partir de bonnes pratiques : intégration des pays tiers.',
                         ],
                     ],
                     [
                         'id' => '1.2',
                         'description' => [
-                            'es' => 'Estudio de las afecciones de la intrusión salina en las costas y sus efectos sobre sectores afectados.',
-                            'pt' => 'Estudo dos efeitos da intrusão salina nas zonas costeiras e dos seus impactos nos setores afetados.',
-                            'en' => 'Study of the effects of saltwater intrusion on coasts and its impacts on affected sectors.',
-                            'fr' => 'Étude des effets de l’intrusion saline sur les zones côtières et de ses impacts sur les secteurs concernés.',
+                            'es' => 'Implementación de un Atlas Climático para la Macaronesia que permita la transferencia desde el conocimiento a la sociedad y las instituciones públicas.',
+                            'pt' => 'Implementação de um Atlas Climático para a Macaronésia que permita a transferência de conhecimento para a sociedade e as instituições públicas.',
+                            'en' => 'Implementation of a Climate Atlas for Macaronesia to enable knowledge transfer to society and public institutions.',
+                            'fr' => 'Mise en œuvre d’un Atlas climatique pour la Macaronésie afin de faciliter le transfert de connaissances à la société et aux institutions publiques.',
                         ],
                     ],
                     [
                         'id' => '1.3',
                         'description' => [
-                            'es' => 'Diseño de un sistema piloto de predicción de las condiciones marinas costeras, focalizado en la prevención de impactos de eventos adversos costeros.',
-                            'pt' => 'Desenho de um sistema-piloto de previsão das condições marinhas costeiras, focado na prevenção dos impactos de eventos costeiros adversos.',
-                            'en' => 'Design of a pilot system to forecast coastal marine conditions, focused on preventing the impacts of adverse coastal events.',
-                            'fr' => 'Conception d’un système pilote de prévision des conditions marines côtières, axé sur la prévention des impacts des événements côtiers défavorables.',
+                            'es' => 'Desarrollo de una propuesta común de indicadores sobre Cambio Climático (de tipo ambiental y socioeconómico) para toda la Región Macaronésica.',
+                            'pt' => 'Desenvolvimento de uma proposta comum de indicadores sobre alterações climáticas (ambientais e socioeconómicos) para toda a região macaronésica.',
+                            'en' => 'Development of a common set of climate change indicators (environmental and socio-economic) for the entire Macaronesian region.',
+                            'fr' => 'Élaboration d’une proposition commune d’indicateurs de changement climatique (environnementaux et socio-économiques) pour l’ensemble de la région macaronésienne.',
                         ],
                     ],
                 ],
@@ -77,41 +77,41 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'title' => [
                     'es' => 'Objetivo específico 2 del proyecto',
                     'pt' => 'Objetivo específico 2 do projeto',
-                    'en' => 'Specific objective 2 of the project',
+                    'en' => 'Project Specific Objective 2',
                     'fr' => 'Objectif spécifique 2 du projet',
                 ],
                 'description' => [
-                    'es' => 'Evaluar el alcance, intensidad y riesgo asociados a la erosión costera: resultados cuantitativos y cualitativos sobre el impacto social, económico y ecosistémico.',
-                    'pt' => 'Avaliar o alcance, a intensidade e o risco associados à erosão costeira: resultados quantitativos e qualitativos sobre o impacto social, económico e ecossistémico.',
-                    'en' => 'Assess the extent, intensity and risk associated with coastal erosion: quantitative and qualitative results on social, economic and ecosystem impacts.',
-                    'fr' => 'Évaluer l’étendue, l’intensité et le risque associés à l’érosion côtière : résultats quantitatifs et qualitatifs sur les impacts sociaux, économiques et écosystémiques.',
+                    'es' => 'Evaluar la evolución de los indicadores regionales de cambio climático en la región macaronésica (desde la atmósfera hasta el océano). Impactos y acciones de adaptación vinculadas a la vulnerabilidad de los ecosistemas y la sociedad.',
+                    'pt' => 'Avaliar a evolução dos indicadores regionais de alterações climáticas na região macaronésica (da atmosfera ao oceano). Impactos e ações de adaptação ligados à vulnerabilidade dos ecossistemas e da sociedade.',
+                    'en' => 'Assess the evolution of regional climate change indicators in the Macaronesian region (from the atmosphere to the ocean). Impacts and adaptation actions linked to ecosystem and societal vulnerability.',
+                    'fr' => 'Évaluer l’évolution des indicateurs régionaux du changement climatique dans la région macaronésienne (de l’atmosphère à l’océan). Impacts et actions d’adaptation liés à la vulnérabilité des écosystèmes et de la société.',
                 ],
                 'activities' => [
                     [
                         'id' => '2.1',
                         'description' => [
-                            'es' => 'Evaluación de la erosión de escarpes y acantilados en las costas rocosas seleccionadas de la Región MAC.',
-                            'pt' => 'Avaliação da erosão de escarpas e falésias nas costas rochosas selecionadas da Região MAC.',
-                            'en' => 'Assessment of the erosion of scarps and cliffs on selected rocky coasts of the MAC Region.',
-                            'fr' => 'Évaluation de l’érosion des escarpements et falaises sur des côtes rocheuses sélectionnées de la région MAC.',
+                            'es' => 'Desarrollo de regionalizaciones climáticas dinámicas usando los diferentes escenarios y los indicadores consolidados en todo el área de actuación.',
+                            'pt' => 'Desenvolvimento de regionalizações climáticas dinâmicas utilizando diferentes cenários e os indicadores consolidados em toda a área de atuação.',
+                            'en' => 'Development of dynamic climate regionalisations using different scenarios and the consolidated indicators across the entire area of intervention.',
+                            'fr' => 'Développement de régionalisations climatiques dynamiques en utilisant différents scénarios et les indicateurs consolidés sur l’ensemble de la zone d’intervention.',
                         ],
                     ],
                     [
                         'id' => '2.2',
                         'description' => [
-                            'es' => 'Evaluación de la erosión de costas sedimentarias, sistemas dunares y humedales costeros, así como sus atributos ecológicos y paisajísticos.',
-                            'pt' => 'Avaliação da erosão das costas sedimentares, sistemas dunares e zonas húmidas costeiras, bem como dos seus atributos ecológicos e paisagísticos.',
-                            'en' => 'Assessment of erosion on sedimentary coasts, dune systems and coastal wetlands, as well as their ecological and landscape attributes.',
-                            'fr' => 'Évaluation de l’érosion des côtes sédimentaires, des systèmes dunaires et des zones humides côtières, ainsi que de leurs attributs écologiques et paysagers.',
+                            'es' => 'Análisis de la evolución del sistema del CO2 en el océano e indicadores de CC a través de series temporales, bases de datos y datos satelitales.',
+                            'pt' => 'Análise da evolução do sistema de CO2 no oceano e dos indicadores de AC através de séries temporais, bases de dados e dados de satélite.',
+                            'en' => 'Analysis of the evolution of the oceanic CO2 system and climate-change indicators using time series, databases and satellite data.',
+                            'fr' => 'Analyse de l’évolution du système de CO2 océanique et des indicateurs de changement climatique à partir de séries temporelles, de bases de données et de données satellitaires.',
                         ],
                     ],
                     [
                         'id' => '2.3',
                         'description' => [
-                            'es' => 'Estudios de planificación de la orla costera en diferentes regiones del espacio MAC de cooperación.',
-                            'pt' => 'Estudos de planeamento da orla costeira em diferentes regiões do espaço de cooperação MAC.',
-                            'en' => 'Coastal zone planning studies in different regions of the MAC cooperation area.',
-                            'fr' => 'Études d’aménagement du littoral dans différentes régions de l’espace de coopération MAC.',
+                            'es' => 'Evaluación de impactos: caracterización de la erosividad de la lluvia; incidencia del CC en la escorrentía y pérdida de suelo por erosión.',
+                            'pt' => 'Avaliação de impactos: caracterização da erosividade da chuva; incidência das AC no escoamento e na perda de solo por erosão.',
+                            'en' => 'Impact assessment: characterisation of rainfall erosivity; effect of climate change on runoff and soil loss by erosion.',
+                            'fr' => 'Évaluation des impacts : caractérisation de l’érosivité des précipitations ; incidence du changement climatique sur le ruissellement et la perte de sol par érosion.',
                         ],
                     ],
                 ],
@@ -120,37 +120,46 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'title' => [
                     'es' => 'Objetivo específico 3 del proyecto',
                     'pt' => 'Objetivo específico 3 do projeto',
-                    'en' => 'Specific objective 3 of the project',
+                    'en' => 'Project Specific Objective 3',
                     'fr' => 'Objectif spécifique 3 du projet',
                 ],
                 'description' => [
-                    'es' => 'Evaluar el alcance, intensidad y riesgo asociados a la subida de la temperatura media del mar y otros parámetros físico-químicos: resultados cuantitativos y cualitativos sobre el impacto social, económico y ecosistémico.',
-                    'pt' => 'Avaliar o alcance, a intensidade e o risco associados ao aumento da temperatura média do mar e de outros parâmetros físico-químicos: resultados quantitativos e qualitativos sobre o impacto social, económico e ecossistémico.',
-                    'en' => 'Assess the extent, intensity and risk associated with the rise in average sea temperature and other physico-chemical parameters: quantitative and qualitative results on social, economic and ecosystem impacts.',
-                    'fr' => 'Évaluer l’étendue, l’intensité et le risque associés à la hausse de la température moyenne de la mer et d’autres paramètres physico-chimiques : résultats quantitatifs et qualitatifs sur les impacts sociaux, économiques et écosystémiques.',
+                    'es' => 'Implementar acciones para la mejora del entendimiento científico y la coordinación entre las administraciones y las entidades sociales y económicas ante los riesgos asociados al cambio climático.',
+                    'pt' => 'Implementar ações para melhorar o entendimento científico e a coordenação entre as administrações e as entidades sociais e económicas face aos riscos associados às alterações climáticas.',
+                    'en' => 'Implement actions to improve scientific understanding and coordination among public administrations and social and economic stakeholders in the face of risks associated with climate change.',
+                    'fr' => 'Mettre en œuvre des actions visant à améliorer la compréhension scientifique et la coordination entre les administrations publiques et les acteurs sociaux et économiques face aux risques liés au changement climatique.',
                 ],
                 'activities' => [
                     [
                         'id' => '3.1',
                         'description' => [
-                            'es' => 'Cuantificar los parámetros físicoquímicos de interés para desarrollar indicadores y establecer la base de la gobernanza de espacios costeros.',
-                            'pt' => 'Quantificar os parâmetros físico-químicos de interesse para desenvolver indicadores e estabelecer as bases da governação dos espaços costeiros.',
-                            'en' => 'Quantify physico-chemical parameters of interest to develop indicators and establish the basis for the governance of coastal areas.',
-                            'fr' => 'Quantifier les paramètres physico-chimiques d’intérêt afin de développer des indicateurs et d’établir les bases de la gouvernance des espaces côtiers.',
+                            'es' => 'Programa de fomento de la ciencia ciudadana sobre acción climática y capacitación técnica sobre impactos y adaptación al cambio climático.',
+                            'pt' => 'Programa de promoção da ciência cidadã sobre ação climática e capacitação técnica sobre impactos e adaptação às alterações climáticas.',
+                            'en' => 'Programme to promote citizen science on climate action and technical training on climate-change impacts and adaptation.',
+                            'fr' => 'Programme de promotion de la science citoyenne sur l’action climatique et de formation technique sur les impacts et l’adaptation au changement climatique.',
                         ],
                     ],
                     [
                         'id' => '3.2',
                         'description' => [
-                            'es' => 'Ciencia ciudadana y sensibilización: el valor de las zonas costeras y litorales en los sectores socio-económicos de la región de cooperación.',
-                            'pt' => 'Ciência cidadã e sensibilização: o valor das zonas costeiras e litorais nos setores socioeconómicos da região de cooperação.',
-                            'en' => 'Citizen science and awareness: the value of coastal and littoral areas for the socio-economic sectors of the cooperation region.',
-                            'fr' => 'Science citoyenne et sensibilisation : la valeur des zones côtières et littorales pour les secteurs socio-économiques de la région de coopération.',
+                            'es' => 'Optimización de oportunidades de actividad y empleo en la transición hacia una economía verde y minimización de los impactos socioeconómicos.',
+                            'pt' => 'Otimização de oportunidades de atividade e emprego na transição para uma economia verde e minimização dos impactos socioeconómicos.',
+                            'en' => 'Optimisation of activity and employment opportunities in the transition to a green economy, minimising socio-economic impacts.',
+                            'fr' => 'Optimisation des opportunités d’activité et d’emploi dans la transition vers une économie verte, en minimisant les impacts socio-économiques.',
+                        ],
+                    ],
+                    [
+                        'id' => '3.3',
+                        'description' => [
+                            'es' => 'Desarrollo de herramientas de aprendizaje para evaluar riesgos y oportunidades y mejorar las decisiones de inversión ante los riesgos climáticos.',
+                            'pt' => 'Desenvolvimento de ferramentas de aprendizagem para avaliar riscos e oportunidades e melhorar as decisões de investimento face aos riscos climáticos.',
+                            'en' => 'Development of learning tools to assess risks and opportunities and improve investment decisions in the face of climate risks.',
+                            'fr' => 'Développement d’outils d’apprentissage pour évaluer les risques et les opportunités et améliorer les décisions d’investissement face aux risques climatiques.',
                         ],
                     ],
                 ],
             ],
-        ];        
+        ];             
     
         $results = [
             [

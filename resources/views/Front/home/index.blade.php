@@ -26,7 +26,7 @@
             <h2 
                 class="hidden text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance" 
                 data-lang="fr">
-                DÉVELOPPEMENT ET SUIVI D’ACTIONS COORDONNÉES DANS LA RÉGION MACARONÉSIENNE EN MATIÈRE DE RISQUES ET DE MENACES LIÉS AU CHANGEMENT CLIMATIQUE
+                DÉVELOPPEMENT ET SUIVI DES ACTIONS COORDONNÉES DANS LA RÉGION MACARONÉSIENNE EN MATIÈRE DE RISQUES ET DE MENACES LIÉS AU CHANGEMENT CLIMATIQUE
             </h2>
         </div>
         <img src="https://interregmac.org/wp-content/uploads/2023/07/Group-9.jpg" alt="" class="w-full">
@@ -265,80 +265,141 @@
         <x-PartnerCard 
             src="/images/LOGO_GOBIERNO_CANARIAS.svg"
             alt="Gobierno de Canarias"
-            caption="Socio Principal"
+            :caption="[
+                'es' => 'Socio Principal',
+                'pt' => 'Sócio Principal',
+                'en' => 'Main Partner',
+                'fr' => 'Partenaire principal'
+            ]"
             href="https://www.gobiernodecanarias.org/transicionecologica/index.html"
         />
 
         <x-PartnerCard 
             src="/images/LOGO_AZORES.png"
             alt="Gobierno de Azores"
-            caption="Administración Pública"
+            :caption="[
+                'es' => 'Administración Pública',
+                'pt' => 'Administração Pública',
+                'en' => 'Public Administration',
+                'fr' => 'Administration Publique'
+            ]"
             href="https://portal.azores.gov.pt/"
         />
         <x-PartnerCard 
             src="/images/LOGO_MADEIRA.png"
             alt="Gobierno de Madeira"
-            caption="Administración Pública"
+            :caption="[
+                'es' => 'Administración Pública',
+                'pt' => 'Administração Pública',
+                'en' => 'Public Administration',
+                'fr' => 'Administration Publique'
+            ]"
             href="https://www.madeira.gov.pt/draac/"
         />
 
         <x-PartnerCard 
             src="/images/LOGO_GESPLAN.png"
             alt="Gesplan"
-            caption="Empresa Pública"
+            :caption="[
+                'es' => 'Empresa Pública',
+                'pt' => 'Empresa Pública',
+                'en' => 'Public Company',
+                'fr' => 'Societé Publique'
+            ]"
             href="https://www.gesplan.es/"
         />
 
         <x-PartnerCard 
             src="/images/LOGO_ITER.png"
             alt="ITER"
-            caption="Empresa Pública"
+            :caption="[
+                'es' => 'Empresa Pública',
+                'pt' => 'Empresa Pública',
+                'en' => 'Public Company',
+                'fr' => 'Societé Publique'
+            ]"
             href="https://www.iter.es/"
         />
         <x-PartnerCard 
             src="/images/LOGO_ITC.svg"
             alt="ITC"
-            caption="Empresa Pública"
+            :caption="[
+                'es' => 'Empresa Pública',
+                'pt' => 'Empresa Pública',
+                'en' => 'Public Company',
+                'fr' => 'Societé Publique'
+            ]"
             href="https://www.itccanarias.org/web/es/"
         />
         <x-PartnerCard 
             src="/images/LOGO_ULPGC.png"
             alt="ULPGC"
-            caption="Universidad"
+            :caption="[
+                'es' => 'Universidad',
+                'pt' => 'Universidade',
+                'en' => 'University',
+                'fr' => 'Université'
+            ]"
             href="https://www10.ulpgc.es/"
         />
 
         <x-PartnerCard 
             src="/images/LOGO_ULL.png"
             alt="ULL"
-            caption="Universidad"
+            :caption="[
+                'es' => 'Universidad',
+                'pt' => 'Universidade',
+                'en' => 'University',
+                'fr' => 'Université'
+            ]"
             href="https://www.ull.es/"
         />
 
         <x-PartnerCard 
             src="/images/LOGO_INMG.webp"
             alt="INMG"
-            caption="Tercer Pais - Cabo Verde"
+            :caption="[
+                'es' => 'Tercer País - Cabo Verde',
+                'pt' => 'Terceiro País - Cabo Verde',
+                'en' => 'Third Country - Cape Verde',
+                'fr' => 'Pays tiers - Cap Vert'
+            ]"
             href="https://www.inmg.gov.cv/"
         />
 
         <x-PartnerCard 
             src="/images/LOGO_SAO_TOME.png"
             alt="DGAAG"
-            caption="Tercer Pais - Santo Tomé y Príncipe"
+            :caption="[
+                'es' => 'Tercer País - Santo Tomé y Príncipe',
+                'pt' => 'Terceiro País - São Tomé e Príncipe',
+                'en' => 'Third Country - São Tomé and Príncipe',
+                'fr' => 'Pays tiers - Sao Tomé-et-Principe'
+            ]"
             href="https://www.facebook.com/dga.stp/"
         />
 
         <x-PartnerCard 
             src="/images/LOGO_GHANA.jpg"
             alt="Ministerio de recursos naturales"
-            caption="Tercer Pais - Ghana"
+            :caption="[
+                'es' => 'Tercer País - Ghana',
+                'pt' => 'Terceiro País - Gana',
+                'en' => 'Third Country - Ghana',
+                'fr' => 'Pays tiers - Ghana'
+            ]"
             href="https://mlnr.gov.gh/"
         />
+        
         <x-PartnerCard 
             src="/images/LOGO_COSTA_MARFIL.png"
             alt="Ministerio de recursos naturales"
-            caption="Tercer Pais - Costa Marfil"
+            :caption="[
+                'es' => 'Tercer Pais - Costa de Marfil',
+                'pt' => 'Terceiro País - Costa do Marfim',
+                'en' => 'Third Countryis - Ivory Coast',
+                'fr' => \"Pays tiers - Côte d'Ivoire\"
+            ]"
             href="#"
         />
     </div>
