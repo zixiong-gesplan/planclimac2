@@ -9,8 +9,20 @@
         @csrf
         <div class="grid gap-4">
             <div class="">
-                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titulo</label>
-                <input required type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Título de la noticia" required="">
+                <label for="title_es" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titulo (ES)</label>
+                <input required type="text" name="title_es" id="title_es" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Título de la noticia" required="">
+            </div>
+            <div class="">
+                <label for="title_pt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titulo (PT)</label>
+                <input required type="text" name="title_pt" id="title_pt" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Título de la noticia" required="">
+            </div>
+            <div class="">
+                <label for="title_en" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titulo (EN)</label>
+                <input required type="text" name="title_en" id="title_en" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Título de la noticia" required="">
+            </div>
+            <div class="">
+                <label for="title_fr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titulo (FR)</label>
+                <input required type="text" name="title_fr" id="title_fr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Título de la noticia" required="">
             </div>
             <div class="flex items-center justify-center w-full">
                 <label for="thumbnail" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
@@ -48,15 +60,44 @@
 
         <div class="flex-col md:flex w-full gap-4 pb-20">
             <div class="w-full">
-                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción</label>
-                <div id="editor-description">
+                <label for="description_es" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción (ES)</label>
+                <div id="editor-description-es">
                 </div>
-                <textarea required  name="description" id="description" rows="8" class="hidden p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Texto de la noticia"></textarea>
+                <textarea required  name="description_es" id="description_es" rows="8" class="hidden p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Texto de la noticia"></textarea>
             </div>
-            
             <div class="w-full">
-                <label for="short_description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción Corta</label>
-                <textarea required name="short_description" id="short_description" rows="4" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Descripción corta de la noticia"></textarea>
+                <label for="description_pt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción (PT)</label>
+                <div id="editor-description-pt">
+                </div>
+                <textarea required  name="description_pt" id="description_pt" rows="8" class="hidden p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Texto de la noticia"></textarea>
+            </div>
+            <div class="w-full">
+                <label for="description_en" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción (EN)</label>
+                <div id="editor-description-en">
+                </div>
+                <textarea required  name="description_en" id="description_en" rows="8" class="hidden p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Texto de la noticia"></textarea>
+            </div>
+            <div class="w-full">
+                <label for="description_en" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción (FR)</label>
+                <div id="editor-description-fr">
+                </div>
+                <textarea required  name="description_fr" id="description_fr" rows="8" class="hidden p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Texto de la noticia"></textarea>
+            </div>                   
+            <div class="w-full">
+                <label for="short_description_es" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción Corta (ES)</label>
+                <textarea required name="short_description_es" id="short_description_es" rows="4" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Descripción corta de la noticia"></textarea>
+            </div>
+            <div class="w-full">
+                <label for="short_description_pt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción Corta (PT)</label>
+                <textarea required name="short_description_pt" id="short_description_pt" rows="4" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Descripción corta de la noticia"></textarea>
+            </div>
+            <div class="w-full">
+                <label for="short_description_en" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción Corta (EN)</label>
+                <textarea required name="short_description_en" id="short_description_en" rows="4" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Descripción corta de la noticia"></textarea>
+            </div>
+            <div class="w-full">
+                <label for="short_description_fr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción Corta (FR)</label>
+                <textarea required name="short_description_fr" id="short_description_fr" rows="4" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Descripción corta de la noticia"></textarea>
             </div>
         </div>
         <button type="submit" class="inline-flex items-center px-5 py-2 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-sky-900 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
@@ -101,20 +142,35 @@
             updatePreview(file);
         });
 
-        const quill = new Quill('#editor-description', {
+        const quill_es = new Quill('#editor-description-es', {
             theme: 'snow'
         });
-        quill.on('text-change', () => {
-            const html = quill.root.innerHTML;
-            document.getElementById('description').value = html;
+        quill_es.on('text-change', () => {
+            const html = quill_es.root.innerHTML;
+            document.getElementById('description_es').value = html;
         });
 
-        const quill2 = new Quill('#editor-short_description', {
+        const quill_pt = new Quill('#editor-description-pt', {
             theme: 'snow'
         });
-        quill2.on('text-change', () => {
-            const html = quill2.root.innerHTML;
-            document.getElementById('short_description').value = html;
+        quill_pt.on('text-change', () => {
+            const html = quill_pt.root.innerHTML;
+            document.getElementById('description_pt').value = html;
+        });
+
+        const quill_en = new Quill('#editor-description-en', {
+            theme: 'snow'
+        });
+        quill_en.on('text-change', () => {
+            const html = quill_en.root.innerHTML;
+            document.getElementById('description_en').value = html;
+        });
+        const quill_fr = new Quill('#editor-description-fr', {
+            theme: 'snow'
+        });
+        quill_fr.on('text-change', () => {
+            const html = quill_fr.root.innerHTML;
+            document.getElementById('description_fr').value = html;
         });
 </script>
 @endsection
