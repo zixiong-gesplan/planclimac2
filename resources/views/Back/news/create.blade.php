@@ -5,7 +5,7 @@
 
 <div class="w-3/4 mx-auto">
 
-    <form action="{{route('news.store')}}" method="post" enctype="multipart/form-data" class="" novalidate>
+    <form action="{{route('admin.news.store')}}" method="post" enctype="multipart/form-data" class="" novalidate>
         @csrf
         <div class="grid gap-4">
             <div class="">

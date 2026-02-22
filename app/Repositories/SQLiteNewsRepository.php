@@ -22,6 +22,12 @@ class SQLiteNewsRepository implements NewsRepositoryInterface
     {
         return $this->news::count();
     }
+
+    public function getAll()
+    {
+        return $this->news::all()->sortByDesc('created_at');
+    }
+
     public function show($id)
     {
         return $this->news::findOrFail($id);

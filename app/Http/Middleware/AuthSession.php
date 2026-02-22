@@ -15,7 +15,9 @@ class AuthSession
      */
     public function handle(Request $request, Closure $next): Response
     {
-        
+        if (!session('is_admin')) {
+            return redirect()->route('login');
+        }
         return $next($request);
     }
 }

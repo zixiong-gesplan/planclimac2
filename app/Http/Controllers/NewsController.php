@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Interfaces\NewsRepositoryInterface;
 use App\Services\NewsService;
-
 use Illuminate\Http\Request;
-// use Illuminate\Http\UploadFile;
 use App\Models\News;
 use App\Events\NewsCreated;
+use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
@@ -37,6 +36,11 @@ class NewsController extends Controller
             'count' => $count/10
         ]);
     }
+    public function adminIndex()
+    {
+        $news = $this->news->getAll();
+        return view('Back.home.index', ['news' => $news]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -52,50 +56,60 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'document' => 'nullable|mimes:pdf|max:10240', // 10MB
 
-        $request->validate([
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'title_es' => 'required|string|max:255',
+            'title_pt' => 'required|string|max:255',
+            'title_en' => 'required|string|max:255',
+            'title_fr' => 'required|string|max:255',
+
+            'short_description_es' => 'required|string|max:1000',
+            'short_description_pt' => 'required|string|max:1000',
+            'short_description_en' => 'required|string|max:1000',
+            'short_description_fr' => 'required|string|max:1000',
+
+            'description_es' => 'required|string',
+            'description_pt' => 'required|string',
+            'description_en' => 'required|string',
+            'description_fr' => 'required|string',
         ]);
-        $data = $request->all();
-        $thumbnail = $request->file('thumbnail');
 
-        $thumbnailName = $thumbnail->getClientOriginalName();
-        $thumbnailExtension = $thumbnail->getClientOriginalExtension();
-        $thumbnailPath = $thumbnail->storeAs('/public/images',$thumbnailName);
-        $attachment = $request->file('document');
+        // Guardar thumbnail con nombre único (no pisas archivos)
+        $thumbPath = $request->file('thumbnail')->store('images', 'public');
+        $thumbUrl = Storage::url($thumbPath); // /storage/images/xxxx.jpg
 
-        $attachmentPath = null;
-        if($attachment != null){
-            $attachmentName = $attachment->getClientOriginalName();
-            $attachmentExtension = $attachment->getClientOriginalExtension();
-            $attachmentPath = $attachment->storeAs('/public/documents',$attachmentName);
-            //TO FIXME:
-            //Se hace esta asignación por que a veces el pdf no se sube
+        // Guardar PDF (si viene)
+        $docUrl = null;
+        if ($request->hasFile('document')) {
+            $docPath = $request->file('document')->store('documents', 'public');
+            $docUrl = Storage::url($docPath); // /storage/documents/xxxx.pdf
         }
-    
-        $news = News::create([
-            'tags' => [],
-            'title_es' => $data['title_es'],
-            'short_description_es' => $data['short_description_es'],
-            'description_es' => $data['description_es'],
-            'title_pt' => $data['title_pt'],
-            'short_description_pt' => $data['short_description_pt'],
-            'description_pt' => $data['description_pt'],
-            'title_en' => $data['title_en'],
-            'short_description_en' => $data['short_description_en'],
-            'description_en' => $data['description_en'],
-            'title_fr' => $data['title_fr'],
-            'short_description_fr' => $data['short_description_fr'],
-            'description_fr' => $data['description_fr'],
-            'image' => '/storage/'.$thumbnailPath,
-            'document' => $attachmentPath ? '/storage/'.$attachmentPath : null,
+
+        News::create([
+            'tags' => [], // asegúrate de que en el modelo sea cast a array/json
+            'title_es' => $validated['title_es'],
+            'short_description_es' => $validated['short_description_es'],
+            'description_es' => $validated['description_es'],
+
+            'title_pt' => $validated['title_pt'],
+            'short_description_pt' => $validated['short_description_pt'],
+            'description_pt' => $validated['description_pt'],
+
+            'title_en' => $validated['title_en'],
+            'short_description_en' => $validated['short_description_en'],
+            'description_en' => $validated['description_en'],
+            
+            'title_fr' => $validated['title_fr'],
+            'short_description_fr' => $validated['short_description_fr'],
+            'description_fr' => $validated['description_fr'],
+
+            'image' => $thumbUrl,
+            'document' => $docUrl,
         ]);
 
-        // $news->save();
-
-        event(new NewsCreated($news));
-
-        return back()->with('success', 'La noticia esta creada');
+        return back()->with('success', 'La noticia está creada');
     }
 
     /**
@@ -110,24 +124,79 @@ class NewsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    // public function edit(string $id)
-    // {
-    //     //
-    // }
+    public function edit(string $id)
+    {
+        $news = $this->news->show($id);
+        return view('Back.news.edit', ['news' => $news]);
+    }
 
     /**
      * Update the specified resource in storage.
      */
-    // public function update(Request $request, string $id)
-    // {
-    //     //
-    // }
+    public function update(Request $request, string $id)
+    {
+        $validated = $request->validate([
+            'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'document' => 'nullable|mimes:pdf|max:10240', // 10MB
+
+            'title_es' => 'required|string|max:255',
+            'title_pt' => 'required|string|max:255',
+            'title_en' => 'required|string|max:255',
+            'title_fr' => 'required|string|max:255',
+
+            'short_description_es' => 'required|string|max:1000',
+            'short_description_pt' => 'required|string|max:1000',
+            'short_description_en' => 'required|string|max:1000',
+            'short_description_fr' => 'required|string|max:1000',
+
+            'description_es' => 'required|string',
+            'description_pt' => 'required|string',
+            'description_en' => 'required|string',
+            'description_fr' => 'required|string',
+        ]);
+
+        $news = $this->news->show($id);
+
+        if ($request->hasFile('thumbnail')) {
+            // Borrar la imagen anterior si existe
+            if ($news->image) {
+                Storage::disk('public')->delete(str_replace('/storage/', '', $news->image));
+            }
+            $thumbPath = $request->file('thumbnail')->store('images', 'public');
+            $validated['image'] = Storage::url($thumbPath);
+        }
+
+        if ($request->hasFile('document')) {
+            // Borrar el documento anterior si existe
+            if ($news->document) {
+                Storage::disk('public')->delete(str_replace('/storage/', '', $news->document));
+            }
+            $docPath = $request->file('document')->store('documents', 'public');
+            $validated['document'] = Storage::url($docPath);
+        }
+
+        $this->news->update($validated, $id);
+
+        return back()->with('success', 'La noticia ha sido actualizada');
+    }
 
     /**
      * Remove the specified resource from storage.
      */
-    // public function destroy(string $id)
-    // {
-    //     //
-    // }
+    public function destroy(string $id)
+    {
+        $news = $this->news->show($id);
+
+        if ($news->image) {
+            Storage::disk('public')->delete(str_replace('/storage/', '', $news->image));
+        }
+
+        if ($news->document) {
+            Storage::disk('public')->delete(str_replace('/storage/', '', $news->document));
+        }
+
+        $this->news->destroy($id);
+
+        return back()->with('success', 'La noticia ha sido eliminada');
+    }
 }

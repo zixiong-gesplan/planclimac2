@@ -22,3 +22,10 @@ yarn-error.log
 /.vscode
 /.zed
 /composer-home
+
+.vscode/*
+.idx/*
+Homestead.json
+Homestead.yaml
+npm-debug.log
+docs/

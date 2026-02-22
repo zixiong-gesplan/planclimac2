@@ -71,21 +71,19 @@
     @endforeach
 </section>
 <section class="my-4 w-full lg:w-3/4 lg:mx-auto flex gap-4 flex-wrap">
-    <a
-        href="/news?page=1"
-        @class([
-            'min-w-9 rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2',
-            'bg-sky-900 border-transparent text-white shadow-md hover:shadow-lg disabled:pointer-events-none disabled:shadow-none' => 1 == request()->query('page') || request()->query('page') == null
-        ])
-    >1</a>
-    @for ($i = 2; $i <=$count+1;$i++)
         <a
-            href="/news?page={{$i}}"
+            href="/news?page=1"
             @class([
                 'min-w-9 rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2',
-                'bg-sky-900 border-transparent text-white shadow-md hover:shadow-lg disabled:pointer-events-none disabled:shadow-none' => $i == request()->query('page')
-            ])
-        >{{$i}}</a>
-    @endfor
+                'bg-sky-900 border-transparent text-white shadow-md hover:shadow-lg disabled:pointer-events-none disabled:shadow-none' => 1 == request()->query('page') || request()->query('page') == null
+        ])>1</a>
+        @for ($i = 2; $i <=$count+1;$i++)
+            <a
+                href="/news?page={{$i}}"
+                @class([
+                    'min-w-9 rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2',
+                    'bg-sky-900 border-transparent text-white shadow-md hover:shadow-lg disabled:pointer-events-none disabled:shadow-none' => $i == request()->query('page')
+                ])>{{$i}}</a>
+        @endfor
 </section>
 @endsection

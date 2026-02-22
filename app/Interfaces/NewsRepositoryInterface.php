@@ -6,6 +6,9 @@ interface NewsRepositoryInterface
 {
     
     public function index(int $page);
+    public function count();
+
+    public function getAll();
 
     public function show($id);
 

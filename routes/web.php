@@ -249,7 +249,10 @@ Route::middleware(TrackVisitors::class)->group(function (){
             'results'       => $results,
         ]);
     });
-    Route::resource('/news', NewsController::class);
+    
+    Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+    Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show');
+
     Route::get('/statistics', function(){
         $indicators = [
             [
@@ -549,11 +552,9 @@ Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::middleware(AuthSession::class)->group(function() {
-    Route::get('/admin', function(){
-        return view('Back.home.index');
-    });
-    Route::get('/admin/crear-noticia', function(){
-        return view('Back.news.create');
-    });
+Route::middleware(AuthSession::class)->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [NewsController::class, 'adminIndex'])->name('home');
+    Route::resource('/news', NewsController::class)->except([
+        'index', 'show'
+    ]);
 });

@@ -20,6 +20,12 @@ class NewsService{
     {
         return  $this->news->count();
     }
+
+    public function getAll()
+    {
+        return $this->news->getAll();
+    }
+
     public function store($data)
     {
         $news = $this->news->store($data);
