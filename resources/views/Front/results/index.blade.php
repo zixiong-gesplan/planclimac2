@@ -28,6 +28,8 @@
             Résultats
         </h1>
     </div>
+
+    <x-timeline />
     
     <div>
     <x-Objetive 

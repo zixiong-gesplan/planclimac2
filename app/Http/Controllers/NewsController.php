@@ -7,6 +7,7 @@ use App\Services\NewsService;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Events\NewsCreated;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
@@ -156,6 +157,7 @@ class NewsController extends Controller
         ]);
 
         $news = $this->news->show($id);
+        $dataToUpdate = $validated;
 
         if ($request->hasFile('thumbnail')) {
             // Borrar la imagen anterior si existe
@@ -163,7 +165,7 @@ class NewsController extends Controller
                 Storage::disk('public')->delete(str_replace('/storage/', '', $news->image));
             }
             $thumbPath = $request->file('thumbnail')->store('images', 'public');
-            $validated['image'] = Storage::url($thumbPath);
+            $dataToUpdate['image'] = Storage::url($thumbPath);
         }
 
         if ($request->hasFile('document')) {
@@ -172,10 +174,10 @@ class NewsController extends Controller
                 Storage::disk('public')->delete(str_replace('/storage/', '', $news->document));
             }
             $docPath = $request->file('document')->store('documents', 'public');
-            $validated['document'] = Storage::url($docPath);
+            $dataToUpdate['document'] = Storage::url($docPath);
         }
 
-        $this->news->update($validated, $id);
+        $this->news->update($dataToUpdate, $id);
 
         return back()->with('success', 'La noticia ha sido actualizada');
     }
