@@ -170,7 +170,7 @@ class NewsController extends Controller
             }
             $file = $request->file('thumbnail');
             $filename = date('Ymd') . '_' . time() . '.' . $file->extension();
-            $thumbPath = $file->storeAs('public/images', $filename, 'public');
+            $thumbPath = $file->storeAs('images', $filename, 'public');
             $dataToUpdate['image'] = '/storage/' . $thumbPath;
         }
 
@@ -181,7 +181,7 @@ class NewsController extends Controller
             }
             $docFile = $request->file('document');
             $docFilename = date('Ymd') . '_' . time() . '.' . $docFile->extension();
-            $docPath = $docFile->storeAs('public/documents', $docFilename, 'public');
+            $docPath = $docFile->storeAs('documents', $docFilename, 'public');
             $dataToUpdate['document'] = '/storage/' . $docPath;
         }
 
