@@ -77,15 +77,19 @@ class NewsController extends Controller
             'description_fr' => 'required|string',
         ]);
 
-        // Guardar thumbnail con nombre único (no pisas archivos)
-        $thumbPath = $request->file('thumbnail')->store('images', 'public');
-        $thumbUrl = Storage::url($thumbPath); // /storage/images/xxxx.jpg
+        // Guardar thumbnail con nombre único
+        $file = $request->file('thumbnail');
+        $filename = date('Ymd') . '_' . time() . '.' . $file->extension();
+        $thumbPath = $file->storeAs('public/images', $filename, 'public');
+        $thumbUrl = '/storage/' . $thumbPath;
 
         // Guardar PDF (si viene)
         $docUrl = null;
         if ($request->hasFile('document')) {
-            $docPath = $request->file('document')->store('documents', 'public');
-            $docUrl = Storage::url($docPath); // /storage/documents/xxxx.pdf
+            $docFile = $request->file('document');
+            $docFilename = date('Ymd') . '_' . time() . '.' . $docFile->extension();
+            $docPath = $docFile->storeAs('public/documents', $docFilename, 'public');
+            $docUrl = '/storage/' . $docPath;
         }
 
         News::create([
@@ -164,8 +168,10 @@ class NewsController extends Controller
             if ($news->image) {
                 Storage::disk('public')->delete(str_replace('/storage/', '', $news->image));
             }
-            $thumbPath = $request->file('thumbnail')->store('images', 'public');
-            $dataToUpdate['image'] = Storage::url($thumbPath);
+            $file = $request->file('thumbnail');
+            $filename = date('Ymd') . '_' . time() . '.' . $file->extension();
+            $thumbPath = $file->storeAs('public/images', $filename, 'public');
+            $dataToUpdate['image'] = '/storage/' . $thumbPath;
         }
 
         if ($request->hasFile('document')) {
@@ -173,8 +179,10 @@ class NewsController extends Controller
             if ($news->document) {
                 Storage::disk('public')->delete(str_replace('/storage/', '', $news->document));
             }
-            $docPath = $request->file('document')->store('documents', 'public');
-            $dataToUpdate['document'] = Storage::url($docPath);
+            $docFile = $request->file('document');
+            $docFilename = date('Ymd') . '_' . time() . '.' . $docFile->extension();
+            $docPath = $docFile->storeAs('public/documents', $docFilename, 'public');
+            $dataToUpdate['document'] = '/storage/' . $docPath;
         }
 
         $this->news->update($dataToUpdate, $id);
