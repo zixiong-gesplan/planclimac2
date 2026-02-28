@@ -80,7 +80,7 @@ class NewsController extends Controller
         // Guardar thumbnail con nombre único
         $file = $request->file('thumbnail');
         $filename = date('Ymd') . '_' . time() . '.' . $file->extension();
-        $thumbPath = $file->storeAs('public/images', $filename, 'public');
+        $thumbPath = $file->storeAs('images', $filename, 'public');
         $thumbUrl = '/storage/' . $thumbPath;
 
         // Guardar PDF (si viene)
@@ -88,7 +88,7 @@ class NewsController extends Controller
         if ($request->hasFile('document')) {
             $docFile = $request->file('document');
             $docFilename = date('Ymd') . '_' . time() . '.' . $docFile->extension();
-            $docPath = $docFile->storeAs('public/documents', $docFilename, 'public');
+            $docPath = $docFile->storeAs('documents', $docFilename, 'public');
             $docUrl = '/storage/' . $docPath;
         }
 
