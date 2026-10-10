@@ -196,204 +196,116 @@
 </section>
 
 
-<section class="mt-16 w-10/12 mx-auto">
-    <div data-container="translator">
-        <h2
-            class="w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
-            data-lang="es">
-            Siete regiones distintas, un mismo objetivo
-        </h2>
-        <h2
-            class="hidden w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
-            data-lang="pt">
-            Sete regiões distintas, um mesmo objetivo
-        </h2>
-        <h2
-            class="hidden w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
-            data-lang="en">
-            Seven different regions, one common goal
-        </h2>
-        <h2
-            class="hidden w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
-            data-lang="fr">
-            Sept régions différentes, un même objectif
-        </h2>
-    </div>
-    <div data-container="translator">
-        <p 
-            class="text-lg text-center text-balance" 
-            data-lang="es">
-            Bajo el marco del proyecto PLANCLIMAC2 (1/MAC/2/2.4/0006) se ha construido un grupo de trabajo 
-            multidisciplinar e interregional que actúa en todo el espacio de cooperación 
-            del Programa INTERREG VI-D MAC 2021-2027.
+@php
+    $consortiumPartners = [
+        ['name' => ['es' => 'Gobierno de Azores', 'pt' => 'Governo dos Açores', 'en' => 'Government of the Azores', 'fr' => 'Gouvernement des Açores'], 'territory' => ['es' => 'Azores', 'pt' => 'Açores', 'en' => 'Azores', 'fr' => 'Açores'], 'category' => ['es' => 'Administración pública', 'pt' => 'Administração pública', 'en' => 'Public administration', 'fr' => 'Administration publique'], 'logo' => 'LOGO_AZORES.png', 'url' => 'https://portal.azores.gov.pt/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'Región de Madeira', 'pt' => 'Região Autónoma da Madeira', 'en' => 'Madeira Region', 'fr' => 'Région de Madère'], 'territory' => ['es' => 'Madeira', 'pt' => 'Madeira', 'en' => 'Madeira', 'fr' => 'Madère'], 'category' => ['es' => 'Administración pública', 'pt' => 'Administração pública', 'en' => 'Public administration', 'fr' => 'Administration publique'], 'logo' => 'LOGO_MADEIRA.png', 'url' => 'https://www.madeira.gov.pt/draac/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'GESPLAN', 'pt' => 'GESPLAN', 'en' => 'GESPLAN', 'fr' => 'GESPLAN'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Empresa pública', 'pt' => 'Empresa pública', 'en' => 'Public company', 'fr' => 'Entreprise publique'], 'logo' => 'LOGO_GESPLAN.png', 'url' => 'https://www.gesplan.es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'ITER', 'pt' => 'ITER', 'en' => 'ITER', 'fr' => 'ITER'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Empresa pública', 'pt' => 'Empresa pública', 'en' => 'Public company', 'fr' => 'Entreprise publique'], 'logo' => 'LOGO_ITER.png', 'url' => 'https://www.iter.es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'Instituto Tecnológico de Canarias (ITC)', 'pt' => 'Instituto Tecnológico de Canarias (ITC)', 'en' => 'Canary Islands Institute of Technology (ITC)', 'fr' => 'Institut Technologique des Canaries (ITC)'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Empresa pública', 'pt' => 'Empresa pública', 'en' => 'Public company', 'fr' => 'Entreprise publique'], 'logo' => 'LOGO_ITC.svg', 'url' => 'https://www.itccanarias.org/web/es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'Universidad de Las Palmas de Gran Canaria (ULPGC)', 'pt' => 'Universidade de Las Palmas de Gran Canaria (ULPGC)', 'en' => 'University of Las Palmas de Gran Canaria (ULPGC)', 'fr' => 'Université de Las Palmas de Gran Canaria (ULPGC)'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Universidad', 'pt' => 'Universidade', 'en' => 'University', 'fr' => 'Université'], 'logo' => 'LOGO_ULPGC.png', 'url' => 'https://www10.ulpgc.es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'Universidad de La Laguna (ULL)', 'pt' => 'Universidade de La Laguna (ULL)', 'en' => 'University of La Laguna (ULL)', 'fr' => 'Université de La Laguna (ULL)'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Universidad', 'pt' => 'Universidade', 'en' => 'University', 'fr' => 'Université'], 'logo' => 'LOGO_ULL.png', 'url' => 'https://www.ull.es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'INMG', 'pt' => 'INMG', 'en' => 'INMG', 'fr' => 'INMG'], 'territory' => ['es' => 'Cabo Verde', 'pt' => 'Cabo Verde', 'en' => 'Cape Verde', 'fr' => 'Cap-Vert'], 'category' => ['es' => 'Socio africano', 'pt' => 'Parceiro africano', 'en' => 'African partner', 'fr' => 'Partenaire africain'], 'logo' => 'LOGO_INMG.webp', 'url' => 'https://www.inmg.gov.cv/', 'group' => 'africa'],
+        ['name' => ['es' => 'DGAAG', 'pt' => 'DGAAG', 'en' => 'DGAAG', 'fr' => 'DGAAG'], 'territory' => ['es' => 'Santo Tomé y Príncipe', 'pt' => 'São Tomé e Príncipe', 'en' => 'São Tomé and Príncipe', 'fr' => 'Sao Tomé-et-Principe'], 'category' => ['es' => 'Socio africano', 'pt' => 'Parceiro africano', 'en' => 'African partner', 'fr' => 'Partenaire africain'], 'logo' => 'LOGO_SAO_TOME.png', 'url' => 'https://www.facebook.com/dga.stp/', 'group' => 'africa'],
+        ['name' => ['es' => 'Socio de Ghana', 'pt' => 'Parceiro do Gana', 'en' => 'Ghana partner', 'fr' => 'Partenaire du Ghana'], 'territory' => ['es' => 'Ghana', 'pt' => 'Gana', 'en' => 'Ghana', 'fr' => 'Ghana'], 'category' => ['es' => 'Socio africano', 'pt' => 'Parceiro africano', 'en' => 'African partner', 'fr' => 'Partenaire africain'], 'logo' => 'LOGO_GHANA.jpg', 'url' => 'https://mlnr.gov.gh/', 'group' => 'africa'],
+        ['name' => ['es' => 'OIPR', 'pt' => 'OIPR', 'en' => 'OIPR', 'fr' => 'OIPR'], 'territory' => ['es' => 'Costa de Marfil', 'pt' => 'Costa do Marfim', 'en' => 'Ivory Coast', 'fr' => 'Côte d’Ivoire'], 'category' => ['es' => 'Socio africano', 'pt' => 'Parceiro africano', 'en' => 'African partner', 'fr' => 'Partenaire africain'], 'logo' => 'LOGO_COSTA_MARFIL.png', 'url' => null, 'group' => 'africa'],
+    ];
+@endphp
+
+<section id="consortium" aria-labelledby="consortium-title" class="section-container mt-16">
+    <header class="max-w-3xl">
+        <p class="section-eyebrow">
+            <span data-container="translator">
+                <span data-lang="es">Cooperación internacional</span><span class="hidden" data-lang="pt">Cooperação internacional</span><span class="hidden" data-lang="en">International cooperation</span><span class="hidden" data-lang="fr">Coopération internationale</span>
+            </span>
         </p>
-        <p 
-            class="hidden text-lg text-center text-balance" 
-            data-lang="pt">
-            No âmbito do projeto PLANCLIMAC2 (1/MAC/2/2.4/0006), foi criado um grupo de trabalho 
-            multidisciplinar e inter-regional que atua em todo o espaço de cooperação 
-            do Programa INTERREG VI-D MAC 2021-2027.
+        <h2 id="consortium-title" class="section-title mt-2">
+            <span data-container="translator">
+                <span data-lang="es">Siete regiones, un mismo objetivo</span><span class="hidden" data-lang="pt">Sete regiões, um mesmo objetivo</span><span class="hidden" data-lang="en">Seven regions, one shared goal</span><span class="hidden" data-lang="fr">Sept régions, un même objectif</span>
+            </span>
+        </h2>
+        <p class="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+            <span data-container="translator">
+                <span data-lang="es">Conoce las entidades que forman parte de PLANCLIMAC2.</span><span class="hidden" data-lang="pt">Conhece as entidades que fazem parte do PLANCLIMAC2.</span><span class="hidden" data-lang="en">Meet the organisations that make up PLANCLIMAC2.</span><span class="hidden" data-lang="fr">Découvrez les organismes qui composent PLANCLIMAC2.</span>
+            </span>
         </p>
-        <p 
-            class="hidden text-lg text-center text-balance" 
-            data-lang="en">
-            Under the framework of the PLANCLIMAC2 project (1/MAC/2/2.4/0006), a multidisciplinary and interregional working group 
-            has been established that operates throughout the cooperation area 
-            of the INTERREG VI-D MAC 2021-2027 Programme.
-        </p>
-        <p 
-            class="hidden text-lg text-center text-balance" 
-            data-lang="fr">
-            Dans le cadre du projet PLANCLIMAC2 (1/MAC/2/2.4/0006), un groupe de travail 
-            pluridisciplinaire et interrégional a été créé, opérant dans l’ensemble de l’espace de coopération 
-            du Programme INTERREG VI-D MAC 2021-2027.
-        </p>
-    </div>
+    </header>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 gap-y-8 py-8">
-        <x-PartnerCard 
-            src="/images/LOGO_GOBIERNO_CANARIAS.svg"
-            alt="Gobierno de Canarias"
-            :caption="[
-                'es' => 'Socio Principal',
-                'pt' => 'Sócio Principal',
-                'en' => 'Main Partner',
-                'fr' => 'Partenaire principal'
-            ]"
-            href="https://www.gobiernodecanarias.org/transicionecologica/index.html"
-        />
+    <dl class="mt-7 grid grid-cols-3 divide-x divide-slate-200 rounded-2xl border-y border-slate-200 py-5 sm:py-6">
+        <div class="flex flex-col px-2 text-center sm:px-6">
+            <dt class="order-2 mt-1 text-xs text-slate-600 sm:text-sm"><span data-container="translator"><span data-lang="es">Entidades</span><span class="hidden" data-lang="pt">Entidades</span><span class="hidden" data-lang="en">Partners</span><span class="hidden" data-lang="fr">Organismes</span></span></dt>
+            <dd class="order-1 text-2xl font-bold tracking-tight text-sky-950 sm:text-3xl">12</dd>
+        </div>
+        <div class="flex flex-col px-2 text-center sm:px-6">
+            <dt class="order-2 mt-1 text-xs text-slate-600 sm:text-sm"><span data-container="translator"><span data-lang="es">Regiones</span><span class="hidden" data-lang="pt">Regiões</span><span class="hidden" data-lang="en">Regions</span><span class="hidden" data-lang="fr">Régions</span></span></dt>
+            <dd class="order-1 text-2xl font-bold tracking-tight text-sky-950 sm:text-3xl">7</dd>
+        </div>
+        <div class="flex flex-col px-2 text-center sm:px-6">
+            <dt class="order-2 mt-1 text-xs text-slate-600 sm:text-sm"><span data-container="translator"><span data-lang="es">Objetivo común</span><span class="hidden" data-lang="pt">Objetivo comum</span><span class="hidden" data-lang="en">Shared goal</span><span class="hidden" data-lang="fr">Objectif commun</span></span></dt>
+            <dd class="order-1 text-2xl font-bold tracking-tight text-sky-950 sm:text-3xl">1</dd>
+        </div>
+    </dl>
 
-        <x-PartnerCard 
-            src="/images/LOGO_AZORES.png"
-            alt="Gobierno de Azores"
-            :caption="[
-                'es' => 'Administración Pública',
-                'pt' => 'Administração Pública',
-                'en' => 'Public Administration',
-                'fr' => 'Administration Publique'
-            ]"
-            href="https://portal.azores.gov.pt/"
-        />
-        <x-PartnerCard 
-            src="/images/LOGO_MADEIRA.png"
-            alt="Gobierno de Madeira"
-            :caption="[
-                'es' => 'Administración Pública',
-                'pt' => 'Administração Pública',
-                'en' => 'Public Administration',
-                'fr' => 'Administration Publique'
-            ]"
-            href="https://www.madeira.gov.pt/draac/"
-        />
+    <section aria-labelledby="lead-partner-title" class="mt-7">
+        <div class="mb-3 flex items-center justify-between gap-3">
+            <h3 id="lead-partner-title" class="text-lg font-bold text-sky-950">
+                <span data-container="translator"><span data-lang="es">Socio principal</span><span class="hidden" data-lang="pt">Parceiro principal</span><span class="hidden" data-lang="en">Lead partner</span><span class="hidden" data-lang="fr">Partenaire principal</span></span>
+            </h3>
+            <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-900 sm:text-sm">
+                <span data-container="translator"><span data-lang="es">Coordinación</span><span class="hidden" data-lang="pt">Coordenação</span><span class="hidden" data-lang="en">Coordination</span><span class="hidden" data-lang="fr">Coordination</span></span>
+            </span>
+        </div>
+        <a href="https://www.gobiernodecanarias.org/cambioclimatico/index.html" target="_blank" rel="noopener noreferrer" class="lead-partner-card">
+            <span class="flex h-16 w-20 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white p-2 sm:h-20 sm:w-24">
+                <img src="{{ asset('images/LOGO_GOBIERNO_CANARIAS.svg') }}" alt="" class="max-h-full max-w-full object-contain">
+            </span>
+            <span class="min-w-0 flex-1">
+                <span class="block font-bold text-slate-900 sm:text-lg"><span data-container="translator"><span data-lang="es">Gobierno de Canarias</span><span class="hidden" data-lang="pt">Governo das Canárias</span><span class="hidden" data-lang="en">Government of the Canary Islands</span><span class="hidden" data-lang="fr">Gouvernement des Canaries</span></span></span>
+                <span class="mt-1 block text-sm text-slate-600"><span data-container="translator"><span data-lang="es">Socio principal del proyecto</span><span class="hidden" data-lang="pt">Parceiro principal do projeto</span><span class="hidden" data-lang="en">Lead partner of the project</span><span class="hidden" data-lang="fr">Partenaire principal du projet</span></span></span>
+            </span>
+            <span aria-hidden="true" class="text-lg text-slate-400">↗</span>
+        </a>
+    </section>
 
-        <x-PartnerCard 
-            src="/images/LOGO_GESPLAN.png"
-            alt="Gesplan"
-            :caption="[
-                'es' => 'Empresa Pública',
-                'pt' => 'Empresa Pública',
-                'en' => 'Public Company',
-                'fr' => 'Societé Publique'
-            ]"
-            href="https://www.gesplan.es/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_ITER.png"
-            alt="ITER"
-            :caption="[
-                'es' => 'Empresa Pública',
-                'pt' => 'Empresa Pública',
-                'en' => 'Public Company',
-                'fr' => 'Societé Publique'
-            ]"
-            href="https://www.iter.es/"
-        />
-        <x-PartnerCard 
-            src="/images/LOGO_ITC.svg"
-            alt="ITC"
-            :caption="[
-                'es' => 'Empresa Pública',
-                'pt' => 'Empresa Pública',
-                'en' => 'Public Company',
-                'fr' => 'Societé Publique'
-            ]"
-            href="https://www.itccanarias.org/web/es/"
-        />
-        <x-PartnerCard 
-            src="/images/LOGO_ULPGC.png"
-            alt="ULPGC"
-            :caption="[
-                'es' => 'Universidad',
-                'pt' => 'Universidade',
-                'en' => 'University',
-                'fr' => 'Université'
-            ]"
-            href="https://www10.ulpgc.es/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_ULL.png"
-            alt="ULL"
-            :caption="[
-                'es' => 'Universidad',
-                'pt' => 'Universidade',
-                'en' => 'University',
-                'fr' => 'Université'
-            ]"
-            href="https://www.ull.es/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_INMG.webp"
-            alt="INMG"
-            :caption="[
-                'es' => 'Tercer País - Cabo Verde',
-                'pt' => 'Terceiro País - Cabo Verde',
-                'en' => 'Third Country - Cape Verde',
-                'fr' => 'Pays tiers - Cap Vert'
-            ]"
-            href="https://www.inmg.gov.cv/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_SAO_TOME.png"
-            alt="DGAAG"
-            :caption="[
-                'es' => 'Tercer País - Santo Tomé y Príncipe',
-                'pt' => 'Terceiro País - São Tomé e Príncipe',
-                'en' => 'Third Country - São Tomé and Príncipe',
-                'fr' => 'Pays tiers - Sao Tomé-et-Principe'
-            ]"
-            href="https://www.facebook.com/dga.stp/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_GHANA.jpg"
-            alt="Ministerio de recursos naturales"
-            :caption="[
-                'es' => 'Tercer País - Ghana',
-                'pt' => 'Terceiro País - Gana',
-                'en' => 'Third Country - Ghana',
-                'fr' => 'Pays tiers - Ghana'
-            ]"
-            href="https://mlnr.gov.gh/"
-        />
-        
-        <x-PartnerCard 
-            src="/images/LOGO_COSTA_MARFIL.png"
-            alt="Ministerio de recursos naturales"
-            :caption="[
-                'es' => 'Tercer Pais - Costa de Marfil',
-                'pt' => 'Terceiro País - Costa do Marfim',
-                'en' => 'Third Country - Ivory Coast',
-                'fr' => 'Pays tiers - Côte Ivoire'
-            ]"
-            href="#"
-        />
-    </div>
-
+    <section aria-labelledby="participant-title" class="mt-7">
+        <h3 id="participant-title" class="text-lg font-bold text-sky-950">
+            <span data-container="translator"><span data-lang="es">Entidades participantes</span><span class="hidden" data-lang="pt">Entidades participantes</span><span class="hidden" data-lang="en">Participating organisations</span><span class="hidden" data-lang="fr">Organismes participants</span></span>
+        </h3>
+        <div class="mt-3 flex flex-wrap gap-2" role="group" aria-labelledby="participant-title">
+            <button type="button" class="partner-filter" data-partner-filter="all" aria-controls="partner-grid" aria-pressed="true"><span data-container="translator"><span data-lang="es">Todos</span><span class="hidden" data-lang="pt">Todos</span><span class="hidden" data-lang="en">All</span><span class="hidden" data-lang="fr">Tous</span></span></button>
+            <button type="button" class="partner-filter" data-partner-filter="macaronesia" aria-controls="partner-grid" aria-pressed="false"><span data-container="translator"><span data-lang="es">Macaronesia</span><span class="hidden" data-lang="pt">Macaronésia</span><span class="hidden" data-lang="en">Macaronesia</span><span class="hidden" data-lang="fr">Macaronésie</span></span></button>
+            <button type="button" class="partner-filter" data-partner-filter="africa" aria-controls="partner-grid" aria-pressed="false"><span data-container="translator"><span data-lang="es">África</span><span class="hidden" data-lang="pt">África</span><span class="hidden" data-lang="en">Africa</span><span class="hidden" data-lang="fr">Afrique</span></span></button>
+        </div>
+        <div id="partner-grid" class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3" aria-live="polite">
+            @foreach ($consortiumPartners as $partner)
+                <x-PartnerCard :partner="$partner" />
+            @endforeach
+        </div>
+    </section>
 </section>
+
+<script>
+    (() => {
+        const filters = document.querySelectorAll('[data-partner-filter]');
+        const cards = document.querySelectorAll('[data-partner-group]');
+
+        if (!filters.length || !cards.length) return;
+
+        filters.forEach((filter) => {
+            filter.addEventListener('click', () => {
+                const selectedGroup = filter.dataset.partnerFilter;
+
+                filters.forEach((button) => {
+                    button.setAttribute('aria-pressed', String(button === filter));
+                });
+
+                cards.forEach((card) => {
+                    card.hidden = selectedGroup !== 'all' && card.dataset.partnerGroup !== selectedGroup;
+                });
+            });
+        });
+    })();
+</script>
 
 <section class="my-12 flex flex-col gap-16 w-10/12 mx-auto">
 @foreach($objectives as $i => $o)

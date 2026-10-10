@@ -12,10 +12,7 @@ class PartnerCard extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public string $src,
-        public string $alt,
-        public array $caption,
-        public string $href
+        public array $partner
     )
     {
         //

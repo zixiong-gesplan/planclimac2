@@ -1,14 +1,36 @@
-<a href="{{$href}}" target="_blank" rel="noopener noreferrer"
-    class="border rounded-lg p-4 isolate bg-white/20 shadow-lg ring-1 ring-black/5"
->
-    <figure class="flex flex-col items-center text-center space-y-2 ">
-        <img src="{{$src}}" alt="{{$alt}}" class="h-12">
-        <div data-container="translator">
-        <figcaption class="text-blue-700 text-md font-bold" data-lang="es"> {{$caption['es']}} </figcaption>
-        <figcaption class="text-blue-700 text-md font-bold hidden" data-lang="pt"> {{$caption['pt']}} </figcaption>
-        <figcaption class="text-blue-700 text-md font-bold hidden" data-lang="en"> {{$caption['en']}} </figcaption>
-        <figcaption class="text-blue-700 text-md font-bold hidden" data-lang="fr"> {{$caption['fr']}} </figcaption>
-
+<article data-partner-group="{{ $partner['group'] }}">
+    @if ($partner['url'])
+        <a href="{{ $partner['url'] }}" target="_blank" rel="noopener noreferrer" class="partner-card-link">
+    @else
+        <div class="partner-card-link">
+    @endif
+        <span class="flex h-12 w-16 shrink-0 items-center justify-start">
+            <img src="{{ asset('images/' . $partner['logo']) }}" alt="" loading="lazy" class="max-h-full max-w-full object-contain">
+        </span>
+        <span class="mt-3 block font-semibold leading-snug text-slate-900">
+            <span data-container="translator">
+                @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                    <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $partner['name'][$language] }}</span>
+                @endforeach
+            </span>
+        </span>
+        <span class="mt-1 block text-sm text-slate-600">
+            <span data-container="translator">
+                @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                    <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $partner['category'][$language] }}</span>
+                @endforeach
+            </span>
+        </span>
+        <span class="mt-1 block text-xs text-slate-500">
+            <span data-container="translator">
+                @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                    <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $partner['territory'][$language] }}</span>
+                @endforeach
+            </span>
+        </span>
+    @if ($partner['url'])
+        </a>
+    @else
         </div>
-    </figure>
-</a>
+    @endif
+</article>
