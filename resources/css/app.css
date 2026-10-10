@@ -36,6 +36,86 @@
         @apply hover:-translate-y-0.5 hover:border-sky-200 hover:shadow-md;
         @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-800;
     }
+
+    .objective-tablist {
+        @apply flex gap-2 sm:gap-3;
+    }
+
+    .objective-tablist[hidden] {
+        display: none;
+    }
+
+    .objective-tab {
+        @apply relative flex h-44 min-w-0 flex-1 basis-0 flex-col justify-end overflow-hidden rounded-2xl border border-slate-200 bg-sky-950 p-3 text-left text-white transition-all duration-300;
+        @apply hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-800;
+    }
+
+    .objective-tab[aria-selected="true"] {
+        @apply border-yellow-300 ring-2 ring-yellow-300/70;
+        flex-grow: 2;
+    }
+
+    .objective-tab:not([aria-selected="true"]) .objective-tab-title {
+        @apply sr-only;
+    }
+
+    .objective-tab-image {
+        @apply absolute inset-0 h-full w-full object-cover transition-transform duration-300;
+    }
+
+    .objective-tab-shade {
+        @apply absolute inset-0 bg-sky-950/55;
+    }
+
+    .objective-tab:hover .objective-tab-image,
+    .objective-tab[aria-selected="true"] .objective-tab-image {
+        transform: scale(1.03);
+    }
+
+    .objective-tab-number {
+        @apply relative z-10 mb-2 text-sm font-bold tracking-[0.14em] text-yellow-300;
+    }
+
+    .objective-tab-title {
+        @apply relative z-10 text-lg font-bold leading-snug;
+    }
+
+    .objective-panel {
+        @apply mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm;
+    }
+
+    .objective-activity {
+        @apply rounded-xl border-l-4 border-sky-900 bg-slate-50 p-4;
+    }
+}
+
+@media (min-width: 640px) {
+    .objective-tab:not([aria-selected="true"]) .objective-tab-title {
+        @apply not-sr-only;
+    }
+}
+
+@keyframes objective-panel-enter {
+    from { opacity: 0; transform: translateY(0.35rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.objective-panel.is-entering {
+    animation: objective-panel-enter 220ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .objective-tab,
+    .objective-tab-image,
+    .objective-panel.is-entering {
+        animation-duration: 0.01ms;
+        transition-duration: 0.01ms;
+    }
+
+    .objective-tab:hover .objective-tab-image,
+    .objective-tab[aria-selected="true"] .objective-tab-image {
+        transform: none;
+    }
 }
 
 :root {

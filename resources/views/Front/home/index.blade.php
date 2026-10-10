@@ -307,42 +307,150 @@
     })();
 </script>
 
-<section class="my-12 flex flex-col gap-16 w-10/12 mx-auto">
-@foreach($objectives as $i => $o)
-        @php $reverse = $i % 2 === 1; @endphp
+<section id="project-objectives" aria-labelledby="objectives-title" class="section-container my-16">
+    <header class="mb-7 max-w-3xl">
+        <h2 id="objectives-title" class="section-title">
+            <span data-container="translator">
+                <span data-lang="es">Objetivos del proyecto</span>
+                <span class="hidden" data-lang="pt">Objetivos do projeto</span>
+                <span class="hidden" data-lang="en">Project objectives</span>
+                <span class="hidden" data-lang="fr">Objectifs du projet</span>
+            </span>
+        </h2>
+        <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+            <span data-container="translator">
+                <span data-lang="es">Tres objetivos estratégicos para avanzar en el conocimiento, la cooperación y la adaptación al cambio climático en la Macaronesia.</span>
+                <span class="hidden" data-lang="pt">Três objetivos estratégicos para avançar no conhecimento, na cooperação e na adaptação às alterações climáticas na Macaronésia.</span>
+                <span class="hidden" data-lang="en">Three strategic objectives to advance knowledge, cooperation and climate change adaptation in Macaronesia.</span>
+                <span class="hidden" data-lang="fr">Trois objectifs stratégiques pour faire progresser les connaissances, la coopération et l’adaptation au changement climatique en Macaronésie.</span>
+            </span>
+        </p>
+    </header>
 
-        <div @class(['flex gap-16 flex-col md:flex-row my-4', 'md:flex-row-reverse' => $reverse])>
-                <article class="w-full md:w-1/2">
-                    <div data-container="translator">
+    <div id="objective-tablist" class="objective-tablist" role="tablist" aria-labelledby="objectives-title" hidden>
+        @foreach ($objectives as $index => $objective)
+            <button
+                id="objective-tab-{{ $index + 1 }}"
+                class="objective-tab sm:h-48 sm:p-5"
+                type="button"
+                role="tab"
+                aria-controls="objective-panel-{{ $index + 1 }}"
+                aria-selected="{{ $index === 0 ? 'true' : 'false' }}"
+                tabindex="{{ $index === 0 ? '0' : '-1' }}">
+                <img
+                    src="{{ asset($objective['image']) }}"
+                    alt=""
+                    width="720"
+                    height="420"
+                    loading="lazy"
+                    class="objective-tab-image">
+                <span class="objective-tab-shade" aria-hidden="true"></span>
+                <span class="objective-tab-number" aria-hidden="true">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <span class="objective-tab-title" data-container="translator">
+                    @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                        <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $objective['navigation_title'][$language] }}</span>
+                    @endforeach
+                </span>
+            </button>
+        @endforeach
+    </div>
 
-                        <h2 class="text-2xl font-semibold" data-lang="es">{{ $o['title']['es'] }}</h2>
-                        <h2 class="text-2xl font-semibold hidden" data-lang="pt">{{ $o['title']['pt'] }}</h2>
-                        <h2 class="text-2xl font-semibold hidden" data-lang="en">{{ $o['title']['en'] }}</h2>
-                        <h2 class="text-2xl font-semibold hidden" data-lang="fr">{{ $o['title']['fr'] }}</h2>
-                    </div>
-                    <div data-container="translator">
+    @foreach ($objectives as $index => $objective)
+        <section
+            id="objective-panel-{{ $index + 1 }}"
+            class="objective-panel sm:p-8"
+            data-objective-panel="{{ $index + 1 }}"
+            tabindex="0">
+            <header class="mb-6 max-w-4xl">
+                <p class="section-eyebrow">
+                    <span data-container="translator">
+                        <span data-lang="es">Objetivo {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span class="hidden" data-lang="pt">Objetivo {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span class="hidden" data-lang="en">Objective {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span class="hidden" data-lang="fr">Objectif {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                    </span>
+                </p>
+                <h3 class="mt-2 text-xl font-bold tracking-tight text-sky-950 sm:text-2xl">
+                    <span data-container="translator">
+                        @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                            <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $objective['title'][$language] }}</span>
+                        @endforeach
+                    </span>
+                </h3>
+                <p class="mt-3 text-base leading-relaxed text-slate-700">
+                    <span data-container="translator">
+                        @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                            <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $objective['description'][$language] }}</span>
+                        @endforeach
+                    </span>
+                </p>
+            </header>
 
-                        <p data-lang="es">{{ $o['description']['es'] }}</p>
-                        <p class="hidden" data-lang="pt">{{ $o['description']['pt'] }}</p>
-                        <p class="hidden" data-lang="en">{{ $o['description']['en'] }}</p>
-                        <p class="hidden" data-lang="fr">{{ $o['description']['fr'] }}</p>
-                    </div>
-                </article>
-
-                <div class="w-full md:w-1/2 flex flex-col gap-4">
-                @foreach($o['activities'] as $a)
+            <div class="grid grid-cols-1 gap-3">
+                @foreach ($objective['activities'] as $activity)
                     <x-activity
-                        :id="$a['id']"
-                        :description="$a['description']"
+                        :id="$activity['id']"
+                        :description="$activity['description']"
                     />
                 @endforeach
-                </div>
             </div>
-
-        </div>
+        </section>
     @endforeach
-
 </section>
+
+<script>
+    (() => {
+        const tablist = document.querySelector('#objective-tablist');
+        if (!tablist) return;
+
+        const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+        const panels = tabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls')));
+        if (!tabs.length || panels.some((panel) => !panel)) return;
+
+        panels.forEach((panel, index) => {
+            panel.setAttribute('role', 'tabpanel');
+            panel.setAttribute('aria-labelledby', tabs[index].id);
+        });
+
+        const activateTab = (selectedIndex, moveFocus = false) => {
+            tabs.forEach((tab, index) => {
+                const selected = index === selectedIndex;
+                tab.setAttribute('aria-selected', String(selected));
+                tab.tabIndex = selected ? 0 : -1;
+                panels[index].hidden = !selected;
+            });
+
+            panels[selectedIndex].classList.remove('is-entering');
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                void panels[selectedIndex].offsetWidth;
+                panels[selectedIndex].classList.add('is-entering');
+            }
+
+            if (moveFocus) tabs[selectedIndex].focus();
+        };
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => activateTab(index));
+
+            tab.addEventListener('keydown', (event) => {
+                let nextIndex = index;
+
+                if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+                else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+                else if (event.key === 'Home') nextIndex = 0;
+                else if (event.key === 'End') nextIndex = tabs.length - 1;
+                else return;
+
+                event.preventDefault();
+                activateTab(nextIndex, true);
+            });
+        });
+
+        activateTab(0);
+        tablist.hidden = false;
+    })();
+</script>
+
 
 <section class="my-16 w-10/12 mx-auto">
     <div class="w-full">

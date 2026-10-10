@@ -37,6 +37,13 @@ Route::middleware(TrackVisitors::class)->group(function (){
                     'en' => 'Project Specific Objective 1',
                     'fr' => 'Objectif spécifique 1 du projet',
                 ],
+                'navigation_title' => [
+                    'es' => 'Observatorio y adaptación climática',
+                    'pt' => 'Observatório e adaptação climática',
+                    'en' => 'Observatory and climate adaptation',
+                    'fr' => 'Observatoire et adaptation climatique',
+                ],
+                'image' => 'images/objective-cooperation.svg',
                 'description' => [
                     'es' => 'Consolidar el Observatorio de Cambio Climático (OCC) de la Macaronesia. Este ente permitirá analizar y promover las medidas de adaptación al cambio climático y establecer un marco de cooperación en la gestión de riesgos naturales provocados por el cambio climático en la región macaronésica y terceros países.',
                     'pt' => 'Consolidar o Observatório de Alterações Climáticas (OCC) da Macaronésia. Este organismo permitirá analisar e promover medidas de adaptação às alterações climáticas e estabelecer um quadro de cooperação na gestão de riscos naturais provocados pelas alterações climáticas na região macaronésica e em países terceiros.',
@@ -80,6 +87,13 @@ Route::middleware(TrackVisitors::class)->group(function (){
                     'en' => 'Project Specific Objective 2',
                     'fr' => 'Objectif spécifique 2 du projet',
                 ],
+                'navigation_title' => [
+                    'es' => 'Indicadores y conocimiento climático',
+                    'pt' => 'Indicadores e conhecimento climático',
+                    'en' => 'Climate indicators and knowledge',
+                    'fr' => 'Indicateurs et connaissances climatiques',
+                ],
+                'image' => 'images/objective-climate-science.svg',
                 'description' => [
                     'es' => 'Evaluar la evolución de los indicadores regionales de cambio climático en la región macaronésica (desde la atmósfera hasta el océano). Impactos y acciones de adaptación vinculadas a la vulnerabilidad de los ecosistemas y la sociedad.',
                     'pt' => 'Avaliar a evolução dos indicadores regionais de alterações climáticas na região macaronésica (da atmosfera ao oceano). Impactos e ações de adaptação ligados à vulnerabilidade dos ecossistemas e da sociedade.',
@@ -123,6 +137,13 @@ Route::middleware(TrackVisitors::class)->group(function (){
                     'en' => 'Project Specific Objective 3',
                     'fr' => 'Objectif spécifique 3 du projet',
                 ],
+                'navigation_title' => [
+                    'es' => 'Ciencia ciudadana y transición verde',
+                    'pt' => 'Ciência cidadã e transição verde',
+                    'en' => 'Citizen science and green transition',
+                    'fr' => 'Science citoyenne et transition verte',
+                ],
+                'image' => 'images/objective-citizen-science.svg',
                 'description' => [
                     'es' => 'Implementar acciones para la mejora del entendimiento científico y la coordinación entre las administraciones y las entidades sociales y económicas ante los riesgos asociados al cambio climático.',
                     'pt' => 'Implementar ações para melhorar o entendimento científico e a coordenação entre as administrações e as entidades sociais e económicas face aos riscos associados às alterações climáticas.',
