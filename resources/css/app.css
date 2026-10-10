@@ -87,6 +87,54 @@
     .objective-activity {
         @apply rounded-xl border-l-4 border-sky-900 bg-slate-50 p-4;
     }
+
+    .project-indicator {
+        @apply flex min-h-36 flex-col justify-between gap-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5;
+    }
+
+    .project-indicator-icon {
+        @apply flex h-10 w-10 items-center justify-center rounded-xl bg-sky-50 text-sky-800;
+    }
+
+    .project-indicator-icon svg {
+        @apply h-5 w-5;
+    }
+
+    .project-indicator-title {
+        @apply text-xs font-semibold leading-snug text-slate-600 sm:text-sm;
+    }
+
+    .project-indicator-value {
+        @apply mt-2 text-3xl font-extrabold leading-none tracking-tight text-sky-950 tabular-nums sm:text-4xl;
+    }
+
+    .project-indicator--featured {
+        @apply min-h-28 flex-row items-center gap-4 border-emerald-200 bg-emerald-50;
+    }
+
+    .project-indicator--featured .project-indicator-icon {
+        @apply shrink-0 bg-white text-emerald-700;
+    }
+
+    .project-indicator--featured .project-indicator-value {
+        @apply text-4xl text-emerald-700 sm:text-5xl;
+    }
+
+    .project-indicator--spotlight {
+        @apply border-sky-950 bg-sky-950;
+    }
+
+    .project-indicator--spotlight .project-indicator-icon {
+        @apply bg-white/10 text-yellow-300;
+    }
+
+    .project-indicator--spotlight .project-indicator-title {
+        @apply text-white/80;
+    }
+
+    .project-indicator--spotlight .project-indicator-value {
+        @apply text-yellow-300;
+    }
 }
 
 @media (min-width: 640px) {

@@ -184,6 +184,9 @@ Route::middleware(TrackVisitors::class)->group(function (){
     
         $results = [
             [
+                'id' => 'studies',
+                'category' => 'research',
+                'icon' => 'book-open',
                 'title' => [
                     'es' => 'Estudios realizados',
                     'pt' => 'Estudos realizados',
@@ -194,6 +197,9 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'target' => 15
             ],
             [
+                'id' => 'researchers',
+                'category' => 'research',
+                'icon' => 'users',
                 'title' => [
                     'es' => 'Investigadores',
                     'pt' => 'Investigadores',
@@ -204,6 +210,9 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'target' => 5
             ],
             [
+                'id' => 'follow-up-meetings',
+                'category' => 'cooperation',
+                'icon' => 'calendar-check',
                 'title' => [
                     'es' => 'Reuniones de seguimiento',
                     'pt' => 'Reuniões de acompanhamento',
@@ -214,6 +223,9 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'target' => 5
             ],
             [
+                'id' => 'event-participants',
+                'category' => 'communication',
+                'icon' => 'users-round',
                 'title' => [
                     'es' => 'Participantes en eventos',
                     'pt' => 'Participantes em eventos',
@@ -224,6 +236,9 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'target' => 400
             ],
             [
+                'id' => 'scientific-publications',
+                'category' => 'research',
+                'icon' => 'file-text',
                 'title' => [
                     'es' => 'Publicaciones científicas',
                     'pt' => 'Publicações científicas',
@@ -234,6 +249,9 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'target' => 3
             ],
             [
+                'id' => 'website-visits',
+                'category' => 'communication',
+                'icon' => 'globe',
                 'title' => [
                     'es' => 'Visitas a la web del proyecto',
                     'pt' => 'Visitas ao site do projeto',
@@ -244,6 +262,9 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'target' => 5000
             ],
             [
+                'id' => 'dissemination-events',
+                'category' => 'communication',
+                'icon' => 'megaphone',
                 'title' => [
                     'es' => 'Actos de difusión',
                     'pt' => 'Ações de divulgação',
@@ -254,6 +275,9 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'target' => 15
             ],
             [
+                'id' => 'vulnerability-indicators',
+                'category' => 'research',
+                'icon' => 'chart',
                 'title' => [
                     'es' => 'Nº de indicadores de vulnerabilidad ante el cambio climático desarrollados',
                     'pt' => 'Nº de indicadores de vulnerabilidade às alterações climáticas desenvolvidos',

@@ -452,64 +452,132 @@
 </script>
 
 
-<section class="my-16 w-10/12 mx-auto">
-    <div class="w-full">
-        <div data-container="translator">
-            <h2
-                class="w-full text-center text-lg md:text-2xl font-semibold my-4" 
-                data-lang="es">
-                Indicadores del proyecto
-            </h2>
-            <h2
-                class="hidden w-full text-center text-lg md:text-2xl font-semibold my-4" 
-                data-lang="pt">
-                Indicadores do projeto
-            </h2>
-            <h2
-                class="hidden w-full text-center text-lg md:text-2xl font-semibold my-4" 
-                data-lang="en">
-                Project indicators
-            </h2>
-            <h2
-                class="hidden w-full text-center text-lg md:text-2xl font-semibold my-4" 
-                data-lang="fr">
-                Indicateurs du projet
-            </h2>
-        </div>
-        <div data-container="translator">
-            <p 
-                class="w-full text-center text-md md:text-xl" 
-                data-lang="es">
-                En el proyecto <span class="text-sky-800 font-semibold">PLANCLIMAC2</span> nos centramos en la innovación del desarrollo a largo plazo con la vigilancia en el cambio climático y el impacto del mismo en la Macaronesia con los siguientes indicadores.
-            </p>
-            <p 
-                class="hidden w-full text-center text-md md:text-xl" 
-                data-lang="pt">
-                No projeto <span class="text-sky-800 font-semibold">PLANCLIMAC2</span> focamo-nos na inovação do desenvolvimento a longo prazo, com a monitorização das alterações climáticas e o seu impacto na Macaronésia, utilizando os seguintes indicadores.
-            </p>
-            <p 
-                class="hidden w-full text-center text-md md:text-xl" 
-                data-lang="en">
-                In the <span class="text-sky-800 font-semibold">PLANCLIMAC2</span> project, we focus on innovation in long-term development, monitoring climate change and its impact on Macaronesia through the following indicators.
-            </p>
-            <p 
-                class="hidden w-full text-center text-md md:text-xl" 
-                data-lang="fr">
-                Dans le cadre du projet <span class="text-sky-800 font-semibold">PLANCLIMAC2</span>, nous nous concentrons sur l’innovation dans le développement à long terme, la surveillance du changement climatique et son impact sur la Macaronésie à travers les indicateurs suivants.
-            </p>
-        </div>
+@php
+    $indicatorGroups = [
+        [
+            'id' => 'research',
+            'title' => ['es' => 'Investigación y conocimiento', 'pt' => 'Investigação e conhecimento', 'en' => 'Research and knowledge', 'fr' => 'Recherche et connaissances'],
+            'ids' => ['studies', 'researchers', 'scientific-publications', 'vulnerability-indicators'],
+        ],
+        [
+            'id' => 'cooperation',
+            'title' => ['es' => 'Cooperación y seguimiento', 'pt' => 'Cooperação e acompanhamento', 'en' => 'Cooperation and follow-up', 'fr' => 'Coopération et suivi'],
+            'ids' => ['follow-up-meetings'],
+        ],
+        [
+            'id' => 'communication',
+            'title' => ['es' => 'Comunicación y participación', 'pt' => 'Comunicação e participação', 'en' => 'Communication and participation', 'fr' => 'Communication et participation'],
+            'ids' => ['event-participants', 'website-visits', 'dissemination-events'],
+        ],
+    ];
+@endphp
 
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-8">
-        @foreach($results as $r)
-            <x-BlueCard
-                :title="$r['title']"
-                :progress="$r['progress']"
-                :target="$r['target']"
-            />
+<section id="project-indicators" aria-labelledby="project-indicators-title" class="section-container my-16">
+    <header class="mb-8 max-w-3xl">
+        <p class="section-eyebrow">
+            <span data-container="translator">
+                <span data-lang="es">Resultados del proyecto</span><span class="hidden" data-lang="pt">Resultados do projeto</span><span class="hidden" data-lang="en">Project results</span><span class="hidden" data-lang="fr">Résultats du projet</span>
+            </span>
+        </p>
+        <h2 id="project-indicators-title" class="section-title mt-2">
+            <span data-container="translator">
+                <span data-lang="es">Indicadores del proyecto</span><span class="hidden" data-lang="pt">Indicadores do projeto</span><span class="hidden" data-lang="en">Project indicators</span><span class="hidden" data-lang="fr">Indicateurs du projet</span>
+            </span>
+        </h2>
+        <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+            <span data-container="translator">
+                <span data-lang="es">Avances de PLANCLIMAC2 en investigación, cooperación y divulgación climática.</span><span class="hidden" data-lang="pt">Avanços do PLANCLIMAC2 em investigação, cooperação e divulgação climática.</span><span class="hidden" data-lang="en">PLANCLIMAC2 progress in climate research, cooperation and outreach.</span><span class="hidden" data-lang="fr">Avancées de PLANCLIMAC2 en matière de recherche, de coopération et de sensibilisation au climat.</span>
+            </span>
+        </p>
+    </header>
+
+    <div class="space-y-8" data-indicators>
+        @foreach ($indicatorGroups as $group)
+            @php
+                $groupIndicators = array_values(array_filter($results, fn ($indicator) => in_array($indicator['id'], $group['ids'], true)));
+            @endphp
+            <section aria-labelledby="indicator-group-{{ $group['id'] }}">
+                <h3 id="indicator-group-{{ $group['id'] }}" class="mb-3 text-lg font-bold text-sky-950 sm:text-xl">
+                    <span data-container="translator">
+                        @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                            <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $group['title'][$language] }}</span>
+                        @endforeach
+                    </span>
+                </h3>
+                <dl @class([
+                    'grid gap-3 sm:gap-4',
+                    'grid-cols-1' => $group['id'] === 'cooperation',
+                    'grid-cols-2 sm:grid-cols-4' => $group['id'] === 'research',
+                    'grid-cols-2 sm:grid-cols-3' => $group['id'] === 'communication',
+                ])>
+                    @foreach ($groupIndicators as $indicator)
+                        <x-project-indicator
+                            :indicator="$indicator"
+                            :featured="$indicator['id'] === 'follow-up-meetings'"
+                            :spotlight="$indicator['id'] === 'website-visits'"
+                        />
+                    @endforeach
+                </dl>
+            </section>
         @endforeach
     </div>
-
 </section>
+
+<script>
+    (() => {
+        const section = document.querySelector('[data-indicators]');
+        if (!section) return;
+
+        const counters = Array.from(section.querySelectorAll('[data-count-up]'));
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!counters.length || reducedMotion || !('IntersectionObserver' in window)) return;
+
+        const formatValue = (value) => Math.trunc(value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        const duration = 1500;
+        const frames = new Map();
+        let hasStarted = false;
+
+        const observer = new IntersectionObserver((entries) => {
+            if (hasStarted || !entries.some((entry) => entry.isIntersecting)) return;
+
+            hasStarted = true;
+            observer.disconnect();
+
+            counters.forEach((counter) => {
+                const endValue = Number(counter.dataset.countValue);
+                if (!Number.isFinite(endValue) || endValue <= 0) {
+                    counter.textContent = formatValue(Math.max(0, endValue || 0));
+                    return;
+                }
+
+                counter.textContent = '0';
+                const startTime = performance.now();
+
+                const tick = (now) => {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 4);
+                    counter.textContent = formatValue(Math.round(endValue * eased));
+
+                    if (progress < 1) {
+                        frames.set(counter, requestAnimationFrame(tick));
+                    } else {
+                        counter.textContent = formatValue(endValue);
+                        frames.delete(counter);
+                    }
+                };
+
+                frames.set(counter, requestAnimationFrame(tick));
+            });
+        }, { threshold: 0.15 });
+
+        observer.observe(section);
+
+        window.addEventListener('pagehide', () => {
+            observer.disconnect();
+            frames.forEach((frame) => cancelAnimationFrame(frame));
+            frames.clear();
+        }, { once: true });
+    })();
+</script>
 @endsection
 
