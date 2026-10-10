@@ -1,3 +1,4 @@
+.ddev/*
 /.phpunit.cache
 /node_modules
 /public/build
@@ -22,3 +23,5 @@ yarn-error.log
 /.vscode
 /.zed
 /composer-home
+# Instrucciones locales del proyecto
+/AGENTS/

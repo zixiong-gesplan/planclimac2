@@ -3,44 +3,85 @@
 @section('title', 'PLANCLIMAC2 (1/MAC/2/2.4/0006)')
 
 @section('content')
-<section class="w-full md:w-10/12 mx-auto my-8 md:mb-16 flex flex-col md:flex-row gap-8">
-    <div class="w-full md:w-1/2">
-        <img src="/images/PLANCLIMAC2_AMARILLO.svg" alt="Logo PLANCLIMAC2" class="w-10/12 mb-2">
-        <h1 class="text-lg md:text-3xl font-extrabold capitalize mb4 text-yellow-400 md:ml-4">(1/MAC/2/2.4/0006)</h1>
-        <div data-container="translator">
-            <h2 
-                class="text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance" 
-                data-lang="es">
-                DESARROLLO Y MONITORIZACIÓN DE ACTUACIONES COORDINADAS EN LA REGIÓN MACARONÉSICA EN MATERIA DE RIESGOS Y AMENAZAS DEL CAMBIO CLIMÁTICO
-            </h2>
-            <h2 
-                class="hidden text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance" 
-                data-lang="pt">
-                DESENVOLVIMENTO E MONITORIZAÇÃO DE AÇÕES COORDENADAS NA REGIÃO MACARONÉSICA EM MATÉRIA DE RISCOS E AMEAÇAS DAS MUDANÇAS CLIMÁTICAS
-            </h2>
-            <h2 
-                class="hidden text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance" 
-                data-lang="en">
-                DEVELOPMENT AND MONITORING OF COORDINATED ACTIONS IN THE MACARONESIAN REGION ON RISKS AND THREATS OF CLIMATE CHANGE
-            </h2>
-            <h2 
-                class="hidden text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance" 
-                data-lang="fr">
-                DÉVELOPPEMENT ET SUIVI DES ACTIONS COORDONNÉES DANS LA RÉGION MACARONÉSIENNE EN MATIÈRE DE RISQUES ET DE MENACES LIÉS AU CHANGEMENT CLIMATIQUE
-            </h2>
+<section class="relative left-1/2 -mt-2 min-h-[100svh] w-screen -translate-x-1/2 overflow-hidden bg-sky-950 text-white shadow-xl md:-mt-8">
+    <img
+        src="{{ asset('images/HERO.jpg') }}"
+        alt=""
+        width="1600"
+        height="1200"
+        fetchpriority="high"
+        class="absolute inset-0 z-0 h-full w-full object-cover"
+    >
+    <div class="absolute inset-0 z-10 bg-gradient-to-r from-sky-950/95 via-sky-950/75 to-sky-950/30"></div>
+
+    <div class="relative z-20 flex min-h-[100svh] items-center px-6 py-24 sm:px-10 md:px-14 lg:px-20">
+        <div class="max-w-4xl">
+            <p class="mb-5 inline-flex rounded-full border border-yellow-300/50 bg-sky-950/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-yellow-300 sm:text-sm">
+                <span data-container="translator">
+                    <span data-lang="es">Proyecto Interreg MAC 2021–2027 · 1/MAC/2/2.4/0006</span>
+                    <span class="hidden" data-lang="pt">Projeto Interreg MAC 2021–2027 · 1/MAC/2/2.4/0006</span>
+                    <span class="hidden" data-lang="en">Interreg MAC Project 2021–2027 · 1/MAC/2/2.4/0006</span>
+                    <span class="hidden" data-lang="fr">Projet Interreg MAC 2021–2027 · 1/MAC/2/2.4/0006</span>
+                </span>
+            </p>
+
+            <div data-container="translator">
+                <h1 class="max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl" data-lang="es">
+                    Preparar la región macaronésica frente al cambio climático
+                </h1>
+                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl" data-lang="pt">
+                    Preparar a região macaronésia para as alterações climáticas
+                </h1>
+                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl" data-lang="en">
+                    Preparing the Macaronesian region for climate change
+                </h1>
+                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl" data-lang="fr">
+                    Préparer la région macaronésienne face au changement climatique
+                </h1>
+            </div>
+
+            <div data-container="translator">
+                <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl" data-lang="es">
+                    Investigación y cooperación para comprender los riesgos climáticos y apoyar la adaptación de nuestros territorios.
+                </p>
+                <p class="hidden mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl" data-lang="pt">
+                    Investigação e cooperação para compreender os riscos climáticos e apoiar a adaptação dos nossos territórios.
+                </p>
+                <p class="hidden mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl" data-lang="en">
+                    Research and cooperation to understand climate risks and support adaptation across our territories.
+                </p>
+                <p class="hidden mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl" data-lang="fr">
+                    Recherche et coopération pour comprendre les risques climatiques et soutenir l’adaptation de nos territoires.
+                </p>
+            </div>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a href="{{ url('/results') }}" class="inline-flex min-h-12 items-center justify-center rounded-xl bg-yellow-300 px-6 py-3 text-center font-bold text-sky-950 transition hover:bg-yellow-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                    <span data-container="translator">
+                        <span data-lang="es">Conoce nuestros resultados</span>
+                        <span class="hidden" data-lang="pt">Conhece os nossos resultados</span>
+                        <span class="hidden" data-lang="en">Explore our results</span>
+                        <span class="hidden" data-lang="fr">Découvrez nos résultats</span>
+                    </span>
+                </a>
+                <a href="{{ url('/news') }}" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/80 px-6 py-3 text-center font-bold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-300">
+                    <span data-container="translator">
+                        <span data-lang="es">Últimas noticias</span>
+                        <span class="hidden" data-lang="pt">Últimas notícias</span>
+                        <span class="hidden" data-lang="en">Latest news</span>
+                        <span class="hidden" data-lang="fr">Dernières actualités</span>
+                    </span>
+                </a>
+            </div>
         </div>
-        <img src="https://interregmac.org/wp-content/uploads/2023/07/Group-9.jpg" alt="" class="w-full">
-    </div>
-    <div class="w-full md:w-1/2 h-full">
-        <img src="/images/HERO.jpg" alt="" class="w-full rounded-lg aspect-video my-auto shadow-lg">
     </div>
 </section>
 
-<section class="w-10/12 mt-2 gap-4 lg:gap-6 justify-center grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-auto">
+<section class="relative z-10 mx-auto mt-5 grid w-full max-w-7xl grid-cols-1 justify-center gap-3 sm:grid-cols-2 lg:mt-7 lg:grid-cols-4 lg:gap-4">
     <div class="bg-emerald-50 p-4 rounded-lg shadow-lg">
-        <h1 class="w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500">
+        <h2 class="w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500">
             3.045.442,75 €
-        </h1>
+        </h2>
         <div data-container="translator">
             <p 
                 class="text-slate text-base font-semibold" 
@@ -66,26 +107,26 @@
     </div>
     <div class="bg-sky-50 p-4 rounded-lg shadow-lg">
         <div data-container="translator">
-            <h1 
+            <h2
                 class="w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
                 data-lang="es">
                 48 Meses
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
                 data-lang="pt">
                 48 Meses
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
                 data-lang="en">
                 48 Months
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
                 data-lang="fr">
                 48 Mois
-            </h1>
+            </h2>
         </div>
         <div data-container="translator">
             <p 
@@ -113,26 +154,26 @@
     </div>
     <div class="bg-emerald-50 p-4 rounded-lg shadow-lg">
         <div data-container="translator">
-            <h1 
+            <h2
                 class="w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
                 data-lang="es">
                 85%
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
                 data-lang="pt">
                 85%
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
                 data-lang="en">
                 85%
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
                 data-lang="fr">
                 85%
-            </h1>
+            </h2>
         </div>
         <div data-container="translator">
             <p 
@@ -160,26 +201,26 @@
     </div>
     <div class="bg-sky-50 p-4 rounded-lg shadow-lg">
         <div data-container="translator">
-            <h1 
+            <h2
                 class="w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
                 data-lang="es">
                 Prioridad 2 - MAC Verde
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
                 data-lang="pt">
                 Prioridade 2 - MAC Verde
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
                 data-lang="en">
                 Priority 2 - Green MAC
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
                 data-lang="fr">
                 Priorité 2 - MAC Vert
-            </h1>
+            </h2>
         </div>
         <div data-container="translator">
             <p 
@@ -209,26 +250,26 @@
 
 <section class="mt-16 w-10/12 mx-auto">
     <div data-container="translator">
-        <h1 
+        <h2
             class="w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
             data-lang="es">
             Siete regiones distintas, un mismo objetivo
-        </h1>
-        <h1 
+        </h2>
+        <h2
             class="hidden w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
             data-lang="pt">
             Sete regiões distintas, um mesmo objetivo
-        </h1>
-        <h1 
+        </h2>
+        <h2
             class="hidden w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
             data-lang="en">
             Seven different regions, one common goal
-        </h1>
-        <h1 
+        </h2>
+        <h2
             class="hidden w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
             data-lang="fr">
             Sept régions différentes, un même objectif
-        </h1>
+        </h2>
     </div>
     <div data-container="translator">
         <p 
@@ -414,10 +455,10 @@
                 <article class="w-full md:w-1/2">
                     <div data-container="translator">
 
-                        <h1 class="text-2xl font-semibold" data-lang="es">{{ $o['title']['es'] }}</h1>
-                        <h1 class="text-2xl font-semibold hidden" data-lang="pt">{{ $o['title']['pt'] }}</h1>
-                        <h1 class="text-2xl font-semibold hidden" data-lang="en">{{ $o['title']['en'] }}</h1>
-                        <h1 class="text-2xl font-semibold hidden" data-lang="fr">{{ $o['title']['fr'] }}</h1>
+                        <h2 class="text-2xl font-semibold" data-lang="es">{{ $o['title']['es'] }}</h2>
+                        <h2 class="text-2xl font-semibold hidden" data-lang="pt">{{ $o['title']['pt'] }}</h2>
+                        <h2 class="text-2xl font-semibold hidden" data-lang="en">{{ $o['title']['en'] }}</h2>
+                        <h2 class="text-2xl font-semibold hidden" data-lang="fr">{{ $o['title']['fr'] }}</h2>
                     </div>
                     <div data-container="translator">
 
@@ -446,26 +487,26 @@
 <section class="my-16 w-10/12 mx-auto">
     <div class="w-full">
         <div data-container="translator">
-            <h1 
+            <h2
                 class="w-full text-center text-lg md:text-2xl font-semibold my-4" 
                 data-lang="es">
                 Indicadores del proyecto
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-center text-lg md:text-2xl font-semibold my-4" 
                 data-lang="pt">
                 Indicadores do projeto
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-center text-lg md:text-2xl font-semibold my-4" 
                 data-lang="en">
                 Project indicators
-            </h1>
-            <h1 
+            </h2>
+            <h2
                 class="hidden w-full text-center text-lg md:text-2xl font-semibold my-4" 
                 data-lang="fr">
                 Indicateurs du projet
-            </h1>
+            </h2>
         </div>
         <div data-container="translator">
             <p 
