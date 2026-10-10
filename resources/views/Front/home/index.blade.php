@@ -3,7 +3,7 @@
 @section('title', 'PLANCLIMAC2 (1/MAC/2/2.4/0006)')
 
 @section('content')
-<section class="relative left-1/2 -mt-2 min-h-[100svh] w-screen -translate-x-1/2 overflow-hidden bg-sky-950 text-white shadow-xl md:-mt-8">
+<section class="relative -mx-2 -mt-2 min-h-[100svh] w-[calc(100%_+_1rem)] overflow-hidden bg-sky-950 text-white shadow-xl md:-mx-8 md:-mt-8 md:w-[calc(100%_+_4rem)]">
     <img
         src="{{ asset('images/HERO.jpg') }}"
         alt=""
@@ -26,17 +26,17 @@
             </p>
 
             <div data-container="translator">
-                <h1 class="max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl" data-lang="es">
-                    Preparar la región macaronésica frente al cambio climático
+                <h1 class="max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl" data-lang="es">
+                    ACTUACIONES COORDINADAS EN LA REGIÓN MACARONÉSICA EN MATERIA DE RIESGOS Y AMENAZAS DEL CAMBIO CLIMÁTICO
                 </h1>
-                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl" data-lang="pt">
-                    Preparar a região macaronésia para as alterações climáticas
+                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl" data-lang="pt">
+                    AÇÕES COORDENADAS NA REGIÃO MACARONÉSICA EM MATÉRIA DE RISCOS E AMEAÇAS DAS MUDANÇAS CLIMÁTICAS
                 </h1>
-                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl" data-lang="en">
-                    Preparing the Macaronesian region for climate change
+                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl" data-lang="en">
+                    COORDINATED ACTIONS IN THE MACARONESIAN REGION ON RISKS AND THREATS OF CLIMATE CHANGE
                 </h1>
-                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl" data-lang="fr">
-                    Préparer la région macaronésienne face au changement climatique
+                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl" data-lang="fr">
+                    ACTIONS COORDONNÉES DANS LA RÉGION MACARONÉSIENNE EN MATIÈRE DE RISQUES ET DE MENACES LIÉS AU CHANGEMENT CLIMATIQUE
                 </h1>
             </div>
 
@@ -97,7 +97,7 @@
                     <span class="hidden" data-lang="fr">Budget d’exécution</span>
                 </span>
             </dt>
-            <dd class="mt-3 text-3xl font-extrabold tracking-tight text-emerald-700 sm:text-4xl">3.045.442,75 €</dd>
+            <dd class="project-fact-value">3.045.442,75 €</dd>
             <dd class="mt-2 text-sm text-slate-700">
                 <span data-container="translator">
                     <span data-lang="es">Presupuesto de ejecución del proyecto</span>
@@ -117,7 +117,7 @@
                     <span class="hidden" data-lang="fr">Durée</span>
                 </span>
             </dt>
-            <dd class="mt-3 text-3xl font-extrabold tracking-tight text-sky-900">
+            <dd class="project-fact-value">
                 <span data-container="translator">
                     <span data-lang="es">48 meses</span>
                     <span class="hidden" data-lang="pt">48 meses</span>
@@ -137,16 +137,16 @@
                     <span class="hidden" data-lang="fr">Cofinancement</span>
                 </span>
             </dt>
-            <dd class="mt-3 text-3xl font-extrabold tracking-tight text-emerald-700 sm:text-4xl">85 %</dd>
+            <dd class="project-fact-value">85 %</dd>
             <div
-                class="mt-4 h-2 overflow-hidden rounded-full bg-emerald-100"
+                class="project-fact-meter"
                 role="progressbar"
                 aria-labelledby="cofinancing-label"
                 aria-valuemin="0"
                 aria-valuemax="100"
                 aria-valuenow="85"
             >
-                <div class="h-full w-[85%] rounded-full bg-emerald-600"></div>
+                <div class="project-fact-meter-fill"></div>
             </div>
             <dd class="mt-3 text-sm leading-relaxed text-slate-700">
                 <span data-container="translator">

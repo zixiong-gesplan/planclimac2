@@ -1,30 +1,78 @@
-<div class="flex flex-col border-t-2 border-sky-800 gap-8 py-8">
-    <div class="flex flex-col sm:flex-row gap-16 mt-8 w-10/12 mx-auto">
-        <div class="w-full sm:w-3/12 place-self-center">
-            <!-- <img src="https://interregmac.org/wp-content/uploads/2023/07/Group-9.jpg" alt="" class="w-full"> -->
-            <img src="/images/PLANCLIMAC2_AMARILLO.svg" alt="Logo PLANCLIMAC2" class="w-8/12 mb-2">
-            <div class="flex flex-row">
-                <a target="_blank" href="https://www.youtube.com/@proyectoplanclimac1715">
-                    <svg class="w-12 h-12 text-gray-800 dark:text-white hover:text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/>
-                    </svg>
+<footer class="site-footer" aria-labelledby="footer-project-title">
+    <div class="section-container site-footer-inner">
+        <div class="site-footer-main">
+            <section class="site-footer-brand" aria-labelledby="footer-project-title">
+                <h2 id="footer-project-title" class="sr-only">PLANCLIMAC2</h2>
+                <a href="/" class="inline-flex rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-300" aria-label="PLANCLIMAC2 — Inicio">
+                    <img src="{{ asset('images/PLANCLIMAC2_AMARILLO.svg') }}" alt="PLANCLIMAC2" class="site-footer-logo">
                 </a>
-            </div>
-            <div>
-                <p class="font-bold text-sky-800">
-                    © 2025 Planclimac2.
+                <p class="site-footer-description" data-container="translator">
+                    <span data-lang="es">Cooperación para avanzar en el conocimiento y la adaptación al cambio climático en la Macaronesia.</span>
+                    <span class="hidden" data-lang="pt">Cooperação para avançar no conhecimento e na adaptação às alterações climáticas na Macaronésia.</span>
+                    <span class="hidden" data-lang="en">Cooperation to advance knowledge and adaptation to climate change in Macaronesia.</span>
+                    <span class="hidden" data-lang="fr">Coopérer pour faire progresser les connaissances et l’adaptation au changement climatique en Macaronésie.</span>
                 </p>
-            </div>
+            </section>
+
+            <nav class="site-footer-group" aria-labelledby="footer-explore-title">
+                <h2 id="footer-explore-title" class="site-footer-heading" data-container="translator">
+                    <span data-lang="es">Explora</span><span class="hidden" data-lang="pt">Explorar</span><span class="hidden" data-lang="en">Explore</span><span class="hidden" data-lang="fr">Explorer</span>
+                </h2>
+                <ul class="site-footer-links">
+                    <li><a class="footer-link" href="/"><span data-container="translator"><span data-lang="es">Inicio</span><span class="hidden" data-lang="pt">Início</span><span class="hidden" data-lang="en">Home</span><span class="hidden" data-lang="fr">Accueil</span></span></a></li>
+                    <li><a class="footer-link" href="/news"><span data-container="translator"><span data-lang="es">Noticias</span><span class="hidden" data-lang="pt">Notícias</span><span class="hidden" data-lang="en">News</span><span class="hidden" data-lang="fr">Actualités</span></span></a></li>
+                    <li><a class="footer-link" href="/statistics"><span data-container="translator"><span data-lang="es">Estadísticas</span><span class="hidden" data-lang="pt">Estatísticas</span><span class="hidden" data-lang="en">Statistics</span><span class="hidden" data-lang="fr">Statistiques</span></span></a></li>
+                    <li><a class="footer-link" href="/results"><span data-container="translator"><span data-lang="es">Resultados</span><span class="hidden" data-lang="pt">Resultados</span><span class="hidden" data-lang="en">Results</span><span class="hidden" data-lang="fr">Resultados</span></span></a></li>
+                    <li><a class="footer-link" href="/contact"><span data-container="translator"><span data-lang="es">Contacto</span><span class="hidden" data-lang="pt">Contato</span><span class="hidden" data-lang="en">Contact</span><span class="hidden" data-lang="fr">Contact</span></span></a></li>
+                </ul>
+            </nav>
+
+            <section class="site-footer-group" aria-labelledby="footer-territories-title">
+                <h2 id="footer-territories-title" class="site-footer-heading" data-container="translator">
+                    <span data-lang="es">Cooperación territorial</span><span class="hidden" data-lang="pt">Cooperação territorial</span><span class="hidden" data-lang="en">Territorial cooperation</span><span class="hidden" data-lang="fr">Coopération territoriale</span>
+                </h2>
+                <ul class="site-footer-territories" data-container="translator">
+                    <li data-lang="es">Canarias · Azores · Madeira</li>
+                    <li class="hidden" data-lang="pt">Canárias · Açores · Madeira</li>
+                    <li class="hidden" data-lang="en">Canary Islands · Azores · Madeira</li>
+                    <li class="hidden" data-lang="fr">Îles Canaries · Açores · Madère</li>
+                </ul>
+                <ul class="site-footer-territories" data-container="translator">
+                    <li data-lang="es">Cabo Verde · Santo Tomé y Príncipe</li>
+                    <li class="hidden" data-lang="pt">Cabo Verde · São Tomé e Príncipe</li>
+                    <li class="hidden" data-lang="en">Cape Verde · São Tomé and Príncipe</li>
+                    <li class="hidden" data-lang="fr">Cap-Vert · São Tomé-et-Príncipe</li>
+                </ul>
+                <ul class="site-footer-territories" data-container="translator">
+                    <li data-lang="es">Ghana · Costa de Marfil</li>
+                    <li class="hidden" data-lang="pt">Gana · Costa do Marfim</li>
+                    <li class="hidden" data-lang="en">Ghana · Ivory Coast</li>
+                    <li class="hidden" data-lang="fr">Ghana · Côte d’Ivoire</li>
+                </ul>
+                <a class="footer-link footer-contact-link" href="/contact">
+                    <span aria-hidden="true">⌖</span>
+                    <span data-container="translator"><span data-lang="es">Consultar contactos territoriales</span><span class="hidden" data-lang="pt">Consultar contactos territoriais</span><span class="hidden" data-lang="en">View regional contacts</span><span class="hidden" data-lang="fr">Consulter les contacts territoriaux</span></span>
+                </a>
+            </section>
         </div>
-        <div class="w-full sm:w-9/12 flex gap-4">
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-16">
-                @foreach ($partners as $p)
-                    <x-footer-card 
-                        :title="$p['title']"
-                        location=" {{ $p['location'] }} "
-                    />
-                @endforeach
-            </div>
+
+        <div class="site-footer-funding" aria-label="Identificación del programa de financiación">
+            <span data-container="translator">
+                <span data-lang="es">Proyecto cofinanciado por el Programa Interreg MAC 2021–2027.</span>
+                <span class="hidden" data-lang="pt">Projeto cofinanciado pelo Programa Interreg MAC 2021–2027.</span>
+                <span class="hidden" data-lang="en">Project co-financed by the Interreg MAC 2021–2027 Programme.</span>
+                <span class="hidden" data-lang="fr">Projet cofinancé par le Programme Interreg MAC 2021–2027.</span>
+            </span>
+        </div>
+
+        <div class="site-footer-bottom">
+            <p>© {{ date('Y') }} PLANCLIMAC2</p>
+            <p class="site-footer-legal-note" data-container="translator">
+                <span data-lang="es">Proyecto de cooperación territorial Interreg MAC 2021–2027.</span>
+                <span class="hidden" data-lang="pt">Projeto de cooperação territorial Interreg MAC 2021–2027.</span>
+                <span class="hidden" data-lang="en">Interreg MAC 2021–2027 territorial cooperation project.</span>
+                <span class="hidden" data-lang="fr">Projet de coopération territoriale Interreg MAC 2021–2027.</span>
+            </p>
         </div>
     </div>
-</div>
+</footer>
