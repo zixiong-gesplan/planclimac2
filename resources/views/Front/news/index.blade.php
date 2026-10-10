@@ -69,8 +69,8 @@
     </div>
 @endif
 
-<section class="section-container news-list" aria-labelledby="news-page-title">
-    @foreach($news as $n)
+<section class="section-container news-grid" aria-labelledby="news-page-title">
+    @forelse($news as $n)
         <x-NewsCard
             src="{{ $n['image'] }}"
             :title="[
@@ -79,7 +79,6 @@
                 'en' => $n['title_en'],
                 'fr' => $n['title_fr'],
             ]"
-            created_at="{{ $n['created_at'] }}"
             :description="[
                 'es' => $n['short_description_es'],
                 'pt' => $n['short_description_pt'],
@@ -87,9 +86,15 @@
                 'fr' => $n['short_description_fr'],
             ]"
             id="{{ $n['id'] }}"
-            :tags="$n['tags']"
         />
-    @endforeach
+    @empty
+        <p class="news-empty-state" data-container="translator">
+            <span data-lang="es">No hay más noticias para mostrar.</span>
+            <span class="hidden" data-lang="pt">Não há mais notícias para mostrar.</span>
+            <span class="hidden" data-lang="en">There are no more news articles to show.</span>
+            <span class="hidden" data-lang="fr">Il n’y a pas d’autres actualités à afficher.</span>
+        </p>
+    @endforelse
 </section>
 <section class="my-4 w-full lg:w-3/4 lg:mx-auto flex gap-4 flex-wrap">
     <a
