@@ -77,174 +77,122 @@
     </div>
 </section>
 
-<section class="relative z-10 mx-auto mt-5 grid w-full max-w-7xl grid-cols-1 justify-center gap-3 sm:grid-cols-2 lg:mt-7 lg:grid-cols-4 lg:gap-4">
-    <div class="bg-emerald-50 p-4 rounded-lg shadow-lg">
-        <h2 class="w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500">
-            3.045.442,75 €
-        </h2>
-        <div data-container="translator">
-            <p 
-                class="text-slate text-base font-semibold" 
-                data-lang="es">
-                Presupuesto de ejecución
-            </p>
-            <p 
-                class="hidden text-slate text-base font-semibold" 
-                data-lang="pt">
-                Orçamento de execução
-            </p>
-            <p 
-                class="hidden text-slate text-base font-semibold" 
-                data-lang="en">
-                Execution budget
-            </p>
-            <p 
-                class="hidden text-slate text-base font-semibold" 
-                data-lang="fr">
-                Budget d’exécution
-            </p>
-        </div>
-    </div>
-    <div class="bg-sky-50 p-4 rounded-lg shadow-lg">
-        <div data-container="translator">
-            <h2
-                class="w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="es">
-                48 Meses
-            </h2>
-            <h2
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="pt">
-                48 Meses
-            </h2>
-            <h2
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="en">
-                48 Months
-            </h2>
-            <h2
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="fr">
-                48 Mois
-            </h2>
-        </div>
-        <div data-container="translator">
-            <p 
-                class="text-stale-900 text-base font-semibold" 
-                data-lang="es">
-                Duración del proyecto 2025-2028
-            </p>
-            <p 
-                class="hidden text-stale-900 text-base font-semibold" 
-                data-lang="pt">
-                Duração do projeto 2025-2028
-            </p>
-            <p 
-                class="hidden text-stale-900 text-base font-semibold" 
-                data-lang="en">
-                Project duration 2025-2028
-            </p>
-            <p 
-                class="hidden text-stale-900 text-base font-semibold" 
-                data-lang="fr">
-                Durée du projet 2025-2028
-            </p>
+<section aria-labelledby="project-facts-title" class="mx-auto mt-8 w-full max-w-7xl px-4 sm:px-6 lg:mt-12">
+    <h2 id="project-facts-title" class="text-2xl font-extrabold text-sky-950 sm:text-3xl">
+        <span data-container="translator">
+            <span data-lang="es">Financiación y duración de PLANCLIMAC2</span>
+            <span class="hidden" data-lang="pt">Financiamento e duração do PLANCLIMAC2</span>
+            <span class="hidden" data-lang="en">PLANCLIMAC2 funding and duration</span>
+            <span class="hidden" data-lang="fr">Financement et durée de PLANCLIMAC2</span>
+        </span>
+    </h2>
+
+    <dl class="mt-6 grid grid-cols-1 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm md:grid-cols-3 md:divide-x md:divide-y-0">
+        <div class="p-6 sm:p-8">
+            <dt class="text-sm font-bold uppercase tracking-wide text-slate-600">
+                <span data-container="translator">
+                    <span data-lang="es">Presupuesto de ejecución</span>
+                    <span class="hidden" data-lang="pt">Orçamento de execução</span>
+                    <span class="hidden" data-lang="en">Project budget</span>
+                    <span class="hidden" data-lang="fr">Budget d’exécution</span>
+                </span>
+            </dt>
+            <dd class="mt-3 text-3xl font-extrabold tracking-tight text-emerald-700 sm:text-4xl">3.045.442,75 €</dd>
+            <dd class="mt-2 text-sm text-slate-700">
+                <span data-container="translator">
+                    <span data-lang="es">Presupuesto de ejecución del proyecto</span>
+                    <span class="hidden" data-lang="pt">Orçamento de execução do projeto</span>
+                    <span class="hidden" data-lang="en">Project implementation budget</span>
+                    <span class="hidden" data-lang="fr">Budget d’exécution du projet</span>
+                </span>
+            </dd>
         </div>
 
-    </div>
-    <div class="bg-emerald-50 p-4 rounded-lg shadow-lg">
-        <div data-container="translator">
-            <h2
-                class="w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
-                data-lang="es">
-                85%
-            </h2>
-            <h2
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
-                data-lang="pt">
-                85%
-            </h2>
-            <h2
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
-                data-lang="en">
-                85%
-            </h2>
-            <h2
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
-                data-lang="fr">
-                85%
-            </h2>
-        </div>
-        <div data-container="translator">
-            <p 
-                class="text-slate-900 text-base font-semibold" 
-                data-lang="es">
-                Co-financiación por el Programa de Cooperación Interreg Madeira-Azores-Canarias (MAC) 2021-2027
-            </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="pt">
-                Co-financiamento pelo Programa de Cooperação Interreg Madeira-Açores-Canárias (MAC) 2021-2027
-            </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="en">
-                Co-financed by the Interreg Madeira-Azores-Canarias (MAC) Cooperation Programme 2021-2027
-            </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="fr">
-                Cofinancé par le Programme de Coopération Interreg Madère-Açores-Canaries (MAC) 2021-2027
-            </p>
+        <div class="p-6 sm:p-8">
+            <dt class="text-sm font-bold uppercase tracking-wide text-slate-600">
+                <span data-container="translator">
+                    <span data-lang="es">Duración</span>
+                    <span class="hidden" data-lang="pt">Duração</span>
+                    <span class="hidden" data-lang="en">Duration</span>
+                    <span class="hidden" data-lang="fr">Durée</span>
+                </span>
+            </dt>
+            <dd class="mt-3 text-3xl font-extrabold tracking-tight text-sky-900">
+                <span data-container="translator">
+                    <span data-lang="es">48 meses</span>
+                    <span class="hidden" data-lang="pt">48 meses</span>
+                    <span class="hidden" data-lang="en">48 months</span>
+                    <span class="hidden" data-lang="fr">48 mois</span>
+                </span>
+            </dd>
+            <dd class="mt-2 text-sm text-slate-700">2025–2028</dd>
         </div>
 
-    </div>
-    <div class="bg-sky-50 p-4 rounded-lg shadow-lg">
-        <div data-container="translator">
-            <h2
-                class="w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="es">
-                Prioridad 2 - MAC Verde
-            </h2>
-            <h2
-                class="hidden w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="pt">
-                Prioridade 2 - MAC Verde
-            </h2>
-            <h2
-                class="hidden w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="en">
-                Priority 2 - Green MAC
-            </h2>
-            <h2
-                class="hidden w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="fr">
-                Priorité 2 - MAC Vert
-            </h2>
+        <div class="p-6 sm:p-8">
+            <dt id="cofinancing-label" class="text-sm font-bold uppercase tracking-wide text-slate-600">
+                <span data-container="translator">
+                    <span data-lang="es">Cofinanciación</span>
+                    <span class="hidden" data-lang="pt">Cofinanciamento</span>
+                    <span class="hidden" data-lang="en">Co-financing</span>
+                    <span class="hidden" data-lang="fr">Cofinancement</span>
+                </span>
+            </dt>
+            <dd class="mt-3 text-3xl font-extrabold tracking-tight text-emerald-700 sm:text-4xl">85 %</dd>
+            <div
+                class="mt-4 h-2 overflow-hidden rounded-full bg-emerald-100"
+                role="progressbar"
+                aria-labelledby="cofinancing-label"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="85"
+            >
+                <div class="h-full w-[85%] rounded-full bg-emerald-600"></div>
+            </div>
+            <dd class="mt-3 text-sm leading-relaxed text-slate-700">
+                <span data-container="translator">
+                    <span data-lang="es">Programa de Cooperación Interreg Madeira-Azores-Canarias (MAC) 2021–2027</span>
+                    <span class="hidden" data-lang="pt">Programa de Cooperação Interreg Madeira-Açores-Canárias (MAC) 2021–2027</span>
+                    <span class="hidden" data-lang="en">Interreg Madeira-Azores-Canarias (MAC) Cooperation Programme 2021–2027</span>
+                    <span class="hidden" data-lang="fr">Programme de coopération Interreg Madère-Açores-Canaries (MAC) 2021–2027</span>
+                </span>
+            </dd>
         </div>
-        <div data-container="translator">
-            <p 
-                class="text-slate-900 text-base font-semibold" 
-                data-lang="es">
+    </dl>
+
+    <article class="mt-4 grid gap-4 rounded-2xl bg-emerald-600 p-6 text-white sm:p-8 md:grid-cols-3 md:items-center md:gap-8">
+        <div>
+            <p class="text-sm font-bold uppercase tracking-[0.14em]">
+                <span data-container="translator">
+                    <span data-lang="es">Prioridad 2</span>
+                    <span class="hidden" data-lang="pt">Prioridade 2</span>
+                    <span class="hidden" data-lang="en">Priority 2</span>
+                    <span class="hidden" data-lang="fr">Priorité 2</span>
+                </span>
+            </p>
+            <h3 class="mt-1 text-2xl font-extrabold text-white sm:text-3xl">
+                <span data-container="translator">
+                    <span data-lang="es">MAC Verde</span>
+                    <span class="hidden" data-lang="pt">MAC Verde</span>
+                    <span class="hidden" data-lang="en">Green MAC</span>
+                    <span class="hidden" data-lang="fr">MAC Vert</span>
+                </span>
+            </h3>
+        </div>
+        <div class="md:col-span-2" data-container="translator">
+            <p class="leading-relaxed text-white/90" data-lang="es">
                 Transición ecológica, apoyo al desarrollo de una economía verde y azul, lucha contra el cambio climático, prevención y gestión de riesgos y emergencias
             </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="pt">
+            <p class="hidden leading-relaxed text-white/90" data-lang="pt">
                 Transição ecológica, apoio ao desenvolvimento de uma economia verde e azul, combate às alterações climáticas, prevenção e gestão de riscos e emergências
             </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="en">
+            <p class="hidden leading-relaxed text-white/90" data-lang="en">
                 Ecological transition, support for the development of a green and blue economy, fight against climate change, prevention and management of risks and emergencies
             </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="fr">
+            <p class="hidden leading-relaxed text-white/90" data-lang="fr">
                 Transition écologique, soutien au développement d’une économie verte et bleue, lutte contre le changement climatique, prévention et gestion des risques et des urgences
             </p>
         </div>
-    </div>
+    </article>
 </section>
 
 
