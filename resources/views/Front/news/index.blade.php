@@ -4,51 +4,72 @@
 
 @section('content')
 
-<section class="my-4 w-full mx-auto">
+<header class="section-container news-header" aria-labelledby="news-page-title">
+    <p class="section-eyebrow" data-container="translator">
+        <span data-lang="es">Actualidad del proyecto</span>
+        <span class="hidden" data-lang="pt">Atualidade do projeto</span>
+        <span class="hidden" data-lang="en">Project updates</span>
+        <span class="hidden" data-lang="fr">Actualités du projet</span>
+    </p>
+    <h1 id="news-page-title" class="section-title mt-2" data-container="translator">
+        <span data-lang="es">Noticias</span>
+        <span class="hidden" data-lang="pt">Notícias</span>
+        <span class="hidden" data-lang="en">News</span>
+        <span class="hidden" data-lang="fr">Actualités</span>
+    </h1>
+    <p class="news-intro" data-container="translator">
+        <span data-lang="es">Publicaciones, actividades y novedades de PLANCLIMAC2.</span>
+        <span class="hidden" data-lang="pt">Publicações, atividades e novidades do PLANCLIMAC2.</span>
+        <span class="hidden" data-lang="en">Publications, activities and updates from PLANCLIMAC2.</span>
+        <span class="hidden" data-lang="fr">Publications, activités et actualités de PLANCLIMAC2.</span>
+    </p>
+</header>
 
-    <div data-container="translator">
-        <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4" data-lang="es">
-            Noticias
-        </h1>
-        <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4 hidden" data-lang="pt">
-            Notícias
-        </h1>
-        <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4 hidden" data-lang="en">
-            News
-        </h1>
-        <h1 class="w-full text-center text-3xl font-semibold text-sky-800 mt-4 hidden" data-lang="fr">
-            Actualité
-        </h1>
-    </div>
-    <div class="flex gap-4 w-full justify-center mt-4 flex-col lg:flex-row">
-        <!-- <div class="flex flex-col md:flex-row gap-2 justify-between">
-            <x-QueryLink
-                query="news"
-                label="Todas"
-            />
-            <x-QueryLink
-                query="news?type=acciones formativas"
-                label="Acciones formativas"
-            />
-            
-            <x-QueryLink
-                query="news?type=publicaciones científicas"
-                label="Publicaciones científicas"
-            />
-            <x-QueryLink
-                query="news?type=publicaciones técnicas"
-                label="Publicaciones técnicas"
-            />
+@if ($featured)
+    @php
+        $featuredDate = $featured['created_at']
+            ? \Illuminate\Support\Carbon::parse($featured['created_at'])
+            : null;
+    @endphp
+    <div class="section-container">
+    <article class="news-featured" aria-labelledby="featured-news-title">
+        @if (!empty($featured['image']))
+            <div class="news-featured-media">
+                <img src="{{ $featured['image'] }}" alt="" class="news-featured-image" fetchpriority="high">
+            </div>
+        @else
+            <div class="news-featured-media news-featured-placeholder" aria-hidden="true">
+                <span>PLANCLIMAC2</span>
+            </div>
+        @endif
+
+        <div class="news-featured-content">
+            <h2 id="featured-news-title" class="news-featured-title" data-container="translator">
+                <span data-lang="es">{{ $featured['title_es'] }}</span>
+                <span class="hidden" data-lang="pt">{{ $featured['title_pt'] }}</span>
+                <span class="hidden" data-lang="en">{{ $featured['title_en'] }}</span>
+                <span class="hidden" data-lang="fr">{{ $featured['title_fr'] }}</span>
+            </h2>
+
+            <div class="news-featured-summary" data-container="translator">
+                <p data-lang="es">{{ \Illuminate\Support\Str::limit(strip_tags((string) $featured['short_description_es']), 260) }}</p>
+                <p class="hidden" data-lang="pt">{{ \Illuminate\Support\Str::limit(strip_tags((string) $featured['short_description_pt']), 260) }}</p>
+                <p class="hidden" data-lang="en">{{ \Illuminate\Support\Str::limit(strip_tags((string) $featured['short_description_en']), 260) }}</p>
+                <p class="hidden" data-lang="fr">{{ \Illuminate\Support\Str::limit(strip_tags((string) $featured['short_description_fr']), 260) }}</p>
+            </div>
+
+            <a href="/news/{{ $featured['id'] }}" class="news-featured-link" data-container="translator">
+                <span data-lang="es">Leer noticia <span aria-hidden="true">→</span></span>
+                <span class="hidden" data-lang="pt">Ler notícia <span aria-hidden="true">→</span></span>
+                <span class="hidden" data-lang="en">Read the story <span aria-hidden="true">→</span></span>
+                <span class="hidden" data-lang="fr">Lire l’actualité <span aria-hidden="true">→</span></span>
+            </a>
         </div>
-
-        <form action="" class="flex gap-2">
-            <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded focus:ring-sky-800 focus:border-sky-800 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-            <button type="submit" class="text-sky-800 text-sm md:text-lg rounded px-4 border border-sky-800"> Buscar</button>
-        </form> -->
+    </article>
     </div>
-</section>
+@endif
 
-<section class="my-4 w-full lg:w-3/4 lg:mx-auto">
+<section class="section-container news-list" aria-labelledby="news-page-title">
     @foreach($news as $n)
         <x-NewsCard
             src="{{ $n['image'] }}"

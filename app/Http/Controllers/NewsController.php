@@ -31,10 +31,17 @@ class NewsController extends Controller
             $page = 1;
         }
         $news = $this->news->index($page);
+        $featured = $page === 1 ? $news->first() : null;
+
+        if ($featured) {
+            $news = $news->reject(fn ($item) => $item->getKey() === $featured->getKey())->values();
+        }
+
         $count = $this->news->count();
         return view('Front.news.index', [
             'news' => $news,
-            'count' => $count/10
+            'featured' => $featured,
+            'count' => $count/10,
         ]);
     }
 

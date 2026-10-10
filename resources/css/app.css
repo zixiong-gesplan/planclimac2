@@ -278,6 +278,72 @@
     .site-footer-legal-note {
         @apply leading-relaxed text-white/75;
     }
+
+    .news-header {
+        @apply mb-7 mt-6 sm:mb-9 sm:mt-8;
+    }
+
+    .news-intro {
+        @apply mt-3 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg;
+    }
+
+    .news-featured {
+        @apply relative isolate my-7 flex overflow-hidden rounded-2xl border border-slate-200 bg-sky-950 shadow-sm sm:my-9;
+        min-height: 28rem;
+    }
+
+    @media (min-width: 768px) {
+        .news-featured {
+            min-height: 34rem;
+        }
+    }
+
+    .news-featured::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(0deg, rgb(8 47 73 / 0.96) 0%, rgb(8 47 73 / 0.78) 38%, rgb(8 47 73 / 0.12) 100%);
+    }
+
+    .news-featured-media {
+        @apply absolute inset-0 z-0 overflow-hidden bg-slate-100;
+    }
+
+    .news-featured-image {
+        @apply block h-full w-full object-cover;
+    }
+
+    .news-featured-placeholder {
+        @apply flex items-center justify-center bg-sky-900 text-lg font-bold tracking-wide text-white/90;
+    }
+
+    .news-featured-content {
+        @apply relative z-10 flex w-full min-w-0 flex-col justify-end p-5 sm:p-8 lg:p-12;
+        min-height: inherit;
+    }
+
+    .news-featured-date {
+        @apply text-sm font-bold text-yellow-300;
+    }
+
+    .news-featured-title {
+        @apply mt-3 max-w-4xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl;
+    }
+
+    .news-featured-summary {
+        @apply mt-4 max-w-3xl text-sm leading-relaxed text-white/90 sm:text-base;
+    }
+
+    .news-featured-link {
+        @apply mt-5 inline-flex min-h-11 w-fit items-center rounded-lg bg-white px-4 py-2 text-sm font-bold text-sky-950 transition-colors hover:bg-yellow-300;
+        @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-300;
+    }
+
+    .news-list {
+        @apply my-8;
+    }
 }
 
 @media (max-width: 639px) {
