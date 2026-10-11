@@ -23,13 +23,14 @@ class NewsController extends Controller
      */
     public function index(Request $request)
     {
-        $page = $request->query('page');
+        $page = filter_var($request->query('page', 1), FILTER_VALIDATE_INT);
+        abort_if($page === false || $page < 1, 404);
 
-        if ($page) {
-            $page = (int) $page;
-        } else {
-            $page = 1;
-        }
+        $perPage = 10;
+        $totalItems = $this->news->count();
+        $totalPages = (int) ceil($totalItems / $perPage);
+        abort_if($page > max(1, $totalPages), 404);
+
         $news = $this->news->index($page);
         $featured = $page === 1 ? $news->first() : null;
 
@@ -37,11 +38,21 @@ class NewsController extends Controller
             $news = $news->reject(fn ($item) => $item->getKey() === $featured->getKey())->values();
         }
 
-        $count = $this->news->count();
+        if ($request->boolean('partial')) {
+            return response()->view('Front.news.partials.cards', ['news' => $news]);
+        }
+
+        $pageWindowStart = max(1, $page - 1);
+        $pageWindowEnd = min($totalPages, $page + 1);
+
         return view('Front.news.index', [
             'news' => $news,
             'featured' => $featured,
-            'count' => $count/10,
+            'currentPage' => $page,
+            'totalPages' => $totalPages,
+            'hasMore' => $page < $totalPages,
+            'pageWindowStart' => $pageWindowStart,
+            'pageWindowEnd' => $pageWindowEnd,
         ]);
     }
 

@@ -16,7 +16,12 @@ class SQLiteNewsRepository implements NewsRepositoryInterface
 
     public function index(int $page)
     {
-        return $this->news::all()->sortByDesc('created_at')->forPage($page, 10);
+        return $this->news->newQuery()
+            ->orderByDesc('created_at')
+            ->orderByDesc('id')
+            ->offset(($page - 1) * 10)
+            ->limit(10)
+            ->get();
     }
     public function count()
     {
