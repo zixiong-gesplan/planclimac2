@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'PLANCLIMAC2 (1/MAC/2/2.4/0006)')
+@section('title', 'PLANCLIMAC2 | Actuaciones coordinadas en la región macaronésica en materia de riesgos y amenazas del cambio climático')
 
 @section('content')
 <section class="relative -mx-2 -mt-2 min-h-[100svh] w-[calc(100%_+_1rem)] overflow-hidden bg-sky-950 text-white shadow-xl md:-mx-8 md:-mt-8 md:w-[calc(100%_+_4rem)]">
@@ -58,10 +58,10 @@
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a href="{{ url('/results') }}" class="inline-flex min-h-12 items-center justify-center rounded-xl bg-yellow-300 px-6 py-3 text-center font-bold text-sky-950 transition hover:bg-yellow-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
                     <span data-container="translator">
-                        <span data-lang="es">Conoce nuestros resultados</span>
-                        <span class="hidden" data-lang="pt">Conhece os nossos resultados</span>
-                        <span class="hidden" data-lang="en">Explore our results</span>
-                        <span class="hidden" data-lang="fr">Découvrez nos résultats</span>
+                        <span data-lang="es">Ver objetivos y productos</span>
+                        <span class="hidden" data-lang="pt">Ver objetivos e produtos</span>
+                        <span class="hidden" data-lang="en">View objectives and products</span>
+                        <span class="hidden" data-lang="fr">Voir les objectifs et les produits</span>
                     </span>
                 </a>
                 <a href="{{ url('/news') }}" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/80 px-6 py-3 text-center font-bold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-300">
@@ -98,14 +98,6 @@
                 </span>
             </dt>
             <dd class="project-fact-value">3.045.442,75 €</dd>
-            <dd class="mt-2 text-sm text-slate-700">
-                <span data-container="translator">
-                    <span data-lang="es">Presupuesto de ejecución del proyecto</span>
-                    <span class="hidden" data-lang="pt">Orçamento de execução do projeto</span>
-                    <span class="hidden" data-lang="en">Project implementation budget</span>
-                    <span class="hidden" data-lang="fr">Budget d’exécution du projet</span>
-                </span>
-            </dd>
         </div>
 
         <div class="p-6 sm:p-8">
@@ -221,12 +213,12 @@
         </p>
         <h2 id="consortium-title" class="section-title mt-2">
             <span data-container="translator">
-                <span data-lang="es">Siete regiones, un mismo objetivo</span><span class="hidden" data-lang="pt">Sete regiões, um mesmo objetivo</span><span class="hidden" data-lang="en">Seven regions, one shared goal</span><span class="hidden" data-lang="fr">Sept régions, un même objectif</span>
+                <span data-lang="es">Doce entidades colaboran en siete regiones</span><span class="hidden" data-lang="pt">Doze entidades colaboram em sete regiões</span><span class="hidden" data-lang="en">Twelve organisations work across seven regions</span><span class="hidden" data-lang="fr">Douze organismes coopèrent dans sept régions</span>
             </span>
         </h2>
         <p class="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
             <span data-container="translator">
-                <span data-lang="es">Conoce las entidades que forman parte de PLANCLIMAC2.</span><span class="hidden" data-lang="pt">Conhece as entidades que fazem parte do PLANCLIMAC2.</span><span class="hidden" data-lang="en">Meet the organisations that make up PLANCLIMAC2.</span><span class="hidden" data-lang="fr">Découvrez les organismes qui composent PLANCLIMAC2.</span>
+                <span data-lang="es">Estas entidades participan en PLANCLIMAC2 desde Macaronesia y África.</span><span class="hidden" data-lang="pt">Estas entidades participam no PLANCLIMAC2 a partir da Macaronésia e de África.</span><span class="hidden" data-lang="en">These organisations take part in PLANCLIMAC2 across Macaronesia and Africa.</span><span class="hidden" data-lang="fr">Ces organismes participent à PLANCLIMAC2 depuis la Macaronésie et l’Afrique.</span>
             </span>
         </p>
     </header>
@@ -241,8 +233,8 @@
             <dd class="order-1 text-2xl font-bold tracking-tight text-sky-950 sm:text-3xl">7</dd>
         </div>
         <div class="flex flex-col px-2 text-center sm:px-6">
-            <dt class="order-2 mt-1 text-xs text-slate-600 sm:text-sm"><span data-container="translator"><span data-lang="es">Objetivo común</span><span class="hidden" data-lang="pt">Objetivo comum</span><span class="hidden" data-lang="en">Shared goal</span><span class="hidden" data-lang="fr">Objectif commun</span></span></dt>
-            <dd class="order-1 text-2xl font-bold tracking-tight text-sky-950 sm:text-3xl">1</dd>
+            <dt class="order-2 mt-1 text-xs text-slate-600 sm:text-sm"><span data-container="translator"><span data-lang="es">Objetivos</span><span class="hidden" data-lang="pt">Objetivos</span><span class="hidden" data-lang="en">Objectives</span><span class="hidden" data-lang="fr">Objectifs</span></span></dt>
+            <dd class="order-1 text-2xl font-bold tracking-tight text-sky-950 sm:text-3xl">3</dd>
         </div>
     </dl>
 
@@ -319,10 +311,10 @@
         </h2>
         <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
             <span data-container="translator">
-                <span data-lang="es">Tres objetivos estratégicos para avanzar en el conocimiento, la cooperación y la adaptación al cambio climático en la Macaronesia.</span>
-                <span class="hidden" data-lang="pt">Três objetivos estratégicos para avançar no conhecimento, na cooperação e na adaptação às alterações climáticas na Macaronésia.</span>
-                <span class="hidden" data-lang="en">Three strategic objectives to advance knowledge, cooperation and climate change adaptation in Macaronesia.</span>
-                <span class="hidden" data-lang="fr">Trois objectifs stratégiques pour faire progresser les connaissances, la coopération et l’adaptation au changement climatique en Macaronésie.</span>
+                <span data-lang="es">Los tres objetivos son consolidar el Observatorio, evaluar indicadores climáticos y promover la ciencia ciudadana y la adaptación.</span>
+                <span class="hidden" data-lang="pt">Os três objetivos são consolidar o Observatório, avaliar indicadores climáticos e promover a ciência cidadã e a adaptação.</span>
+                <span class="hidden" data-lang="en">The three objectives are to consolidate the Observatory, assess climate indicators, and promote citizen science and adaptation.</span>
+                <span class="hidden" data-lang="fr">Les trois objectifs consistent à consolider l’Observatoire, évaluer les indicateurs climatiques et promouvoir la science citoyenne et l’adaptation.</span>
             </span>
         </p>
     </header>
@@ -476,17 +468,17 @@
     <header class="mb-8 max-w-3xl">
         <p class="section-eyebrow">
             <span data-container="translator">
-                <span data-lang="es">Resultados del proyecto</span><span class="hidden" data-lang="pt">Resultados do projeto</span><span class="hidden" data-lang="en">Project results</span><span class="hidden" data-lang="fr">Résultats du projet</span>
+                <span data-lang="es">Seguimiento del proyecto</span><span class="hidden" data-lang="pt">Acompanhamento do projeto</span><span class="hidden" data-lang="en">Project tracking</span><span class="hidden" data-lang="fr">Suivi du projet</span>
             </span>
         </p>
         <h2 id="project-indicators-title" class="section-title mt-2">
             <span data-container="translator">
-                <span data-lang="es">Indicadores del proyecto</span><span class="hidden" data-lang="pt">Indicadores do projeto</span><span class="hidden" data-lang="en">Project indicators</span><span class="hidden" data-lang="fr">Indicateurs du projet</span>
+                <span data-lang="es">Indicadores y metas</span><span class="hidden" data-lang="pt">Indicadores e metas</span><span class="hidden" data-lang="en">Indicators and targets</span><span class="hidden" data-lang="fr">Indicateurs et objectifs</span>
             </span>
         </h2>
         <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
             <span data-container="translator">
-                <span data-lang="es">Avances de PLANCLIMAC2 en investigación, cooperación y divulgación climática.</span><span class="hidden" data-lang="pt">Avanços do PLANCLIMAC2 em investigação, cooperação e divulgação climática.</span><span class="hidden" data-lang="en">PLANCLIMAC2 progress in climate research, cooperation and outreach.</span><span class="hidden" data-lang="fr">Avancées de PLANCLIMAC2 en matière de recherche, de coopération et de sensibilisation au climat.</span>
+                <span data-lang="es">Esta sección reúne indicadores y metas de investigación, cooperación y comunicación.</span><span class="hidden" data-lang="pt">Esta secção reúne indicadores e metas de investigação, cooperação e comunicação.</span><span class="hidden" data-lang="en">This section brings together research, cooperation and communication indicators and targets.</span><span class="hidden" data-lang="fr">Cette section rassemble les indicateurs et les objectifs de recherche, de coopération et de communication.</span>
             </span>
         </p>
     </header>

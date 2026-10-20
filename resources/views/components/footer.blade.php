@@ -7,10 +7,10 @@
                     <img src="{{ asset('images/PLANCLIMAC2_AMARILLO.svg') }}" alt="PLANCLIMAC2" class="site-footer-logo">
                 </a>
                 <p class="site-footer-description" data-container="translator">
-                    <span data-lang="es">Cooperación para avanzar en el conocimiento y la adaptación al cambio climático en la Macaronesia.</span>
-                    <span class="hidden" data-lang="pt">Cooperação para avançar no conhecimento e na adaptação às alterações climáticas na Macaronésia.</span>
-                    <span class="hidden" data-lang="en">Cooperation to advance knowledge and adaptation to climate change in Macaronesia.</span>
-                    <span class="hidden" data-lang="fr">Coopérer pour faire progresser les connaissances et l’adaptation au changement climatique en Macaronésie.</span>
+                    <span data-lang="es">PLANCLIMAC2 reúne a entidades de Macaronesia y África para estudiar los riesgos climáticos y la adaptación.</span>
+                    <span class="hidden" data-lang="pt">O PLANCLIMAC2 reúne entidades da Macaronésia e de África para estudar os riscos climáticos e a adaptação.</span>
+                    <span class="hidden" data-lang="en">PLANCLIMAC2 brings together organisations from Macaronesia and Africa to study climate risks and adaptation.</span>
+                    <span class="hidden" data-lang="fr">PLANCLIMAC2 réunit des organismes de Macaronésie et d’Afrique pour étudier les risques climatiques et l’adaptation.</span>
                 </p>
             </section>
 

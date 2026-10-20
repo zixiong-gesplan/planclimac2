@@ -32,10 +32,10 @@ Route::middleware(TrackVisitors::class)->group(function (){
         $objectives = [
             [
                 'title' => [
-                    'es' => 'Objetivo específico 1 del proyecto',
-                    'pt' => 'Objetivo específico 1 do projeto',
-                    'en' => 'Project Specific Objective 1',
-                    'fr' => 'Objectif spécifique 1 du projet',
+                    'es' => 'Consolidar el Observatorio de Cambio Climático',
+                    'pt' => 'Consolidar o Observatório das Alterações Climáticas',
+                    'en' => 'Consolidate the Climate Change Observatory',
+                    'fr' => 'Consolider l’Observatoire du Changement Climatique',
                 ],
                 'navigation_title' => [
                     'es' => 'Observatorio y adaptación climática',
@@ -45,47 +45,47 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 ],
                 'image' => 'images/objective-cooperation.svg',
                 'description' => [
-                    'es' => 'Consolidar el Observatorio de Cambio Climático (OCC) de la Macaronesia. Este ente permitirá analizar y promover las medidas de adaptación al cambio climático y establecer un marco de cooperación en la gestión de riesgos naturales provocados por el cambio climático en la región macaronésica y terceros países.',
-                    'pt' => 'Consolidar o Observatório de Alterações Climáticas (OCC) da Macaronésia. Este organismo permitirá analisar e promover medidas de adaptação às alterações climáticas e estabelecer um quadro de cooperação na gestão de riscos naturais provocados pelas alterações climáticas na região macaronésica e em países terceiros.',
-                    'en' => 'Consolidate the Macaronesian Climate Change Observatory (OCC). This body will enable the analysis and promotion of climate change adaptation measures and establish a cooperation framework for managing natural risks caused by climate change in the Macaronesian region and third countries.',
-                    'fr' => 'Consolider l’Observatoire du Changement Climatique (OCC) de la Macaronésie. Cet organisme permettra d’analyser et de promouvoir les mesures d’adaptation au changement climatique et d’établir un cadre de coopération pour la gestion des risques naturels induits par le changement climatique dans la région macaronésienne et les pays tiers.',
+                    'es' => 'El proyecto consolidará el Observatorio de Cambio Climático (OCC) de la Macaronesia. El OCC analizará y promoverá medidas de adaptación, y establecerá un marco de cooperación para gestionar riesgos naturales asociados al cambio climático en la región y terceros países.',
+                    'pt' => 'O projeto consolidará o Observatório das Alterações Climáticas (OCC) da Macaronésia. O OCC analisará e promoverá medidas de adaptação e estabelecerá um quadro de cooperação para gerir riscos naturais associados às alterações climáticas na região e em países terceiros.',
+                    'en' => 'The project will consolidate the Macaronesia Climate Change Observatory (OCC). The OCC will assess and promote adaptation measures and establish a cooperation framework to manage natural risks linked to climate change in the region and third countries.',
+                    'fr' => 'Le projet consolidera l’Observatoire du Changement Climatique (OCC) de la Macaronésie. L’OCC analysera et promouvra des mesures d’adaptation, et établira un cadre de coopération pour gérer les risques naturels liés au changement climatique dans la région et les pays tiers.',
                 ],
                 'activities' => [
                     [
                         'id' => '1.1',
                         'description' => [
-                            'es' => 'Desarrollo de una Estrategia Macaronésica de Adaptación al CC impulsada desde el OCC a través de buenas prácticas: integración de Terceros Países.',
-                            'pt' => 'Desenvolvimento de uma Estratégia Macaronésica de Adaptação às AC, promovida pelo OCC com base em boas práticas: integração de Países Terceiros.',
-                            'en' => 'Development of a Macaronesian Climate Change Adaptation Strategy led by the OCC through good practices: integration of third countries.',
-                            'fr' => 'Élaboration d’une stratégie macaronésienne d’adaptation au changement climatique, pilotée par l’OCC à partir de bonnes pratiques : intégration des pays tiers.',
+                            'es' => 'Desarrollar desde el OCC una Estrategia Macaronésica de Adaptación al Cambio Climático basada en buenas prácticas e integrar a terceros países.',
+                            'pt' => 'Desenvolver, a partir do OCC, uma Estratégia Macaronésica de Adaptação às Alterações Climáticas baseada em boas práticas e integrar países terceiros.',
+                            'en' => 'Develop an OCC-led Macaronesian Climate Change Adaptation Strategy based on good practices and integrate third countries.',
+                            'fr' => 'Élaborer, sous l’égide de l’OCC, une stratégie macaronésienne d’adaptation au changement climatique fondée sur de bonnes pratiques et intégrer les pays tiers.',
                         ],
                     ],
                     [
                         'id' => '1.2',
                         'description' => [
-                            'es' => 'Implementación de un Atlas Climático para la Macaronesia que permita la transferencia desde el conocimiento a la sociedad y las instituciones públicas.',
-                            'pt' => 'Implementação de um Atlas Climático para a Macaronésia que permita a transferência de conhecimento para a sociedade e as instituições públicas.',
-                            'en' => 'Implementation of a Climate Atlas for Macaronesia to enable knowledge transfer to society and public institutions.',
-                            'fr' => 'Mise en œuvre d’un Atlas climatique pour la Macaronésie afin de faciliter le transfert de connaissances à la société et aux institutions publiques.',
+                            'es' => 'Implementar un Atlas Climático para Macaronesia y transferir sus conocimientos a la sociedad y las instituciones públicas.',
+                            'pt' => 'Implementar um Atlas Climático para a Macaronésia e transferir o seu conhecimento para a sociedade e as instituições públicas.',
+                            'en' => 'Implement a Climate Atlas for Macaronesia and share its knowledge with the public and public institutions.',
+                            'fr' => 'Mettre en place un Atlas climatique pour la Macaronésie et transmettre ses connaissances au public et aux institutions publiques.',
                         ],
                     ],
                     [
                         'id' => '1.3',
                         'description' => [
-                            'es' => 'Desarrollo de una propuesta común de indicadores sobre Cambio Climático (de tipo ambiental y socioeconómico) para toda la Región Macaronésica.',
-                            'pt' => 'Desenvolvimento de uma proposta comum de indicadores sobre alterações climáticas (ambientais e socioeconómicos) para toda a região macaronésica.',
-                            'en' => 'Development of a common set of climate change indicators (environmental and socio-economic) for the entire Macaronesian region.',
-                            'fr' => 'Élaboration d’une proposition commune d’indicateurs de changement climatique (environnementaux et socio-économiques) pour l’ensemble de la région macaronésienne.',
+                            'es' => 'Proponer indicadores ambientales y socioeconómicos comunes sobre cambio climático para toda Macaronesia.',
+                            'pt' => 'Propor indicadores ambientais e socioeconómicos comuns sobre alterações climáticas para toda a Macaronésia.',
+                            'en' => 'Propose shared environmental and socio-economic climate change indicators for Macaronesia.',
+                            'fr' => 'Proposer des indicateurs environnementaux et socio-économiques communs sur le changement climatique pour toute la Macaronésie.',
                         ],
                     ],
                 ],
             ],
             [
                 'title' => [
-                    'es' => 'Objetivo específico 2 del proyecto',
-                    'pt' => 'Objetivo específico 2 do projeto',
-                    'en' => 'Project Specific Objective 2',
-                    'fr' => 'Objectif spécifique 2 du projet',
+                    'es' => 'Evaluar los indicadores climáticos regionales',
+                    'pt' => 'Avaliar os indicadores climáticos regionais',
+                    'en' => 'Assess regional climate indicators',
+                    'fr' => 'Évaluer les indicateurs climatiques régionaux',
                 ],
                 'navigation_title' => [
                     'es' => 'Indicadores y conocimiento climático',
@@ -95,47 +95,47 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 ],
                 'image' => 'images/objective-climate-science.svg',
                 'description' => [
-                    'es' => 'Evaluar la evolución de los indicadores regionales de cambio climático en la región macaronésica (desde la atmósfera hasta el océano). Impactos y acciones de adaptación vinculadas a la vulnerabilidad de los ecosistemas y la sociedad.',
-                    'pt' => 'Avaliar a evolução dos indicadores regionais de alterações climáticas na região macaronésica (da atmosfera ao oceano). Impactos e ações de adaptação ligados à vulnerabilidade dos ecossistemas e da sociedade.',
-                    'en' => 'Assess the evolution of regional climate change indicators in the Macaronesian region (from the atmosphere to the ocean). Impacts and adaptation actions linked to ecosystem and societal vulnerability.',
-                    'fr' => 'Évaluer l’évolution des indicateurs régionaux du changement climatique dans la région macaronésienne (de l’atmosphère à l’océan). Impacts et actions d’adaptation liés à la vulnérabilité des écosystèmes et de la société.',
+                    'es' => 'El proyecto evaluará los indicadores regionales del cambio climático, desde la atmósfera hasta el océano. También estudiará los impactos y las medidas de adaptación relacionados con la vulnerabilidad de los ecosistemas y la sociedad.',
+                    'pt' => 'O projeto avaliará os indicadores regionais das alterações climáticas, da atmosfera ao oceano. Também estudará os impactos e as medidas de adaptação relacionados com a vulnerabilidade dos ecossistemas e da sociedade.',
+                    'en' => 'The project will assess regional climate change indicators, from the atmosphere to the ocean. It will also study impacts and adaptation measures linked to the vulnerability of ecosystems and society.',
+                    'fr' => 'Le projet évaluera les indicateurs régionaux du changement climatique, de l’atmosphère à l’océan. Il étudiera aussi les impacts et les mesures d’adaptation liés à la vulnérabilité des écosystèmes et de la société.',
                 ],
                 'activities' => [
                     [
                         'id' => '2.1',
                         'description' => [
-                            'es' => 'Desarrollo de regionalizaciones climáticas dinámicas usando los diferentes escenarios y los indicadores consolidados en todo el área de actuación.',
-                            'pt' => 'Desenvolvimento de regionalizações climáticas dinâmicas utilizando diferentes cenários e os indicadores consolidados em toda a área de atuação.',
-                            'en' => 'Development of dynamic climate regionalisations using different scenarios and the consolidated indicators across the entire area of intervention.',
-                            'fr' => 'Développement de régionalisations climatiques dynamiques en utilisant différents scénarios et les indicateurs consolidés sur l’ensemble de la zone d’intervention.',
+                            'es' => 'Elaborar regionalizaciones climáticas dinámicas con distintos escenarios e indicadores consolidados en toda el área de actuación.',
+                            'pt' => 'Elaborar regionalizações climáticas dinâmicas com diferentes cenários e indicadores consolidados em toda a área de atuação.',
+                            'en' => 'Develop dynamic climate regionalisations using different scenarios and the consolidated indicators across the project area.',
+                            'fr' => 'Élaborer des régionalisations climatiques dynamiques à partir de différents scénarios et des indicateurs consolidés dans toute la zone d’intervention.',
                         ],
                     ],
                     [
                         'id' => '2.2',
                         'description' => [
-                            'es' => 'Análisis de la evolución del sistema del CO2 en el océano e indicadores de CC a través de series temporales, bases de datos y datos satelitales.',
-                            'pt' => 'Análise da evolução do sistema de CO2 no oceano e dos indicadores de AC através de séries temporais, bases de dados e dados de satélite.',
-                            'en' => 'Analysis of the evolution of the oceanic CO2 system and climate-change indicators using time series, databases and satellite data.',
-                            'fr' => 'Analyse de l’évolution du système de CO2 océanique et des indicateurs de changement climatique à partir de séries temporelles, de bases de données et de données satellitaires.',
+                            'es' => 'Analizar la evolución del sistema oceánico de CO₂ y de los indicadores climáticos mediante series temporales, bases de datos y datos satelitales.',
+                            'pt' => 'Analisar a evolução do sistema oceânico de CO₂ e dos indicadores climáticos através de séries temporais, bases de dados e dados de satélite.',
+                            'en' => 'Analyse the oceanic CO₂ system and climate indicators over time using time series, databases and satellite data.',
+                            'fr' => 'Analyser l’évolution du système océanique de CO₂ et des indicateurs climatiques à partir de séries temporelles, de bases de données et de données satellitaires.',
                         ],
                     ],
                     [
                         'id' => '2.3',
                         'description' => [
-                            'es' => 'Evaluación de impactos: caracterización de la erosividad de la lluvia; incidencia del CC en la escorrentía y pérdida de suelo por erosión.',
-                            'pt' => 'Avaliação de impactos: caracterização da erosividade da chuva; incidência das AC no escoamento e na perda de solo por erosão.',
-                            'en' => 'Impact assessment: characterisation of rainfall erosivity; effect of climate change on runoff and soil loss by erosion.',
-                            'fr' => 'Évaluation des impacts : caractérisation de l’érosivité des précipitations ; incidence du changement climatique sur le ruissellement et la perte de sol par érosion.',
+                            'es' => 'Evaluar la erosividad de la lluvia y los efectos del cambio climático en la escorrentía y la pérdida de suelo por erosión.',
+                            'pt' => 'Avaliar a erosividade da chuva e os efeitos das alterações climáticas no escoamento e na perda de solo por erosão.',
+                            'en' => 'Assess rainfall erosivity and the effects of climate change on runoff and soil loss through erosion.',
+                            'fr' => 'Évaluer l’érosivité des pluies et les effets du changement climatique sur le ruissellement et la perte de sol par érosion.',
                         ],
                     ],
                 ],
             ],
             [
                 'title' => [
-                    'es' => 'Objetivo específico 3 del proyecto',
-                    'pt' => 'Objetivo específico 3 do projeto',
-                    'en' => 'Project Specific Objective 3',
-                    'fr' => 'Objectif spécifique 3 du projet',
+                    'es' => 'Ciencia ciudadana y adaptación climática',
+                    'pt' => 'Ciência cidadã e adaptação climática',
+                    'en' => 'Citizen science and climate adaptation',
+                    'fr' => 'Science citoyenne et adaptation climatique',
                 ],
                 'navigation_title' => [
                     'es' => 'Ciencia ciudadana y transición verde',
@@ -145,37 +145,37 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 ],
                 'image' => 'images/objective-citizen-science.svg',
                 'description' => [
-                    'es' => 'Implementar acciones para la mejora del entendimiento científico y la coordinación entre las administraciones y las entidades sociales y económicas ante los riesgos asociados al cambio climático.',
-                    'pt' => 'Implementar ações para melhorar o entendimento científico e a coordenação entre as administrações e as entidades sociais e económicas face aos riscos associados às alterações climáticas.',
-                    'en' => 'Implement actions to improve scientific understanding and coordination among public administrations and social and economic stakeholders in the face of risks associated with climate change.',
-                    'fr' => 'Mettre en œuvre des actions visant à améliorer la compréhension scientifique et la coordination entre les administrations publiques et les acteurs sociaux et économiques face aux risques liés au changement climatique.',
+                    'es' => 'El proyecto pondrá en marcha acciones para mejorar la comprensión científica del cambio climático y reforzar la coordinación entre administraciones y entidades sociales y económicas ante sus riesgos.',
+                    'pt' => 'O projeto implementará ações para melhorar a compreensão científica das alterações climáticas e reforçar a coordenação entre administrações e entidades sociais e económicas perante os seus riscos.',
+                    'en' => 'The project will carry out actions to improve scientific understanding of climate change and strengthen coordination between public administrations and social and economic organisations in response to related risks.',
+                    'fr' => 'Le projet mettra en œuvre des actions pour améliorer la compréhension scientifique du changement climatique et renforcer la coordination entre les administrations et les organismes sociaux et économiques face aux risques associés.',
                 ],
                 'activities' => [
                     [
                         'id' => '3.1',
                         'description' => [
-                            'es' => 'Programa de fomento de la ciencia ciudadana sobre acción climática y capacitación técnica sobre impactos y adaptación al cambio climático.',
-                            'pt' => 'Programa de promoção da ciência cidadã sobre ação climática e capacitação técnica sobre impactos e adaptação às alterações climáticas.',
-                            'en' => 'Programme to promote citizen science on climate action and technical training on climate-change impacts and adaptation.',
-                            'fr' => 'Programme de promotion de la science citoyenne sur l’action climatique et de formation technique sur les impacts et l’adaptation au changement climatique.',
+                            'es' => 'Promover la ciencia ciudadana sobre acción climática y ofrecer formación técnica sobre los impactos del cambio climático y la adaptación.',
+                            'pt' => 'Promover a ciência cidadã sobre ação climática e oferecer formação técnica sobre os impactos das alterações climáticas e a adaptação.',
+                            'en' => 'Promote citizen science on climate action and provide technical training on climate change impacts and adaptation.',
+                            'fr' => 'Promouvoir la science citoyenne sur l’action climatique et proposer une formation technique sur les impacts du changement climatique et l’adaptation.',
                         ],
                     ],
                     [
                         'id' => '3.2',
                         'description' => [
-                            'es' => 'Optimización de oportunidades de actividad y empleo en la transición hacia una economía verde y minimización de los impactos socioeconómicos.',
-                            'pt' => 'Otimização de oportunidades de atividade e emprego na transição para uma economia verde e minimização dos impactos socioeconómicos.',
-                            'en' => 'Optimisation of activity and employment opportunities in the transition to a green economy, minimising socio-economic impacts.',
-                            'fr' => 'Optimisation des opportunités d’activité et d’emploi dans la transition vers une économie verte, en minimisant les impacts socio-économiques.',
+                            'es' => 'Ampliar las oportunidades de actividad y empleo en la transición verde y reducir los impactos socioeconómicos.',
+                            'pt' => 'Ampliar as oportunidades de atividade e emprego na transição verde e reduzir os impactos socioeconómicos.',
+                            'en' => 'Expand work and employment opportunities in the green transition and reduce socio-economic impacts.',
+                            'fr' => 'Accroître les possibilités d’activité et d’emploi dans la transition verte et réduire les impacts socio-économiques.',
                         ],
                     ],
                     [
                         'id' => '3.3',
                         'description' => [
-                            'es' => 'Desarrollo de herramientas de aprendizaje para evaluar riesgos y oportunidades y mejorar las decisiones de inversión ante los riesgos climáticos.',
-                            'pt' => 'Desenvolvimento de ferramentas de aprendizagem para avaliar riscos e oportunidades e melhorar as decisões de investimento face aos riscos climáticos.',
-                            'en' => 'Development of learning tools to assess risks and opportunities and improve investment decisions in the face of climate risks.',
-                            'fr' => 'Développement d’outils d’apprentissage pour évaluer les risques et les opportunités et améliorer les décisions d’investissement face aux risques climatiques.',
+                            'es' => 'Crear herramientas de aprendizaje para evaluar riesgos y oportunidades y mejorar las decisiones de inversión ante los riesgos climáticos.',
+                            'pt' => 'Criar ferramentas de aprendizagem para avaliar riscos e oportunidades e melhorar as decisões de investimento perante os riscos climáticos.',
+                            'en' => 'Create learning tools to assess risks and opportunities and improve investment decisions in response to climate risks.',
+                            'fr' => 'Créer des outils d’apprentissage pour évaluer les risques et les opportunités et améliorer les décisions d’investissement face aux risques climatiques.',
                         ],
                     ],
                 ],
@@ -188,12 +188,12 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'category' => 'research',
                 'icon' => 'book-open',
                 'title' => [
-                    'es' => 'Estudios realizados',
+                    'es' => 'Estudios realizados', // 2 estudios de la ULPGC
                     'pt' => 'Estudos realizados',
                     'en' => 'Studies carried out',
                     'fr' => 'Études réalisées',
                 ],
-                'progress' => 0,
+                'progress' => 2,
                 'target' => 15
             ],
             [
@@ -201,12 +201,12 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 'category' => 'research',
                 'icon' => 'users',
                 'title' => [
-                    'es' => 'Investigadores',
+                    'es' => 'Investigadores', 
                     'pt' => 'Investigadores',
                     'en' => 'Researchers',
                     'fr' => 'Chercheurs',
                 ],
-                'progress' => 0,
+                'progress' => 1, // Maria Jimenez (ULL)
                 'target' => 5
             ],
             [
@@ -219,7 +219,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                     'en' => 'Follow-up meetings',
                     'fr' => 'Réunions de suivi',
                 ],
-                'progress' => 0,
+                'progress' => 2,
                 'target' => 5
             ],
             [
@@ -232,7 +232,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                     'en' => 'Event participants',
                     'fr' => 'Participants aux événements',
                 ],
-                'progress' => 0,
+                'progress' => 143, // Refugios climatios 75 + Ghana 36 + Jornadas 32
                 'target' => 400
             ],
             [
@@ -245,7 +245,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                     'en' => 'Scientific publications',
                     'fr' => 'Publications scientifiques',
                 ],
-                'progress' => 0,
+                'progress' => 10,
                 'target' => 3
             ],
             [
@@ -271,7 +271,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                     'en' => 'Dissemination events',
                     'fr' => 'Actions de diffusion',
                 ],
-                'progress' => 0,
+                'progress' => 2, // Refugios climatios 1 + Ghana
                 'target' => 15
             ],
             [
@@ -392,7 +392,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of project follow-up meetings.',
                             'fr' => 'Nombre de réunions de suivi du projet.',
                         ],
-                        'progress' => 0,
+                        'reported_value' => 2,
                         'target' => 5
                     ],
                     [
@@ -578,6 +578,57 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 ],
             ],
         ];
+
+        $categoryIds = ['output', 'result', 'project-specific', 'communication'];
+        $shortTitles = [
+            'rco-83' => ['es' => 'Estrategias conjuntas', 'pt' => 'Estratégias conjuntas', 'en' => 'Joint strategies', 'fr' => 'Stratégies conjointes'],
+            'rco-84' => ['es' => 'Actividades piloto', 'pt' => 'Atividades-piloto', 'en' => 'Pilot activities', 'fr' => 'Activités pilotes'],
+            'rco-87' => ['es' => 'Organizaciones que cooperan', 'pt' => 'Organizações em cooperação', 'en' => 'Cooperating organisations', 'fr' => 'Organisations coopérantes'],
+            'rcr-84' => ['es' => 'Cooperación tras el proyecto', 'pt' => 'Cooperação após o projeto', 'en' => 'Cooperation after the project', 'fr' => 'Coopération après le projet'],
+            'rcr-79' => ['es' => 'Estrategias adoptadas', 'pt' => 'Estratégias adotadas', 'en' => 'Adopted strategies', 'fr' => 'Stratégies adoptées'],
+            'project-specific-1' => ['es' => 'Personas formadas y participantes', 'pt' => 'Pessoas formadas e participantes', 'en' => 'People trained and event participants', 'fr' => 'Personnes formées et participantes'],
+            'project-specific-2' => ['es' => 'Reuniones de seguimiento', 'pt' => 'Reuniões de acompanhamento', 'en' => 'Project follow-up meetings', 'fr' => 'Réunions de suivi'],
+            'project-specific-3' => ['es' => 'Indicadores de vulnerabilidad climática', 'pt' => 'Indicadores de vulnerabilidade climática', 'en' => 'Climate vulnerability indicators', 'fr' => 'Indicateurs de vulnérabilité climatique'],
+            'project-specific-4' => ['es' => 'Convenios del Observatorio', 'pt' => 'Acordos do Observatório', 'en' => 'Observatory agreements', 'fr' => 'Accords de l’Observatoire'],
+            'project-specific-5' => ['es' => 'Publicaciones científicas', 'pt' => 'Publicações científicas', 'en' => 'Scientific publications', 'fr' => 'Publications scientifiques'],
+            'project-specific-6' => ['es' => 'Investigadores formados', 'pt' => 'Investigadores formados', 'en' => 'Researchers trained', 'fr' => 'Chercheurs formés'],
+            'project-specific-7' => ['es' => 'Alumnado sensibilizado', 'pt' => 'Alunos sensibilizados', 'en' => 'Students reached', 'fr' => 'Élèves sensibilisés'], // Llevar hojas de firmas para la charla de Jesús
+            'project-specific-8' => ['es' => 'Estudios realizados', 'pt' => 'Estudos realizados', 'en' => 'Studies completed', 'fr' => 'Études réalisées'],
+            'project-specific-9' => ['es' => 'Contratos de investigación', 'pt' => 'Contratos de investigação', 'en' => 'Research contracts', 'fr' => 'Contrats de recherche'],
+            'communication-1' => ['es' => 'Visitas a la web', 'pt' => 'Visitas ao site', 'en' => 'Website visits', 'fr' => 'Visites du site'],
+            'communication-2' => ['es' => 'Acciones en medios', 'pt' => 'Ações nos meios de comunicação', 'en' => 'Media outreach actions', 'fr' => 'Actions dans les médias'],
+            'communication-3' => ['es' => 'Publicaciones', 'pt' => 'Publicações', 'en' => 'Publications', 'fr' => 'Publications'],
+            'communication-4' => ['es' => 'Publicaciones en redes sociales', 'pt' => 'Publicações nas redes sociais', 'en' => 'Social media posts', 'fr' => 'Publications sur les réseaux sociaux'],
+            'communication-5' => ['es' => 'Publicaciones impresas', 'pt' => 'Publicações impressas', 'en' => 'Print publications', 'fr' => 'Publications imprimées'],
+            'communication-6' => ['es' => 'Producciones audiovisuales', 'pt' => 'Produções audiovisuais', 'en' => 'Audiovisual productions', 'fr' => 'Productions audiovisuelles'],
+            'communication-7' => ['es' => 'Eventos de comunicación', 'pt' => 'Eventos de comunicação', 'en' => 'Communication events', 'fr' => 'Événements de communication'],
+            'communication-8' => ['es' => 'Participantes en eventos', 'pt' => 'Participantes nos eventos', 'en' => 'Event participants', 'fr' => 'Participants aux événements'],
+            'communication-9' => ['es' => 'Mujeres participantes', 'pt' => 'Mulheres participantes', 'en' => 'Women participants', 'fr' => 'Femmes participantes'],
+            'communication-10' => ['es' => 'Participantes de terceros países', 'pt' => 'Participantes de países terceiros', 'en' => 'Participants from third countries', 'fr' => 'Participants des pays tiers'],
+        ];
+        foreach ($indicators as $categoryIndex => &$category) {
+            $category['id'] = $categoryIds[$categoryIndex] ?? 'category-' . ($categoryIndex + 1);
+
+            foreach ($category['goals'] as $goalIndex => &$goal) {
+                $originalTitle = $goal['title']['es'] ?? '';
+                preg_match('/^(RCO|RCR)\s+(\d+)/u', $originalTitle, $matches);
+                $goal['code'] = isset($matches[0]) ? $matches[0] : null;
+                $goal['id'] = $goal['code']
+                    ? strtolower(str_replace(' ', '-', $goal['code']))
+                    : $category['id'] . '-' . ($goalIndex + 1);
+                $goal['short_title'] = $shortTitles[$goal['id']] ?? $goal['title'];
+                $goal['category_id'] = $category['id'];
+                $goal['category_title'] = $category['title'];
+                $goal['value'] = isset($goal['reported_value']) ? (int) $goal['reported_value'] : null;
+                $goal['target'] = (int) ($goal['target'] ?? 0);
+
+                if ($goal['id'] === 'communication-1') {
+                    $goal['value'] = Visitor::count();
+                }
+            }
+            unset($goal);
+        }
+        unset($category);
         
     
         return view('Front.stadistics.index', ['indicators' => $indicators]);
