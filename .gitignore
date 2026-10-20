@@ -1,3 +1,4 @@
+.ddev/*
 /.phpunit.cache
 /node_modules
 /public/build
@@ -29,3 +30,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 docs/
+
+# Instrucciones locales del proyecto
+/AGENTS/

@@ -1,506 +1,575 @@
 @extends('layouts.app')
 
-@section('title', 'PLANCLIMAC2 (1/MAC/2/2.4/0006)')
+@section('title', 'PLANCLIMAC2 | Actuaciones coordinadas en la región macaronésica en materia de riesgos y amenazas del cambio climático')
 
 @section('content')
-<section class="w-full md:w-10/12 mx-auto my-8 md:mb-16 flex flex-col md:flex-row gap-8">
-    <div class="w-full md:w-1/2">
-        <img src="/images/PLANCLIMAC2_AMARILLO.svg" alt="Logo PLANCLIMAC2" class="w-10/12 mb-2">
-        <h1 class="text-lg md:text-3xl font-extrabold capitalize mb4 text-yellow-400 md:ml-4">(1/MAC/2/2.4/0006)</h1>
-        <div data-container="translator">
-            <h2 
-                class="text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance" 
-                data-lang="es">
-                DESARROLLO Y MONITORIZACIÓN DE ACTUACIONES COORDINADAS EN LA REGIÓN MACARONÉSICA EN MATERIA DE RIESGOS Y AMENAZAS DEL CAMBIO CLIMÁTICO
-            </h2>
-            <h2 
-                class="hidden text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance" 
-                data-lang="pt">
-                DESENVOLVIMENTO E MONITORIZAÇÃO DE AÇÕES COORDENADAS NA REGIÃO MACARONÉSICA EM MATÉRIA DE RISCOS E AMEAÇAS DAS MUDANÇAS CLIMÁTICAS
-            </h2>
-            <h2 
-                class="hidden text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance" 
-                data-lang="en">
-                DEVELOPMENT AND MONITORING OF COORDINATED ACTIONS IN THE MACARONESIAN REGION ON RISKS AND THREATS OF CLIMATE CHANGE
-            </h2>
-            <h2 
-                class="hidden text-sm md:text-lg font-extrabold text-slate-700 uppercase mx-auto mb-4 md:ml-4 text-balance" 
-                data-lang="fr">
-                DÉVELOPPEMENT ET SUIVI DES ACTIONS COORDONNÉES DANS LA RÉGION MACARONÉSIENNE EN MATIÈRE DE RISQUES ET DE MENACES LIÉS AU CHANGEMENT CLIMATIQUE
-            </h2>
+<section class="relative -mx-2 -mt-2 min-h-[100svh] w-[calc(100%_+_1rem)] overflow-hidden bg-sky-950 text-white shadow-xl md:-mx-8 md:-mt-8 md:w-[calc(100%_+_4rem)]">
+    <img
+        src="{{ asset('images/HERO.jpg') }}"
+        alt=""
+        width="1600"
+        height="1200"
+        fetchpriority="high"
+        class="absolute inset-0 z-0 h-full w-full object-cover"
+    >
+    <div class="absolute inset-0 z-10 bg-gradient-to-r from-sky-950/95 via-sky-950/75 to-sky-950/30"></div>
+
+    <div class="relative z-20 flex min-h-[100svh] items-center px-6 py-24 sm:px-10 md:px-14 lg:px-20">
+        <div class="max-w-4xl">
+            <p class="mb-5 inline-flex rounded-full border border-yellow-300/50 bg-sky-950/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-yellow-300 sm:text-sm">
+                <span data-container="translator">
+                    <span data-lang="es">Proyecto Interreg MAC 2021–2027 · 1/MAC/2/2.4/0006</span>
+                    <span class="hidden" data-lang="pt">Projeto Interreg MAC 2021–2027 · 1/MAC/2/2.4/0006</span>
+                    <span class="hidden" data-lang="en">Interreg MAC Project 2021–2027 · 1/MAC/2/2.4/0006</span>
+                    <span class="hidden" data-lang="fr">Projet Interreg MAC 2021–2027 · 1/MAC/2/2.4/0006</span>
+                </span>
+            </p>
+
+            <div data-container="translator">
+                <h1 class="max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl" data-lang="es">
+                    ACTUACIONES COORDINADAS EN LA REGIÓN MACARONÉSICA EN MATERIA DE RIESGOS Y AMENAZAS DEL CAMBIO CLIMÁTICO
+                </h1>
+                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl" data-lang="pt">
+                    AÇÕES COORDENADAS NA REGIÃO MACARONÉSICA EM MATÉRIA DE RISCOS E AMEAÇAS DAS MUDANÇAS CLIMÁTICAS
+                </h1>
+                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl" data-lang="en">
+                    COORDINATED ACTIONS IN THE MACARONESIAN REGION ON RISKS AND THREATS OF CLIMATE CHANGE
+                </h1>
+                <h1 class="hidden max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl" data-lang="fr">
+                    ACTIONS COORDONNÉES DANS LA RÉGION MACARONÉSIENNE EN MATIÈRE DE RISQUES ET DE MENACES LIÉS AU CHANGEMENT CLIMATIQUE
+                </h1>
+            </div>
+
+            <div data-container="translator">
+                <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl" data-lang="es">
+                    Investigación y cooperación para comprender los riesgos climáticos y apoyar la adaptación de nuestros territorios.
+                </p>
+                <p class="hidden mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl" data-lang="pt">
+                    Investigação e cooperação para compreender os riscos climáticos e apoiar a adaptação dos nossos territórios.
+                </p>
+                <p class="hidden mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl" data-lang="en">
+                    Research and cooperation to understand climate risks and support adaptation across our territories.
+                </p>
+                <p class="hidden mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl" data-lang="fr">
+                    Recherche et coopération pour comprendre les risques climatiques et soutenir l’adaptation de nos territoires.
+                </p>
+            </div>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a href="{{ url('/results') }}" class="inline-flex min-h-12 items-center justify-center rounded-xl bg-yellow-300 px-6 py-3 text-center font-bold text-sky-950 transition hover:bg-yellow-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                    <span data-container="translator">
+                        <span data-lang="es">Ver objetivos y productos</span>
+                        <span class="hidden" data-lang="pt">Ver objetivos e produtos</span>
+                        <span class="hidden" data-lang="en">View objectives and products</span>
+                        <span class="hidden" data-lang="fr">Voir les objectifs et les produits</span>
+                    </span>
+                </a>
+                <a href="{{ url('/news') }}" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/80 px-6 py-3 text-center font-bold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-300">
+                    <span data-container="translator">
+                        <span data-lang="es">Últimas noticias</span>
+                        <span class="hidden" data-lang="pt">Últimas notícias</span>
+                        <span class="hidden" data-lang="en">Latest news</span>
+                        <span class="hidden" data-lang="fr">Dernières actualités</span>
+                    </span>
+                </a>
+            </div>
         </div>
-        <img src="https://interregmac.org/wp-content/uploads/2023/07/Group-9.jpg" alt="" class="w-full">
-    </div>
-    <div class="w-full md:w-1/2 h-full">
-        <img src="/images/HERO.jpg" alt="" class="w-full rounded-lg aspect-video my-auto shadow-lg">
     </div>
 </section>
 
-<section class="w-10/12 mt-2 gap-4 lg:gap-6 justify-center grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-auto">
-    <div class="bg-emerald-50 p-4 rounded-lg shadow-lg">
-        <h1 class="w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500">
-            3.045.442,75 €
-        </h1>
-        <div data-container="translator">
-            <p 
-                class="text-slate text-base font-semibold" 
-                data-lang="es">
-                Presupuesto de ejecución
-            </p>
-            <p 
-                class="hidden text-slate text-base font-semibold" 
-                data-lang="pt">
-                Orçamento de execução
-            </p>
-            <p 
-                class="hidden text-slate text-base font-semibold" 
-                data-lang="en">
-                Execution budget
-            </p>
-            <p 
-                class="hidden text-slate text-base font-semibold" 
-                data-lang="fr">
-                Budget d’exécution
-            </p>
-        </div>
-    </div>
-    <div class="bg-sky-50 p-4 rounded-lg shadow-lg">
-        <div data-container="translator">
-            <h1 
-                class="w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="es">
-                48 Meses
-            </h1>
-            <h1 
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="pt">
-                48 Meses
-            </h1>
-            <h1 
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="en">
-                48 Months
-            </h1>
-            <h1 
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="fr">
-                48 Mois
-            </h1>
-        </div>
-        <div data-container="translator">
-            <p 
-                class="text-stale-900 text-base font-semibold" 
-                data-lang="es">
-                Duración del proyecto 2025-2028
-            </p>
-            <p 
-                class="hidden text-stale-900 text-base font-semibold" 
-                data-lang="pt">
-                Duração do projeto 2025-2028
-            </p>
-            <p 
-                class="hidden text-stale-900 text-base font-semibold" 
-                data-lang="en">
-                Project duration 2025-2028
-            </p>
-            <p 
-                class="hidden text-stale-900 text-base font-semibold" 
-                data-lang="fr">
-                Durée du projet 2025-2028
-            </p>
+<section aria-labelledby="project-facts-title" class="mx-auto mt-8 w-full max-w-7xl px-4 sm:px-6 lg:mt-12">
+    <h2 id="project-facts-title" class="text-2xl font-extrabold text-sky-950 sm:text-3xl">
+        <span data-container="translator">
+            <span data-lang="es">Financiación y duración de PLANCLIMAC2</span>
+            <span class="hidden" data-lang="pt">Financiamento e duração do PLANCLIMAC2</span>
+            <span class="hidden" data-lang="en">PLANCLIMAC2 funding and duration</span>
+            <span class="hidden" data-lang="fr">Financement et durée de PLANCLIMAC2</span>
+        </span>
+    </h2>
+
+    <dl class="mt-6 grid grid-cols-1 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm md:grid-cols-3 md:divide-x md:divide-y-0">
+        <div class="p-6 sm:p-8">
+            <dt class="text-sm font-bold uppercase tracking-wide text-slate-600">
+                <span data-container="translator">
+                    <span data-lang="es">Presupuesto de ejecución</span>
+                    <span class="hidden" data-lang="pt">Orçamento de execução</span>
+                    <span class="hidden" data-lang="en">Project budget</span>
+                    <span class="hidden" data-lang="fr">Budget d’exécution</span>
+                </span>
+            </dt>
+            <dd class="project-fact-value">3.045.442,75 €</dd>
         </div>
 
-    </div>
-    <div class="bg-emerald-50 p-4 rounded-lg shadow-lg">
-        <div data-container="translator">
-            <h1 
-                class="w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
-                data-lang="es">
-                85%
-            </h1>
-            <h1 
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
-                data-lang="pt">
-                85%
-            </h1>
-            <h1 
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
-                data-lang="en">
-                85%
-            </h1>
-            <h1 
-                class="hidden w-full text-2xl font-extrabold capitalize mb-2 text-emerald-500" 
-                data-lang="fr">
-                85%
-            </h1>
-        </div>
-        <div data-container="translator">
-            <p 
-                class="text-slate-900 text-base font-semibold" 
-                data-lang="es">
-                Co-financiación por el Programa de Cooperación Interreg Madeira-Azores-Canarias (MAC) 2021-2027
-            </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="pt">
-                Co-financiamento pelo Programa de Cooperação Interreg Madeira-Açores-Canárias (MAC) 2021-2027
-            </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="en">
-                Co-financed by the Interreg Madeira-Azores-Canarias (MAC) Cooperation Programme 2021-2027
-            </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="fr">
-                Cofinancé par le Programme de Coopération Interreg Madère-Açores-Canaries (MAC) 2021-2027
-            </p>
+        <div class="p-6 sm:p-8">
+            <dt class="text-sm font-bold uppercase tracking-wide text-slate-600">
+                <span data-container="translator">
+                    <span data-lang="es">Duración</span>
+                    <span class="hidden" data-lang="pt">Duração</span>
+                    <span class="hidden" data-lang="en">Duration</span>
+                    <span class="hidden" data-lang="fr">Durée</span>
+                </span>
+            </dt>
+            <dd class="project-fact-value">
+                <span data-container="translator">
+                    <span data-lang="es">48 meses</span>
+                    <span class="hidden" data-lang="pt">48 meses</span>
+                    <span class="hidden" data-lang="en">48 months</span>
+                    <span class="hidden" data-lang="fr">48 mois</span>
+                </span>
+            </dd>
+            <dd class="mt-2 text-sm text-slate-700">2025–2028</dd>
         </div>
 
-    </div>
-    <div class="bg-sky-50 p-4 rounded-lg shadow-lg">
-        <div data-container="translator">
-            <h1 
-                class="w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="es">
-                Prioridad 2 - MAC Verde
-            </h1>
-            <h1 
-                class="hidden w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="pt">
-                Prioridade 2 - MAC Verde
-            </h1>
-            <h1 
-                class="hidden w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="en">
-                Priority 2 - Green MAC
-            </h1>
-            <h1 
-                class="hidden w-full text-xl font-extrabold capitalize mb-2 text-sky-800" 
-                data-lang="fr">
-                Priorité 2 - MAC Vert
-            </h1>
+        <div class="p-6 sm:p-8">
+            <dt id="cofinancing-label" class="text-sm font-bold uppercase tracking-wide text-slate-600">
+                <span data-container="translator">
+                    <span data-lang="es">Cofinanciación</span>
+                    <span class="hidden" data-lang="pt">Cofinanciamento</span>
+                    <span class="hidden" data-lang="en">Co-financing</span>
+                    <span class="hidden" data-lang="fr">Cofinancement</span>
+                </span>
+            </dt>
+            <dd class="project-fact-value">85 %</dd>
+            <div
+                class="project-fact-meter"
+                role="progressbar"
+                aria-labelledby="cofinancing-label"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="85"
+            >
+                <div class="project-fact-meter-fill"></div>
+            </div>
+            <dd class="mt-3 text-sm leading-relaxed text-slate-700">
+                <span data-container="translator">
+                    <span data-lang="es">Programa de Cooperación Interreg Madeira-Azores-Canarias (MAC) 2021–2027</span>
+                    <span class="hidden" data-lang="pt">Programa de Cooperação Interreg Madeira-Açores-Canárias (MAC) 2021–2027</span>
+                    <span class="hidden" data-lang="en">Interreg Madeira-Azores-Canarias (MAC) Cooperation Programme 2021–2027</span>
+                    <span class="hidden" data-lang="fr">Programme de coopération Interreg Madère-Açores-Canaries (MAC) 2021–2027</span>
+                </span>
+            </dd>
         </div>
-        <div data-container="translator">
-            <p 
-                class="text-slate-900 text-base font-semibold" 
-                data-lang="es">
+    </dl>
+
+    <article class="mt-4 grid gap-4 rounded-2xl bg-emerald-600 p-6 text-white sm:p-8 md:grid-cols-3 md:items-center md:gap-8">
+        <div>
+            <p class="text-sm font-bold uppercase tracking-[0.14em]">
+                <span data-container="translator">
+                    <span data-lang="es">Prioridad 2</span>
+                    <span class="hidden" data-lang="pt">Prioridade 2</span>
+                    <span class="hidden" data-lang="en">Priority 2</span>
+                    <span class="hidden" data-lang="fr">Priorité 2</span>
+                </span>
+            </p>
+            <h3 class="mt-1 text-2xl font-extrabold text-white sm:text-3xl">
+                <span data-container="translator">
+                    <span data-lang="es">MAC Verde</span>
+                    <span class="hidden" data-lang="pt">MAC Verde</span>
+                    <span class="hidden" data-lang="en">Green MAC</span>
+                    <span class="hidden" data-lang="fr">MAC Vert</span>
+                </span>
+            </h3>
+        </div>
+        <div class="md:col-span-2" data-container="translator">
+            <p class="leading-relaxed text-white/90" data-lang="es">
                 Transición ecológica, apoyo al desarrollo de una economía verde y azul, lucha contra el cambio climático, prevención y gestión de riesgos y emergencias
             </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="pt">
+            <p class="hidden leading-relaxed text-white/90" data-lang="pt">
                 Transição ecológica, apoio ao desenvolvimento de uma economia verde e azul, combate às alterações climáticas, prevenção e gestão de riscos e emergências
             </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="en">
+            <p class="hidden leading-relaxed text-white/90" data-lang="en">
                 Ecological transition, support for the development of a green and blue economy, fight against climate change, prevention and management of risks and emergencies
             </p>
-            <p 
-                class="hidden text-slate-900 text-base font-semibold" 
-                data-lang="fr">
+            <p class="hidden leading-relaxed text-white/90" data-lang="fr">
                 Transition écologique, soutien au développement d’une économie verte et bleue, lutte contre le changement climatique, prévention et gestion des risques et des urgences
             </p>
         </div>
-    </div>
+    </article>
 </section>
 
 
-<section class="mt-16 w-10/12 mx-auto">
-    <div data-container="translator">
-        <h1 
-            class="w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
-            data-lang="es">
-            Siete regiones distintas, un mismo objetivo
-        </h1>
-        <h1 
-            class="hidden w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
-            data-lang="pt">
-            Sete regiões distintas, um mesmo objetivo
-        </h1>
-        <h1 
-            class="hidden w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
-            data-lang="en">
-            Seven different regions, one common goal
-        </h1>
-        <h1 
-            class="hidden w-full text-center text-4xl font-extrabold mb-4 text-sky-800 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" 
-            data-lang="fr">
-            Sept régions différentes, un même objectif
-        </h1>
-    </div>
-    <div data-container="translator">
-        <p 
-            class="text-lg text-center text-balance" 
-            data-lang="es">
-            Bajo el marco del proyecto PLANCLIMAC2 (1/MAC/2/2.4/0006) se ha construido un grupo de trabajo 
-            multidisciplinar e interregional que actúa en todo el espacio de cooperación 
-            del Programa INTERREG VI-D MAC 2021-2027.
+@php
+    $consortiumPartners = [
+        ['name' => ['es' => 'Gobierno de Azores', 'pt' => 'Governo dos Açores', 'en' => 'Government of the Azores', 'fr' => 'Gouvernement des Açores'], 'territory' => ['es' => 'Azores', 'pt' => 'Açores', 'en' => 'Azores', 'fr' => 'Açores'], 'category' => ['es' => 'Administración pública', 'pt' => 'Administração pública', 'en' => 'Public administration', 'fr' => 'Administration publique'], 'logo' => 'LOGO_AZORES.png', 'url' => 'https://portal.azores.gov.pt/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'Región de Madeira', 'pt' => 'Região Autónoma da Madeira', 'en' => 'Madeira Region', 'fr' => 'Région de Madère'], 'territory' => ['es' => 'Madeira', 'pt' => 'Madeira', 'en' => 'Madeira', 'fr' => 'Madère'], 'category' => ['es' => 'Administración pública', 'pt' => 'Administração pública', 'en' => 'Public administration', 'fr' => 'Administration publique'], 'logo' => 'LOGO_MADEIRA.png', 'url' => 'https://www.madeira.gov.pt/draac/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'GESPLAN', 'pt' => 'GESPLAN', 'en' => 'GESPLAN', 'fr' => 'GESPLAN'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Empresa pública', 'pt' => 'Empresa pública', 'en' => 'Public company', 'fr' => 'Entreprise publique'], 'logo' => 'LOGO_GESPLAN.png', 'url' => 'https://www.gesplan.es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'ITER', 'pt' => 'ITER', 'en' => 'ITER', 'fr' => 'ITER'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Empresa pública', 'pt' => 'Empresa pública', 'en' => 'Public company', 'fr' => 'Entreprise publique'], 'logo' => 'LOGO_ITER.png', 'url' => 'https://www.iter.es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'Instituto Tecnológico de Canarias (ITC)', 'pt' => 'Instituto Tecnológico de Canarias (ITC)', 'en' => 'Canary Islands Institute of Technology (ITC)', 'fr' => 'Institut Technologique des Canaries (ITC)'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Empresa pública', 'pt' => 'Empresa pública', 'en' => 'Public company', 'fr' => 'Entreprise publique'], 'logo' => 'LOGO_ITC.svg', 'url' => 'https://www.itccanarias.org/web/es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'Universidad de Las Palmas de Gran Canaria (ULPGC)', 'pt' => 'Universidade de Las Palmas de Gran Canaria (ULPGC)', 'en' => 'University of Las Palmas de Gran Canaria (ULPGC)', 'fr' => 'Université de Las Palmas de Gran Canaria (ULPGC)'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Universidad', 'pt' => 'Universidade', 'en' => 'University', 'fr' => 'Université'], 'logo' => 'LOGO_ULPGC.png', 'url' => 'https://www10.ulpgc.es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'Universidad de La Laguna (ULL)', 'pt' => 'Universidade de La Laguna (ULL)', 'en' => 'University of La Laguna (ULL)', 'fr' => 'Université de La Laguna (ULL)'], 'territory' => ['es' => 'Canarias', 'pt' => 'Canárias', 'en' => 'Canary Islands', 'fr' => 'Îles Canaries'], 'category' => ['es' => 'Universidad', 'pt' => 'Universidade', 'en' => 'University', 'fr' => 'Université'], 'logo' => 'LOGO_ULL.png', 'url' => 'https://www.ull.es/', 'group' => 'macaronesia'],
+        ['name' => ['es' => 'INMG', 'pt' => 'INMG', 'en' => 'INMG', 'fr' => 'INMG'], 'territory' => ['es' => 'Cabo Verde', 'pt' => 'Cabo Verde', 'en' => 'Cape Verde', 'fr' => 'Cap-Vert'], 'category' => ['es' => 'Socio africano', 'pt' => 'Parceiro africano', 'en' => 'African partner', 'fr' => 'Partenaire africain'], 'logo' => 'LOGO_INMG.webp', 'url' => 'https://www.inmg.gov.cv/', 'group' => 'africa'],
+        ['name' => ['es' => 'DGAAG', 'pt' => 'DGAAG', 'en' => 'DGAAG', 'fr' => 'DGAAG'], 'territory' => ['es' => 'Santo Tomé y Príncipe', 'pt' => 'São Tomé e Príncipe', 'en' => 'São Tomé and Príncipe', 'fr' => 'Sao Tomé-et-Principe'], 'category' => ['es' => 'Socio africano', 'pt' => 'Parceiro africano', 'en' => 'African partner', 'fr' => 'Partenaire africain'], 'logo' => 'LOGO_SAO_TOME.png', 'url' => 'https://www.facebook.com/dga.stp/', 'group' => 'africa'],
+        ['name' => ['es' => 'Socio de Ghana', 'pt' => 'Parceiro do Gana', 'en' => 'Ghana partner', 'fr' => 'Partenaire du Ghana'], 'territory' => ['es' => 'Ghana', 'pt' => 'Gana', 'en' => 'Ghana', 'fr' => 'Ghana'], 'category' => ['es' => 'Socio africano', 'pt' => 'Parceiro africano', 'en' => 'African partner', 'fr' => 'Partenaire africain'], 'logo' => 'LOGO_GHANA.jpg', 'url' => 'https://mlnr.gov.gh/', 'group' => 'africa'],
+        ['name' => ['es' => 'OIPR', 'pt' => 'OIPR', 'en' => 'OIPR', 'fr' => 'OIPR'], 'territory' => ['es' => 'Costa de Marfil', 'pt' => 'Costa do Marfim', 'en' => 'Ivory Coast', 'fr' => 'Côte d’Ivoire'], 'category' => ['es' => 'Socio africano', 'pt' => 'Parceiro africano', 'en' => 'African partner', 'fr' => 'Partenaire africain'], 'logo' => 'LOGO_COSTA_MARFIL.png', 'url' => null, 'group' => 'africa'],
+    ];
+@endphp
+
+<section id="consortium" aria-labelledby="consortium-title" class="section-container mt-16">
+    <header class="max-w-3xl">
+        <p class="section-eyebrow">
+            <span data-container="translator">
+                <span data-lang="es">Cooperación internacional</span><span class="hidden" data-lang="pt">Cooperação internacional</span><span class="hidden" data-lang="en">International cooperation</span><span class="hidden" data-lang="fr">Coopération internationale</span>
+            </span>
         </p>
-        <p 
-            class="hidden text-lg text-center text-balance" 
-            data-lang="pt">
-            No âmbito do projeto PLANCLIMAC2 (1/MAC/2/2.4/0006), foi criado um grupo de trabalho 
-            multidisciplinar e inter-regional que atua em todo o espaço de cooperação 
-            do Programa INTERREG VI-D MAC 2021-2027.
+        <h2 id="consortium-title" class="section-title mt-2">
+            <span data-container="translator">
+                <span data-lang="es">Doce entidades colaboran en siete regiones</span><span class="hidden" data-lang="pt">Doze entidades colaboram em sete regiões</span><span class="hidden" data-lang="en">Twelve organisations work across seven regions</span><span class="hidden" data-lang="fr">Douze organismes coopèrent dans sept régions</span>
+            </span>
+        </h2>
+        <p class="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+            <span data-container="translator">
+                <span data-lang="es">Estas entidades participan en PLANCLIMAC2 desde Macaronesia y África.</span><span class="hidden" data-lang="pt">Estas entidades participam no PLANCLIMAC2 a partir da Macaronésia e de África.</span><span class="hidden" data-lang="en">These organisations take part in PLANCLIMAC2 across Macaronesia and Africa.</span><span class="hidden" data-lang="fr">Ces organismes participent à PLANCLIMAC2 depuis la Macaronésie et l’Afrique.</span>
+            </span>
         </p>
-        <p 
-            class="hidden text-lg text-center text-balance" 
-            data-lang="en">
-            Under the framework of the PLANCLIMAC2 project (1/MAC/2/2.4/0006), a multidisciplinary and interregional working group 
-            has been established that operates throughout the cooperation area 
-            of the INTERREG VI-D MAC 2021-2027 Programme.
-        </p>
-        <p 
-            class="hidden text-lg text-center text-balance" 
-            data-lang="fr">
-            Dans le cadre du projet PLANCLIMAC2 (1/MAC/2/2.4/0006), un groupe de travail 
-            pluridisciplinaire et interrégional a été créé, opérant dans l’ensemble de l’espace de coopération 
-            du Programme INTERREG VI-D MAC 2021-2027.
-        </p>
-    </div>
+    </header>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 gap-y-8 py-8">
-        <x-PartnerCard 
-            src="/images/LOGO_GOBIERNO_CANARIAS.svg"
-            alt="Gobierno de Canarias"
-            :caption="[
-                'es' => 'Socio Principal',
-                'pt' => 'Sócio Principal',
-                'en' => 'Main Partner',
-                'fr' => 'Partenaire principal'
-            ]"
-            href="https://www.gobiernodecanarias.org/transicionecologica/index.html"
-        />
+    <dl class="mt-7 grid grid-cols-3 divide-x divide-slate-200 rounded-2xl border-y border-slate-200 py-5 sm:py-6">
+        <div class="flex flex-col px-2 text-center sm:px-6">
+            <dt class="order-2 mt-1 text-xs text-slate-600 sm:text-sm"><span data-container="translator"><span data-lang="es">Entidades</span><span class="hidden" data-lang="pt">Entidades</span><span class="hidden" data-lang="en">Partners</span><span class="hidden" data-lang="fr">Organismes</span></span></dt>
+            <dd class="order-1 text-2xl font-bold tracking-tight text-sky-950 sm:text-3xl">12</dd>
+        </div>
+        <div class="flex flex-col px-2 text-center sm:px-6">
+            <dt class="order-2 mt-1 text-xs text-slate-600 sm:text-sm"><span data-container="translator"><span data-lang="es">Regiones</span><span class="hidden" data-lang="pt">Regiões</span><span class="hidden" data-lang="en">Regions</span><span class="hidden" data-lang="fr">Régions</span></span></dt>
+            <dd class="order-1 text-2xl font-bold tracking-tight text-sky-950 sm:text-3xl">7</dd>
+        </div>
+        <div class="flex flex-col px-2 text-center sm:px-6">
+            <dt class="order-2 mt-1 text-xs text-slate-600 sm:text-sm"><span data-container="translator"><span data-lang="es">Objetivos</span><span class="hidden" data-lang="pt">Objetivos</span><span class="hidden" data-lang="en">Objectives</span><span class="hidden" data-lang="fr">Objectifs</span></span></dt>
+            <dd class="order-1 text-2xl font-bold tracking-tight text-sky-950 sm:text-3xl">3</dd>
+        </div>
+    </dl>
 
-        <x-PartnerCard 
-            src="/images/LOGO_AZORES.png"
-            alt="Gobierno de Azores"
-            :caption="[
-                'es' => 'Administración Pública',
-                'pt' => 'Administração Pública',
-                'en' => 'Public Administration',
-                'fr' => 'Administration Publique'
-            ]"
-            href="https://portal.azores.gov.pt/"
-        />
-        <x-PartnerCard 
-            src="/images/LOGO_MADEIRA.png"
-            alt="Gobierno de Madeira"
-            :caption="[
-                'es' => 'Administración Pública',
-                'pt' => 'Administração Pública',
-                'en' => 'Public Administration',
-                'fr' => 'Administration Publique'
-            ]"
-            href="https://www.madeira.gov.pt/draac/"
-        />
+    <section aria-labelledby="lead-partner-title" class="mt-7">
+        <div class="mb-3 flex items-center justify-between gap-3">
+            <h3 id="lead-partner-title" class="text-lg font-bold text-sky-950">
+                <span data-container="translator"><span data-lang="es">Socio principal</span><span class="hidden" data-lang="pt">Parceiro principal</span><span class="hidden" data-lang="en">Lead partner</span><span class="hidden" data-lang="fr">Partenaire principal</span></span>
+            </h3>
+            <span class="rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-900 sm:text-sm">
+                <span data-container="translator"><span data-lang="es">Coordinación</span><span class="hidden" data-lang="pt">Coordenação</span><span class="hidden" data-lang="en">Coordination</span><span class="hidden" data-lang="fr">Coordination</span></span>
+            </span>
+        </div>
+        <a href="https://www.gobiernodecanarias.org/cambioclimatico/index.html" target="_blank" rel="noopener noreferrer" class="lead-partner-card">
+            <span class="flex h-16 w-20 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white p-2 sm:h-20 sm:w-24">
+                <img src="{{ asset('images/LOGO_GOBIERNO_CANARIAS.svg') }}" alt="" class="max-h-full max-w-full object-contain">
+            </span>
+            <span class="min-w-0 flex-1">
+                <span class="block font-bold text-slate-900 sm:text-lg"><span data-container="translator"><span data-lang="es">Gobierno de Canarias</span><span class="hidden" data-lang="pt">Governo das Canárias</span><span class="hidden" data-lang="en">Government of the Canary Islands</span><span class="hidden" data-lang="fr">Gouvernement des Canaries</span></span></span>
+                <span class="mt-1 block text-sm text-slate-600"><span data-container="translator"><span data-lang="es">Socio principal del proyecto</span><span class="hidden" data-lang="pt">Parceiro principal do projeto</span><span class="hidden" data-lang="en">Lead partner of the project</span><span class="hidden" data-lang="fr">Partenaire principal du projet</span></span></span>
+            </span>
+            <span aria-hidden="true" class="text-lg text-slate-400">↗</span>
+        </a>
+    </section>
 
-        <x-PartnerCard 
-            src="/images/LOGO_GESPLAN.png"
-            alt="Gesplan"
-            :caption="[
-                'es' => 'Empresa Pública',
-                'pt' => 'Empresa Pública',
-                'en' => 'Public Company',
-                'fr' => 'Societé Publique'
-            ]"
-            href="https://www.gesplan.es/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_ITER.png"
-            alt="ITER"
-            :caption="[
-                'es' => 'Empresa Pública',
-                'pt' => 'Empresa Pública',
-                'en' => 'Public Company',
-                'fr' => 'Societé Publique'
-            ]"
-            href="https://www.iter.es/"
-        />
-        <x-PartnerCard 
-            src="/images/LOGO_ITC.svg"
-            alt="ITC"
-            :caption="[
-                'es' => 'Empresa Pública',
-                'pt' => 'Empresa Pública',
-                'en' => 'Public Company',
-                'fr' => 'Societé Publique'
-            ]"
-            href="https://www.itccanarias.org/web/es/"
-        />
-        <x-PartnerCard 
-            src="/images/LOGO_ULPGC.png"
-            alt="ULPGC"
-            :caption="[
-                'es' => 'Universidad',
-                'pt' => 'Universidade',
-                'en' => 'University',
-                'fr' => 'Université'
-            ]"
-            href="https://www10.ulpgc.es/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_ULL.png"
-            alt="ULL"
-            :caption="[
-                'es' => 'Universidad',
-                'pt' => 'Universidade',
-                'en' => 'University',
-                'fr' => 'Université'
-            ]"
-            href="https://www.ull.es/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_INMG.webp"
-            alt="INMG"
-            :caption="[
-                'es' => 'Tercer País - Cabo Verde',
-                'pt' => 'Terceiro País - Cabo Verde',
-                'en' => 'Third Country - Cape Verde',
-                'fr' => 'Pays tiers - Cap Vert'
-            ]"
-            href="https://www.inmg.gov.cv/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_SAO_TOME.png"
-            alt="DGAAG"
-            :caption="[
-                'es' => 'Tercer País - Santo Tomé y Príncipe',
-                'pt' => 'Terceiro País - São Tomé e Príncipe',
-                'en' => 'Third Country - São Tomé and Príncipe',
-                'fr' => 'Pays tiers - Sao Tomé-et-Principe'
-            ]"
-            href="https://www.facebook.com/dga.stp/"
-        />
-
-        <x-PartnerCard 
-            src="/images/LOGO_GHANA.jpg"
-            alt="Ministerio de recursos naturales"
-            :caption="[
-                'es' => 'Tercer País - Ghana',
-                'pt' => 'Terceiro País - Gana',
-                'en' => 'Third Country - Ghana',
-                'fr' => 'Pays tiers - Ghana'
-            ]"
-            href="https://mlnr.gov.gh/"
-        />
-        
-        <x-PartnerCard 
-            src="/images/LOGO_COSTA_MARFIL.png"
-            alt="Ministerio de recursos naturales"
-            :caption="[
-                'es' => 'Tercer Pais - Costa de Marfil',
-                'pt' => 'Terceiro País - Costa do Marfim',
-                'en' => 'Third Country - Ivory Coast',
-                'fr' => 'Pays tiers - Côte Ivoire'
-            ]"
-            href="#"
-        />
-    </div>
-
+    <section aria-labelledby="participant-title" class="mt-7">
+        <h3 id="participant-title" class="text-lg font-bold text-sky-950">
+            <span data-container="translator"><span data-lang="es">Entidades participantes</span><span class="hidden" data-lang="pt">Entidades participantes</span><span class="hidden" data-lang="en">Participating organisations</span><span class="hidden" data-lang="fr">Organismes participants</span></span>
+        </h3>
+        <div class="mt-3 flex flex-wrap gap-2" role="group" aria-labelledby="participant-title">
+            <button type="button" class="partner-filter" data-partner-filter="all" aria-controls="partner-grid" aria-pressed="true"><span data-container="translator"><span data-lang="es">Todos</span><span class="hidden" data-lang="pt">Todos</span><span class="hidden" data-lang="en">All</span><span class="hidden" data-lang="fr">Tous</span></span></button>
+            <button type="button" class="partner-filter" data-partner-filter="macaronesia" aria-controls="partner-grid" aria-pressed="false"><span data-container="translator"><span data-lang="es">Macaronesia</span><span class="hidden" data-lang="pt">Macaronésia</span><span class="hidden" data-lang="en">Macaronesia</span><span class="hidden" data-lang="fr">Macaronésie</span></span></button>
+            <button type="button" class="partner-filter" data-partner-filter="africa" aria-controls="partner-grid" aria-pressed="false"><span data-container="translator"><span data-lang="es">África</span><span class="hidden" data-lang="pt">África</span><span class="hidden" data-lang="en">Africa</span><span class="hidden" data-lang="fr">Afrique</span></span></button>
+        </div>
+        <div id="partner-grid" class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3" aria-live="polite">
+            @foreach ($consortiumPartners as $partner)
+                <x-PartnerCard :partner="$partner" />
+            @endforeach
+        </div>
+    </section>
 </section>
 
-<section class="my-12 flex flex-col gap-16 w-10/12 mx-auto">
-@foreach($objectives as $i => $o)
-        @php $reverse = $i % 2 === 1; @endphp
+<script>
+    (() => {
+        const filters = document.querySelectorAll('[data-partner-filter]');
+        const cards = document.querySelectorAll('[data-partner-group]');
 
-        <div @class(['flex gap-16 flex-col md:flex-row my-4', 'md:flex-row-reverse' => $reverse])>
-                <article class="w-full md:w-1/2">
-                    <div data-container="translator">
+        if (!filters.length || !cards.length) return;
 
-                        <h1 class="text-2xl font-semibold" data-lang="es">{{ $o['title']['es'] }}</h1>
-                        <h1 class="text-2xl font-semibold hidden" data-lang="pt">{{ $o['title']['pt'] }}</h1>
-                        <h1 class="text-2xl font-semibold hidden" data-lang="en">{{ $o['title']['en'] }}</h1>
-                        <h1 class="text-2xl font-semibold hidden" data-lang="fr">{{ $o['title']['fr'] }}</h1>
-                    </div>
-                    <div data-container="translator">
+        filters.forEach((filter) => {
+            filter.addEventListener('click', () => {
+                const selectedGroup = filter.dataset.partnerFilter;
 
-                        <p data-lang="es">{{ $o['description']['es'] }}</p>
-                        <p class="hidden" data-lang="pt">{{ $o['description']['pt'] }}</p>
-                        <p class="hidden" data-lang="en">{{ $o['description']['en'] }}</p>
-                        <p class="hidden" data-lang="fr">{{ $o['description']['fr'] }}</p>
-                    </div>
-                </article>
+                filters.forEach((button) => {
+                    button.setAttribute('aria-pressed', String(button === filter));
+                });
 
-                <div class="w-full md:w-1/2 flex flex-col gap-4">
-                @foreach($o['activities'] as $a)
-                    <x-activity
-                        :id="$a['id']"
-                        :description="$a['description']"
-                    />
-                @endforeach
-                </div>
-            </div>
+                cards.forEach((card) => {
+                    card.hidden = selectedGroup !== 'all' && card.dataset.partnerGroup !== selectedGroup;
+                });
+            });
+        });
+    })();
+</script>
 
-        </div>
-    @endforeach
+<section id="project-objectives" aria-labelledby="objectives-title" class="section-container my-16">
+    <header class="mb-7 max-w-3xl">
+        <h2 id="objectives-title" class="section-title">
+            <span data-container="translator">
+                <span data-lang="es">Objetivos del proyecto</span>
+                <span class="hidden" data-lang="pt">Objetivos do projeto</span>
+                <span class="hidden" data-lang="en">Project objectives</span>
+                <span class="hidden" data-lang="fr">Objectifs du projet</span>
+            </span>
+        </h2>
+        <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+            <span data-container="translator">
+                <span data-lang="es">Los tres objetivos son consolidar el Observatorio, evaluar indicadores climáticos y promover la ciencia ciudadana y la adaptación.</span>
+                <span class="hidden" data-lang="pt">Os três objetivos são consolidar o Observatório, avaliar indicadores climáticos e promover a ciência cidadã e a adaptação.</span>
+                <span class="hidden" data-lang="en">The three objectives are to consolidate the Observatory, assess climate indicators, and promote citizen science and adaptation.</span>
+                <span class="hidden" data-lang="fr">Les trois objectifs consistent à consolider l’Observatoire, évaluer les indicateurs climatiques et promouvoir la science citoyenne et l’adaptation.</span>
+            </span>
+        </p>
+    </header>
 
-</section>
-
-<section class="my-16 w-10/12 mx-auto">
-    <div class="w-full">
-        <div data-container="translator">
-            <h1 
-                class="w-full text-center text-lg md:text-2xl font-semibold my-4" 
-                data-lang="es">
-                Indicadores del proyecto
-            </h1>
-            <h1 
-                class="hidden w-full text-center text-lg md:text-2xl font-semibold my-4" 
-                data-lang="pt">
-                Indicadores do projeto
-            </h1>
-            <h1 
-                class="hidden w-full text-center text-lg md:text-2xl font-semibold my-4" 
-                data-lang="en">
-                Project indicators
-            </h1>
-            <h1 
-                class="hidden w-full text-center text-lg md:text-2xl font-semibold my-4" 
-                data-lang="fr">
-                Indicateurs du projet
-            </h1>
-        </div>
-        <div data-container="translator">
-            <p 
-                class="w-full text-center text-md md:text-xl" 
-                data-lang="es">
-                En el proyecto <span class="text-sky-800 font-semibold">PLANCLIMAC2</span> nos centramos en la innovación del desarrollo a largo plazo con la vigilancia en el cambio climático y el impacto del mismo en la Macaronesia con los siguientes indicadores.
-            </p>
-            <p 
-                class="hidden w-full text-center text-md md:text-xl" 
-                data-lang="pt">
-                No projeto <span class="text-sky-800 font-semibold">PLANCLIMAC2</span> focamo-nos na inovação do desenvolvimento a longo prazo, com a monitorização das alterações climáticas e o seu impacto na Macaronésia, utilizando os seguintes indicadores.
-            </p>
-            <p 
-                class="hidden w-full text-center text-md md:text-xl" 
-                data-lang="en">
-                In the <span class="text-sky-800 font-semibold">PLANCLIMAC2</span> project, we focus on innovation in long-term development, monitoring climate change and its impact on Macaronesia through the following indicators.
-            </p>
-            <p 
-                class="hidden w-full text-center text-md md:text-xl" 
-                data-lang="fr">
-                Dans le cadre du projet <span class="text-sky-800 font-semibold">PLANCLIMAC2</span>, nous nous concentrons sur l’innovation dans le développement à long terme, la surveillance du changement climatique et son impact sur la Macaronésie à travers les indicateurs suivants.
-            </p>
-        </div>
-
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-8">
-        @foreach($results as $r)
-            <x-BlueCard
-                :title="$r['title']"
-                :progress="$r['progress']"
-                :target="$r['target']"
-            />
+    <div id="objective-tablist" class="objective-tablist" role="tablist" aria-labelledby="objectives-title" hidden>
+        @foreach ($objectives as $index => $objective)
+            <button
+                id="objective-tab-{{ $index + 1 }}"
+                class="objective-tab sm:h-48 sm:p-5"
+                type="button"
+                role="tab"
+                aria-controls="objective-panel-{{ $index + 1 }}"
+                aria-selected="{{ $index === 0 ? 'true' : 'false' }}"
+                tabindex="{{ $index === 0 ? '0' : '-1' }}">
+                <img
+                    src="{{ asset($objective['image']) }}"
+                    alt=""
+                    width="720"
+                    height="420"
+                    loading="lazy"
+                    class="objective-tab-image">
+                <span class="objective-tab-shade" aria-hidden="true"></span>
+                <span class="objective-tab-number" aria-hidden="true">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <span class="objective-tab-title" data-container="translator">
+                    @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                        <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $objective['navigation_title'][$language] }}</span>
+                    @endforeach
+                </span>
+            </button>
         @endforeach
     </div>
 
+    @foreach ($objectives as $index => $objective)
+        <section
+            id="objective-panel-{{ $index + 1 }}"
+            class="objective-panel sm:p-8"
+            data-objective-panel="{{ $index + 1 }}"
+            tabindex="0">
+            <header class="mb-6 max-w-4xl">
+                <p class="section-eyebrow">
+                    <span data-container="translator">
+                        <span data-lang="es">Objetivo {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span class="hidden" data-lang="pt">Objetivo {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span class="hidden" data-lang="en">Objective {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span class="hidden" data-lang="fr">Objectif {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                    </span>
+                </p>
+                <h3 class="mt-2 text-xl font-bold tracking-tight text-sky-950 sm:text-2xl">
+                    <span data-container="translator">
+                        @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                            <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $objective['title'][$language] }}</span>
+                        @endforeach
+                    </span>
+                </h3>
+                <p class="mt-3 text-base leading-relaxed text-slate-700">
+                    <span data-container="translator">
+                        @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                            <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $objective['description'][$language] }}</span>
+                        @endforeach
+                    </span>
+                </p>
+            </header>
+
+            <div class="grid grid-cols-1 gap-3">
+                @foreach ($objective['activities'] as $activity)
+                    <x-activity
+                        :id="$activity['id']"
+                        :description="$activity['description']"
+                    />
+                @endforeach
+            </div>
+        </section>
+    @endforeach
 </section>
+
+<script>
+    (() => {
+        const tablist = document.querySelector('#objective-tablist');
+        if (!tablist) return;
+
+        const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+        const panels = tabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls')));
+        if (!tabs.length || panels.some((panel) => !panel)) return;
+
+        panels.forEach((panel, index) => {
+            panel.setAttribute('role', 'tabpanel');
+            panel.setAttribute('aria-labelledby', tabs[index].id);
+        });
+
+        const activateTab = (selectedIndex, moveFocus = false) => {
+            tabs.forEach((tab, index) => {
+                const selected = index === selectedIndex;
+                tab.setAttribute('aria-selected', String(selected));
+                tab.tabIndex = selected ? 0 : -1;
+                panels[index].hidden = !selected;
+            });
+
+            panels[selectedIndex].classList.remove('is-entering');
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                void panels[selectedIndex].offsetWidth;
+                panels[selectedIndex].classList.add('is-entering');
+            }
+
+            if (moveFocus) tabs[selectedIndex].focus();
+        };
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => activateTab(index));
+
+            tab.addEventListener('keydown', (event) => {
+                let nextIndex = index;
+
+                if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+                else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+                else if (event.key === 'Home') nextIndex = 0;
+                else if (event.key === 'End') nextIndex = tabs.length - 1;
+                else return;
+
+                event.preventDefault();
+                activateTab(nextIndex, true);
+            });
+        });
+
+        activateTab(0);
+        tablist.hidden = false;
+    })();
+</script>
+
+
+@php
+    $indicatorGroups = [
+        [
+            'id' => 'research',
+            'title' => ['es' => 'Investigación y conocimiento', 'pt' => 'Investigação e conhecimento', 'en' => 'Research and knowledge', 'fr' => 'Recherche et connaissances'],
+            'ids' => ['studies', 'researchers', 'scientific-publications', 'vulnerability-indicators'],
+        ],
+        [
+            'id' => 'cooperation',
+            'title' => ['es' => 'Cooperación y seguimiento', 'pt' => 'Cooperação e acompanhamento', 'en' => 'Cooperation and follow-up', 'fr' => 'Coopération et suivi'],
+            'ids' => ['follow-up-meetings'],
+        ],
+        [
+            'id' => 'communication',
+            'title' => ['es' => 'Comunicación y participación', 'pt' => 'Comunicação e participação', 'en' => 'Communication and participation', 'fr' => 'Communication et participation'],
+            'ids' => ['event-participants', 'website-visits', 'dissemination-events'],
+        ],
+    ];
+@endphp
+
+<section id="project-indicators" aria-labelledby="project-indicators-title" class="section-container my-16">
+    <header class="mb-8 max-w-3xl">
+        <p class="section-eyebrow">
+            <span data-container="translator">
+                <span data-lang="es">Seguimiento del proyecto</span><span class="hidden" data-lang="pt">Acompanhamento do projeto</span><span class="hidden" data-lang="en">Project tracking</span><span class="hidden" data-lang="fr">Suivi du projet</span>
+            </span>
+        </p>
+        <h2 id="project-indicators-title" class="section-title mt-2">
+            <span data-container="translator">
+                <span data-lang="es">Indicadores y metas</span><span class="hidden" data-lang="pt">Indicadores e metas</span><span class="hidden" data-lang="en">Indicators and targets</span><span class="hidden" data-lang="fr">Indicateurs et objectifs</span>
+            </span>
+        </h2>
+        <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+            <span data-container="translator">
+                <span data-lang="es">Esta sección reúne indicadores y metas de investigación, cooperación y comunicación.</span><span class="hidden" data-lang="pt">Esta secção reúne indicadores e metas de investigação, cooperação e comunicação.</span><span class="hidden" data-lang="en">This section brings together research, cooperation and communication indicators and targets.</span><span class="hidden" data-lang="fr">Cette section rassemble les indicateurs et les objectifs de recherche, de coopération et de communication.</span>
+            </span>
+        </p>
+    </header>
+
+    <div class="space-y-8" data-indicators>
+        @foreach ($indicatorGroups as $group)
+            @php
+                $groupIndicators = array_values(array_filter($results, fn ($indicator) => in_array($indicator['id'], $group['ids'], true)));
+            @endphp
+            <section aria-labelledby="indicator-group-{{ $group['id'] }}">
+                <h3 id="indicator-group-{{ $group['id'] }}" class="mb-3 text-lg font-bold text-sky-950 sm:text-xl">
+                    <span data-container="translator">
+                        @foreach (['es', 'pt', 'en', 'fr'] as $language)
+                            <span @class(['hidden' => $language !== 'es']) data-lang="{{ $language }}">{{ $group['title'][$language] }}</span>
+                        @endforeach
+                    </span>
+                </h3>
+                <dl @class([
+                    'grid gap-3 sm:gap-4',
+                    'grid-cols-1' => $group['id'] === 'cooperation',
+                    'grid-cols-2 sm:grid-cols-4' => $group['id'] === 'research',
+                    'grid-cols-2 sm:grid-cols-3' => $group['id'] === 'communication',
+                ])>
+                    @foreach ($groupIndicators as $indicator)
+                        <x-project-indicator
+                            :indicator="$indicator"
+                            :featured="$indicator['id'] === 'follow-up-meetings'"
+                            :spotlight="$indicator['id'] === 'website-visits'"
+                        />
+                    @endforeach
+                </dl>
+            </section>
+        @endforeach
+    </div>
+</section>
+
+<script>
+    (() => {
+        const section = document.querySelector('[data-indicators]');
+        if (!section) return;
+
+        const counters = Array.from(section.querySelectorAll('[data-count-up]'));
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!counters.length || reducedMotion || !('IntersectionObserver' in window)) return;
+
+        const formatValue = (value) => Math.trunc(value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        const duration = 1500;
+        const frames = new Map();
+        let hasStarted = false;
+
+        const observer = new IntersectionObserver((entries) => {
+            if (hasStarted || !entries.some((entry) => entry.isIntersecting)) return;
+
+            hasStarted = true;
+            observer.disconnect();
+
+            counters.forEach((counter) => {
+                const endValue = Number(counter.dataset.countValue);
+                if (!Number.isFinite(endValue) || endValue <= 0) {
+                    counter.textContent = formatValue(Math.max(0, endValue || 0));
+                    return;
+                }
+
+                counter.textContent = '0';
+                const startTime = performance.now();
+
+                const tick = (now) => {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 4);
+                    counter.textContent = formatValue(Math.round(endValue * eased));
+
+                    if (progress < 1) {
+                        frames.set(counter, requestAnimationFrame(tick));
+                    } else {
+                        counter.textContent = formatValue(endValue);
+                        frames.delete(counter);
+                    }
+                };
+
+                frames.set(counter, requestAnimationFrame(tick));
+            });
+        }, { threshold: 0.15 });
+
+        observer.observe(section);
+
+        window.addEventListener('pagehide', () => {
+            observer.disconnect();
+            frames.forEach((frame) => cancelAnimationFrame(frame));
+            frames.clear();
+        }, { once: true });
+    })();
+</script>
 @endsection
 

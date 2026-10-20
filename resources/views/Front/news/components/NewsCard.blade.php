@@ -1,45 +1,58 @@
-<div class="flex flex-col sm:flex-row w-full gap-4 md:gap-8 py-10 border-l-2 border-slate-100">
-    <aside class="my-2 md:my-4 w-full md:w-1/2 flex flex-col h-full">
-        <div data-container="translator">
-            <h1 class="font-bold text-base md:text-2xl text-sky-900 text-balance md:text-wrap line-clamp-3 border-l-4 border-sky-900 pl-4" data-lang="es">
-                {{$title['es']}}
-            </h1>
-            <h1 class="font-bold text-base md:text-2xl text-sky-900 text-balance md:text-wrap line-clamp-3 border-l-4 border-sky-900 pl-4 hidden" data-lang="pt">
-                {{$title['pt']}}
-            </h1>
-            <h1 class="font-bold text-base md:text-2xl text-sky-900 text-balance md:text-wrap line-clamp-3 border-l-4 border-sky-900 pl-4 hidden" data-lang="en">
-                {{$title['en']}}
-            </h1>
-            <h1 class="font-bold text-base md:text-2xl text-sky-900 text-balance md:text-wrap line-clamp-3 border-l-4 border-sky-900 pl-4 hidden" data-lang="fr">
-                {{$title['fr']}}
-            </h1>
+@php
+    $spanishTitle = (string) ($title['es'] ?? '');
+    $spanishSummary = (string) ($description['es'] ?? '');
+    $localizedNews = [];
+
+    foreach (['es', 'pt', 'en', 'fr'] as $language) {
+        $localizedTitle = trim((string) ($title[$language] ?? ''));
+        $localizedSummary = trim((string) ($description[$language] ?? ''));
+        $hasCompleteTranslation = $localizedTitle !== '' && $localizedSummary !== '';
+
+        $localizedNews[$language] = [
+            'title' => $hasCompleteTranslation || $language === 'es' ? $localizedTitle : $spanishTitle,
+            'summary' => \Illuminate\Support\Str::limit(
+                html_entity_decode(
+                    strip_tags($hasCompleteTranslation || $language === 'es' ? $localizedSummary : $spanishSummary),
+                    ENT_QUOTES | ENT_HTML5,
+                    'UTF-8'
+                ),
+                200
+            ),
+        ];
+    }
+@endphp
+
+<article class="news-card">
+    @if (filled($src))
+        <div class="news-card-media">
+            <img src="{{ $src }}" alt="" class="news-card-image" loading="lazy" decoding="async">
         </div>
-        <div data-container="translator">
-            <p class="text-sm md:text-base text-balance md:text-wrap line-clamp-6 pl-4" data-lang="es">
-                {!! $description['es'] !!}
-            </p>
-            <p class="text-sm md:text-base text-balance md:text-wrap line-clamp-6 pl-4 hidden" data-lang="pt">
-                {!! $description['pt'] !!}
-            </p>
-            <p class="text-sm md:text-base text-balance md:text-wrap line-clamp-6 pl-4 hidden" data-lang="en">
-                {!! $description['en'] !!}
-            </p>
-            <p class="text-sm md:text-base text-balance md:text-wrap line-clamp-6 pl-4 hidden" data-lang="fr">
-                {!! $description['fr'] !!}
-            </p>
+    @else
+        <div class="news-card-media news-card-placeholder" aria-hidden="true">
+            <span>PLANCLIMAC2</span>
+        </div>
+    @endif
+
+    <div class="news-card-content">
+        <h2 id="news-title-{{ $id }}" class="news-card-title" data-container="translator">
+            <a href="/news/{{ $id }}" data-lang="es">{{ $localizedNews['es']['title'] }}</a>
+            <a href="/news/{{ $id }}" class="hidden" data-lang="pt">{{ $localizedNews['pt']['title'] }}</a>
+            <a href="/news/{{ $id }}" class="hidden" data-lang="en">{{ $localizedNews['en']['title'] }}</a>
+            <a href="/news/{{ $id }}" class="hidden" data-lang="fr">{{ $localizedNews['fr']['title'] }}</a>
+        </h2>
+
+        <div class="news-card-summary" data-container="translator">
+            <p data-lang="es">{{ $localizedNews['es']['summary'] }}</p>
+            <p class="hidden" data-lang="pt">{{ $localizedNews['pt']['summary'] }}</p>
+            <p class="hidden" data-lang="en">{{ $localizedNews['en']['summary'] }}</p>
+            <p class="hidden" data-lang="fr">{{ $localizedNews['fr']['summary'] }}</p>
         </div>
 
-        <a href="/news/{{$id}}" class="mt-2 text-sky-900 p-4 rounded-sm font-bold" data-container="translator">
-            <p data-lang="es">Leer más ></p>
-            <p class="hidden" data-lang="pt">Leia mais ></p>
-            <p class="hidden" data-lang="en">Read more ></p>
-            <p class="hidden" data-lang="fr">Lire la suite ></p>
-        </a>
-    </aside>
-    <div class="w-full md:w-1/2 "> 
-        <a href="/news/{{$id}}" class="bg-white rounded-lg overflow-hidden flex flex-col items-center shadow-lg mx-auto size-72">
-            <img src="{{$src}}" alt="" class="rounded-lg w-full h-full" width="160" height="160"/>
+        <a href="/news/{{ $id }}" id="news-action-{{ $id }}" class="news-card-action" aria-labelledby="news-action-{{ $id }} news-title-{{ $id }}" data-container="translator">
+            <span data-lang="es">Leer noticia <span aria-hidden="true">→</span></span>
+            <span class="hidden" data-lang="pt">Ler notícia <span aria-hidden="true">→</span></span>
+            <span class="hidden" data-lang="en">Read the story <span aria-hidden="true">→</span></span>
+            <span class="hidden" data-lang="fr">Lire l’actualité <span aria-hidden="true">→</span></span>
         </a>
     </div>
-
-</div>
+</article>

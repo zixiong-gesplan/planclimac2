@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="title" content="Proyecto PLANCLIMAC2" />
         <meta name="description" content="Un proyecto COFINANCIADO AL 85% con fondos FEDER y cuyo presupuesto asciende hasta 3.045.442,75 €.  Nos hemos enmarcado en este reto de cambio climatico bajo la PRIORIDAD 2 - MAC VERDE - Transición ecológica, apoyo al desarrollo de una economía verde y azul, lucha contra el cambio climático, prevención y gestion de riesgos y emergencias durante los 48 meses de ejecución del proyecto 2025-2028." />
+        @hasSection('canonical')
+            <link rel="canonical" href="@yield('canonical')">
+        @endif
 
 
         <!-- Open Graph / Facebook -->
@@ -32,12 +35,15 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="/build/assets/app.css">
+        <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}?v={{ filemtime(public_path('build/assets/app.css')) }}">
         <link rel="icon" href="{{ asset('favicon.ico') }}">
 
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <main class="p-2 md:p-8">
+        <main @class([
+            'p-2 pt-24 md:p-8 md:pt-28' => !Request::is('/'),
+            'p-2 pt-2 md:p-8 md:pt-8' => Request::is('/'),
+        ])>
             <x-header/>
 
             @yield('content')

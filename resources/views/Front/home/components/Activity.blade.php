@@ -1,18 +1,18 @@
-<div class="flex border-l-8 border-sky-900 pl-4 flex-col min-h-1/3 items-center">
+<article class="objective-activity sm:p-5">
     <div class="w-full">
         <div data-container="translator">
-            <h1 class="font-semibold text-sky-900 text-lg" data-lang="es">
+            <h4 class="font-semibold text-sky-900 text-lg" data-lang="es">
                 Actividad {{ $id }}
-            </h1>
-            <h1 class="font-semibold text-sky-900 text-lg" data-lang="pt">
+            </h4>
+            <h4 class="font-semibold text-sky-900 text-lg" data-lang="pt">
                 Atividade {{ $id }}
-            </h1>
-            <h1 class="font-semibold text-sky-900 text-lg" data-lang="en">
+            </h4>
+            <h4 class="font-semibold text-sky-900 text-lg" data-lang="en">
                 Activity {{ $id }}
-            </h1>
-            <h1 class="font-semibold text-sky-900 text-lg" data-lang="fr">
+            </h4>
+            <h4 class="font-semibold text-sky-900 text-lg" data-lang="fr">
                 Activité {{ $id }}
-            </h1>
+            </h4>
         </div>
         <div data-container="translator">
             <p data-lang="es">
@@ -29,4 +29,4 @@
             </p>
         </div>
     </div>
-</div>
+</article>
