@@ -275,8 +275,89 @@
         @apply flex flex-col gap-2 pt-4 text-sm text-white/85 sm:flex-row sm:items-center sm:justify-between sm:pt-5;
     }
 
+    .site-footer-legal {
+        @apply flex flex-col gap-1 sm:items-end;
+    }
+
     .site-footer-legal-note {
         @apply leading-relaxed text-white/75;
+    }
+
+    .legal-page {
+        @apply max-w-4xl py-8 sm:py-12;
+    }
+
+    .legal-page-header {
+        @apply border-b border-slate-200 pb-7;
+    }
+
+    .legal-page-intro {
+        @apply mt-3 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg;
+    }
+
+    .legal-page-updated {
+        @apply mt-4 text-sm font-medium text-slate-500;
+    }
+
+    .legal-page-content {
+        @apply mt-8 space-y-8 text-base leading-relaxed text-slate-700;
+    }
+
+    .legal-page-content section {
+        @apply scroll-mt-8;
+    }
+
+    .legal-page-content h2 {
+        @apply mb-3 text-xl font-bold tracking-tight text-sky-950 sm:text-2xl;
+    }
+
+    .legal-page-content p + p {
+        @apply mt-3;
+    }
+
+    .legal-page-content a {
+        @apply rounded-sm font-semibold text-sky-800 underline decoration-sky-300 underline-offset-2 transition-colors hover:text-sky-950 hover:decoration-sky-800;
+        @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-800;
+    }
+
+    .legal-definition-list {
+        @apply space-y-4;
+    }
+
+    .legal-definition-list > div {
+        @apply rounded-xl border border-slate-200 bg-slate-50 p-4;
+    }
+
+    .legal-definition-list dt {
+        @apply font-bold text-slate-900;
+    }
+
+    .legal-definition-list dd {
+        @apply mt-1;
+    }
+
+    .legal-table-wrap {
+        @apply overflow-x-auto rounded-xl border border-slate-200;
+    }
+
+    .legal-table-wrap:focus-visible {
+        @apply outline outline-2 outline-offset-2 outline-sky-800;
+    }
+
+    .legal-table-wrap table {
+        @apply min-w-[40rem] w-full border-collapse text-left text-sm;
+    }
+
+    .legal-table-wrap th {
+        @apply bg-sky-950 px-4 py-3 font-bold text-white;
+    }
+
+    .legal-table-wrap td {
+        @apply border-t border-slate-200 px-4 py-3 align-top;
+    }
+
+    .legal-table-wrap code {
+        @apply rounded bg-slate-200 px-1.5 py-0.5 font-mono text-xs text-slate-900;
     }
 
     .news-header {

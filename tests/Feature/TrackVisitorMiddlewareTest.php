@@ -2,11 +2,12 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
+use App\Http\Middleware\TrackVisitors;
+use App\Models\Visitor;
+use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Route;
-use Carbon\Carbon;
-use App\Models\Visitor;
+use Tests\TestCase;
 
 class TrackVisitorMiddlewareTest extends TestCase
 {
@@ -16,61 +17,68 @@ class TrackVisitorMiddlewareTest extends TestCase
     {
         parent::setUp();
 
-        // Ruta temporal para probar el middleware
-        Route::middleware(['web', \App\Http\Middleware\TrackVisitorMiddleware::class])
-             ->get('/test-middleware', fn() => response('OK'));
+        Route::middleware(['web', TrackVisitors::class])
+            ->get('/test-middleware', fn () => response('OK'));
     }
 
-    public function test_it_tracks_daily_visits_for_normal_ips()
+    protected function tearDown(): void
     {
-        $ip = '192.168.1.1';
+        Carbon::setTestNow();
+
+        parent::tearDown();
+    }
+
+    public function test_it_stores_an_ip_and_tracks_it_once_per_day(): void
+    {
+        $ip = '192.0.2.1';
 
         $this->withServerVariables(['REMOTE_ADDR' => $ip])
-             ->get('/test-middleware')
-             ->assertOk();
+            ->get('/test-middleware')
+            ->assertOk();
 
-        $this->assertDatabaseHas('visitors', [
-            'ip_address' => $ip,
-            'visits' => 1,
-        ]);
+        $this->assertDatabaseHas('visitors', ['ip_address' => $ip]);
+        $lastVisit = Visitor::where('ip_address', $ip)->value('updated_at');
 
-        // Segunda visita el mismo día, no se debe incrementar
-        $this->get('/test-middleware');
+        $this->withServerVariables(['REMOTE_ADDR' => $ip])
+            ->get('/test-middleware')
+            ->assertOk();
 
-        $this->assertEquals(1, Visitor::where('ip_address', $ip)->first()->visits);
+        $this->assertDatabaseCount('visitors', 1);
+        $this->assertEquals($lastVisit, Visitor::where('ip_address', $ip)->value('updated_at'));
     }
 
-    public function test_it_tracks_weekly_visits_for_special_ip()
+    public function test_it_tracks_the_configured_special_ip_at_most_once_per_week(): void
     {
         $ip = '85.52.32.190';
+        Carbon::setTestNow('2026-10-19 12:00:00');
 
         $this->withServerVariables(['REMOTE_ADDR' => $ip])
-             ->get('/test-middleware')
-             ->assertOk();
+            ->get('/test-middleware')
+            ->assertOk();
 
-        $this->assertDatabaseHas('visitors', [
-            'ip_address' => $ip,
-            'visits' => 1,
-        ]);
+        $this->withServerVariables(['REMOTE_ADDR' => $ip])
+            ->get('/test-middleware')
+            ->assertOk();
 
-        // Otra visita la misma semana
-        $this->get('/test-middleware');
-        $this->assertEquals(1, Visitor::where('ip_address', $ip)->first()->visits);
+        $firstVisit = Visitor::where('ip_address', $ip)->value('updated_at');
+        $this->assertSame('2026-10-19 12:00:00', $firstVisit->toDateTimeString());
 
-        // Simular una semana después
-        $visitor = Visitor::where('ip_address', $ip)->first();
-        $visitor->updated_at = Carbon::now()->subWeek()->startOfWeek();
-        $visitor->save();
+        Carbon::setTestNow('2026-10-26 12:00:00');
+        $this->withServerVariables(['REMOTE_ADDR' => $ip])
+            ->get('/test-middleware')
+            ->assertOk();
 
-        $this->get('/test-middleware');
-        $this->assertEquals(2, Visitor::where('ip_address', $ip)->first()->visits);
+        $this->assertSame(
+            '2026-10-26 12:00:00',
+            Visitor::where('ip_address', $ip)->value('updated_at')->toDateTimeString(),
+        );
     }
 
-    public function test_it_ignores_localhost()
+    public function test_it_ignores_localhost(): void
     {
         $this->withServerVariables(['REMOTE_ADDR' => '127.0.0.1'])
-             ->get('/test-middleware')
-             ->assertOk();
+            ->get('/test-middleware')
+            ->assertOk();
 
         $this->assertDatabaseCount('visitors', 0);
     }

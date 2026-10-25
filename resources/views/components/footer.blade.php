@@ -67,12 +67,19 @@
 
         <div class="site-footer-bottom">
             <p>© {{ date('Y') }} PLANCLIMAC2</p>
-            <p class="site-footer-legal-note" data-container="translator">
-                <span data-lang="es">Proyecto de cooperación territorial Interreg MAC 2021–2027.</span>
-                <span class="hidden" data-lang="pt">Projeto de cooperação territorial Interreg MAC 2021–2027.</span>
-                <span class="hidden" data-lang="en">Interreg MAC 2021–2027 territorial cooperation project.</span>
-                <span class="hidden" data-lang="fr">Projet de coopération territoriale Interreg MAC 2021–2027.</span>
-            </p>
+            <div class="site-footer-legal">
+                <a class="footer-link" href="{{ route('legal-notice') }}">Aviso legal</a>
+                <a class="footer-link" href="{{ route('accessibility') }}">Accesibilidad</a>
+                <a class="footer-link" href="{{ route('terms') }}">Condiciones de uso</a>
+                <a class="footer-link" href="{{ route('privacy') }}">Política de privacidad</a>
+                <a class="footer-link" href="{{ route('cookies') }}">Política de cookies</a>
+                <p class="site-footer-legal-note" data-container="translator">
+                    <span data-lang="es">Proyecto de cooperación territorial Interreg MAC 2021–2027.</span>
+                    <span class="hidden" data-lang="pt">Projeto de cooperação territorial Interreg MAC 2021–2027.</span>
+                    <span class="hidden" data-lang="en">Interreg MAC 2021–2027 territorial cooperation project.</span>
+                    <span class="hidden" data-lang="fr">Projet de coopération territoriale Interreg MAC 2021–2027.</span>
+                </p>
+            </div>
         </div>
     </div>
 </footer>

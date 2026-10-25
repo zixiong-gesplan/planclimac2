@@ -2,10 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\View;
 use App\Models\Visitor;
-
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\ServiceProvider;
 
 class VisitorServiceProvider extends ServiceProvider
 {

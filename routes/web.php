@@ -2,11 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Http\Request;
 use App\Models\Visitor;
 use App\Http\Middleware\AuthSession;
+use App\Http\Middleware\NoIndex;
 use App\Http\Middleware\TrackVisitors;
+
+Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
 
 Route::middleware(TrackVisitors::class)->group(function (){
     Route::get('/', function (Request $request) {
@@ -642,13 +646,28 @@ Route::middleware(TrackVisitors::class)->group(function (){
     Route::get('/contact', function(){
         return view('Front.contact.index');
     });
+    Route::view('/politica-de-privacidad', 'Front.legal.privacy', [
+        'legal' => config('legal'),
+    ])->name('privacy');
+    Route::view('/politica-de-cookies', 'Front.legal.cookies', [
+        'legal' => config('legal'),
+    ])->name('cookies');
+    Route::view('/condiciones-de-uso', 'Front.legal.terms')->name('terms');
+    Route::view('/aviso-legal', 'Front.legal.legal-notice', [
+        'legal' => config('legal'),
+    ])->name('legal-notice');
+    Route::view('/declaracion-de-accesibilidad', 'Front.legal.accessibility', [
+        'legal' => config('legal'),
+    ])->name('accessibility');
 });
 
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::middleware(NoIndex::class)->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+});
 
-Route::middleware(AuthSession::class)->prefix('admin')->name('admin.')->group(function () {
+Route::middleware([NoIndex::class, AuthSession::class])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [NewsController::class, 'adminIndex'])->name('home');
     Route::resource('/news', NewsController::class)->except([
         'index', 'show'

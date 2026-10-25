@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title> Login </title>
+        <meta name="robots" content="noindex, nofollow, noarchive">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

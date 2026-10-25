@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use App\Interfaces\NewsRepositoryInterface;
 use App\Repositories\SQLiteNewsRepository;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-        session()->put('locale','es');
+        session()->put('locale', 'es');
         app()->setLocale(session()->get('locale'));
     }
 }
