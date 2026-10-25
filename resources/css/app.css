@@ -1,10 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+@source inline("list-decimal list-disc");
 
 @layer components {
     .navbar-glass {
-        @apply bg-gray-400 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border border-transparent shadow-md;
+        @apply bg-gray-400/30 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm border border-transparent shadow-md;
     }
 
     .navbar-solid {

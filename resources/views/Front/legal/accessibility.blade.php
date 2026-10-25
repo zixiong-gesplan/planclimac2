@@ -26,7 +26,7 @@
 
         <section aria-labelledby="accessibility-feedback">
             <h2 id="accessibility-feedback">3. Comunicaciones y solicitudes</h2>
-            <p>Si encuentra una barrera de accesibilidad o necesita información o contenido en un formato accesible, puede comunicarlo a <a href="mailto:{{ $legal['accessibility_contact_email'] ?: $legal['controller_email'] }}">{{ $legal['accessibility_contact_email'] ?: $legal['controller_email'] }}</a>. Indique la dirección de la página y describa el problema o formato que necesita, evitando incluir datos personales innecesarios.</p>
+            <p>Si encuentra una barrera de accesibilidad o necesita información o contenido en un formato accesible, puede comunicarlo a los distintos puntos focales, que aparecen en <a href="/contact">Contacto</a>. Indique la dirección de la página y describa el problema o formato que necesita, evitando incluir datos personales innecesarios.</p>
             <p>La entidad responsable debe confirmar el canal, los plazos de respuesta y el procedimiento de reclamación que resulten aplicables antes de considerar completo este mecanismo.</p>
         </section>
 
