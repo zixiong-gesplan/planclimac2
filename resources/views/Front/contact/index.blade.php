@@ -56,9 +56,9 @@
 
             <section class="flex gap-4">
                 @include('/Front/contact/components/card', [
-                    "name" => "Silvia Armas Espinel",
+                    "name" => "Rocío González Negrín",
                     "organization" => "Gobierno de Canarias",
-                    "email" => "sarmesp@gobiernodecanarias.org",
+                    "email" => "rgonnegf@gobiernodecanarias.org",
                 ])
                 @include('/Front/contact/components/card', [
                     "name" => "Jesús González Navarro",
