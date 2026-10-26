@@ -319,7 +319,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'RCO 83 - Strategies and action plans jointly developed.',
                             'fr' => 'RCO 83 - Stratégies et plans d’action élaborés conjointement.',
                         ],
-                        'progress' => 0,
+                        'progress' => 0, // consideramos la de Ghana?
                         'target' => 1
                     ],
                     [
@@ -329,7 +329,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'RCO 84 - Pilot activities jointly developed and implemented in the project.',
                             'fr' => 'RCO 84 - Activités pilotes élaborées conjointement et mises en œuvre dans le projet.',
                         ],
-                        'progress' => 0,
+                        'progress' => 0, // consideramos la de Ghana?
                         'target' => 2
                     ],
                     [
@@ -339,8 +339,8 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'RCO 87 - Organisations cooperating across borders.',
                             'fr' => 'RCO 87 - Organisations coopérant au-delà des frontières.',
                         ],
-                        'progress' => 0,
-                        'target' => 13
+                        'progress' => 12,
+                        'target' => 12
                     ],
                 ],
             ],
@@ -360,7 +360,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'fr' => 'RCR 84 - Organisations qui continuent de coopérer après la fin du projet.',
                         ],
                         'progress' => 0,
-                        'target' => 13
+                        'target' => 12
                     ],
                     [
                         'title' => [
@@ -389,7 +389,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of people trained via online courses and participants in seminars and events linked to implementation activities (participants must pre-register via dedicated forms; copies will be included in progress reports).',
                             'fr' => 'Nombre de personnes formées via des cours en ligne et de participants aux séminaires et journées liés aux activités de mise en œuvre (inscription préalable via des formulaires dédiés ; copies jointes aux rapports de suivi).',
                         ],
-                        'progress' => 0,
+                        'progress' => 146, // 75 refugios climaticos + 36 de la campaña de Ghana
                         'target' => 350
                     ],
                     [
@@ -399,7 +399,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of project follow-up meetings.',
                             'fr' => 'Nombre de réunions de suivi du projet.',
                         ],
-                        'reported_value' => 2,
+                        'progress' => 2,
                         'target' => 5
                     ],
                     [
@@ -409,7 +409,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of climate change vulnerability indicators developed.',
                             'fr' => 'Nombre d’indicateurs de vulnérabilité au changement climatique développés.',
                         ],
-                        'progress' => 0,
+                        'progress' => 6, // Comunicacióndel SRAE + 4 High-resolution regional climate projections and tourism impacts in the Macaronesian archipelagos + 1 de 
                         'target' => 4
                     ],
                     [
@@ -429,7 +429,21 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of scientific publications.',
                             'fr' => 'Nombre de publications scientifiques.',
                         ],
-                        'progress' => 0,
+                        /**
+                         * 1.	Investigadores de la ULL desarrollan ClimDiT, una herramienta de inteligencia artificial para mejorar las proyecciones climáticas de alta resolución
+                         *   2.	Canarias avanza hacia un sistema energético más estable gracias a la optimización de renovables
+                         *   3.	Nuevo estudio del grupo QUIMA confirma el aumento del CO₂ y la acidificación en las aguas de Canarias mediante satélites e inteligencia artificial
+                         *   4.	Proyecciones climáticas regionales de alta resolución e impactos en el turismo en los archipiélagos macaronésicos
+                        *  5.	Wildfire Dynamics and Risk in theWildland–Urban Interface in Gran Canaria (Spain): Influence of Climate Change, Land Management, and Civil Protection Policies
+                        *    6.	Canarias avanza hacia un sistema energético más estable gracias a la optimización de renovables
+                        *    7.	Nuevo estudio del grupo QUIMA confirma el aumento del CO₂ y la acidificación en las aguas de Canarias mediante satélites e inteligencia artificial
+                         *   8.	Boundary currents in the Bransfield Strait: near-surface interbasin water volume and heat exchange
+                          *  9.	Postprocessing of convection permitting precipitation forecast using UNets
+                           * 10.	Forest Fires, Vulnerability, and Exposure: The Evaluation of What Was Salvaged in the 2023 Fire in Tenerife (Spain)
+                         *   11.	Identification og the synoptiv causes of torrential rainfall events in the canary islands (1950-2020)
+                          *  12.	Bioclimatic indicators dataset for the orographically complex Canary Islands archipelago
+                         */
+                        'progress' => 12,
                         'target' => 3
                     ],
                     [
@@ -439,7 +453,10 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of researchers trained.',
                             'fr' => 'Nombre de chercheurs formés.',
                         ],
-                        'progress' => 0,
+                        /**
+                         * Hasta donde se es maria Jimenez
+                         */
+                        'progress' => 1,
                         'target' => 5
                     ],
                     [
@@ -459,7 +476,12 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of studies carried out',
                             'fr' => 'Nombre d’études réalisées',
                         ],
-                        'progress' => 0,
+                        /**
+                         * 2 De aridane: 
+                         * distribución del hierro en las aguas de la Macaronesia y Santo Tomé y Príncipe
+                         * evolución de las condiciones oceánicas en Canarias, Cabo Verde y Santo Tomé y Príncipe
+                         */
+                        'progress' => 2,
                         'target' => 4
                     ],
                     [
@@ -469,7 +491,13 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of new researcher contracts.',
                             'fr' => 'Nombre de nouveaux contrats de chercheurs.',
                         ],
-                        'progress' => 0,
+                        /**
+                         * 1.	ULL -> Maria Jimenez
+                         * 2.	ULPGC -> Néstor Marrero
+                         * 3.	Ulpgc -> Víctor Coussy
+                         * 4.	Ulpgc -> Irene Sánchez-Mendoza
+                         */
+                        'progress' => 4,
                         'target' => 6
                     ],
                 ],
@@ -499,7 +527,13 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of dissemination actions in the media.',
                             'fr' => 'Nombre d’actions de diffusion dans les médias.',
                         ],
-                        'progress' => 0,
+                        /**
+                         * 1.	Divulgación de PLANCLIMAC2 por medio de Telenoticias 2 | 02/06/25
+                         * 2.	Somos Naturaleza | ¿Qué es el Planclimac ?: 
+                         * 3.	El proyecto PLAN CLIMAC 2 lucha contra el cambio climático: 
+                         * 4.	Canarias impulsa la creación de refugios climáticos para combatir las olas de calor: 
+                         */
+                        'progress' => 4,
                         'target' => 15
                     ],
                     [
@@ -509,7 +543,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Total number of publications produced.',
                             'fr' => 'Nombre total de publications réalisées.',
                         ],
-                        'progress' => 0,
+                        'progress' => 104,
                         'target' => 43
                     ],
                     [
@@ -519,7 +553,10 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of publications on social media.',
                             'fr' => 'Nombre de publications réalisées sur les réseaux sociaux.',
                         ],
-                        'progress' => 0,
+                        /**
+                         * 98 en Instagram + 103 en facebook (fecha de 21/10/2026)
+                         */
+                        'progress' => 104,
                         'target' => 40
                     ],
                     [
@@ -529,7 +566,11 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of publications produced in print format.',
                             'fr' => 'Nombre de publications réalisées au format papier.',
                         ],
-                        'progress' => 0,
+                        /**
+                         * Estrategia de riegos de la ULL:
+                         * https://www.revistaambienta.es/content/dam/revistaambienta/estructura/hist%C3%B3rico-revistas/2025/144/art%C3%ADculos-pdf/Art_05_144.pdf
+                         */
+                        'progress' => 1,
                         'target' => 3
                     ],
                     [
@@ -539,6 +580,9 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of audiovisual productions.',
                             'fr' => 'Nombre de productions audiovisuelles.',
                         ],
+                        /**
+                         * Refugios climaticos
+                         */
                         'progress' => 0,
                         'target' => 1
                     ],
@@ -549,7 +593,10 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Number of communication events held.',
                             'fr' => 'Nombre d’événements de communication réalisés.',
                         ],
-                        'progress' => 0,
+                                                /**
+                         * Refugios climaticos
+                         */
+                        'progress' => 1,
                         'target' => 10
                     ],
                     [
@@ -559,7 +606,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Total number of participants in the events held.',
                             'fr' => 'Nombre total de participants aux événements organisés.',
                         ],
-                        'progress' => 0,
+                        'progress' => 146, // 75 refugios climaticos + 36 de la campaña de Ghana
                         'target' => 450
                     ],
                     [
@@ -569,7 +616,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Total number of women in the events held.',
                             'fr' => 'Nombre total de femmes ayant participé aux événements.',
                         ],
-                        'progress' => 0,
+                        'progress' => 38, // Refugios climaticos 38
                         'target' => 250
                     ],
                     [
@@ -579,7 +626,7 @@ Route::middleware(TrackVisitors::class)->group(function (){
                             'en' => 'Total number of participants from third countries in the events held.',
                             'fr' => 'Nombre total de participants des pays tiers aux événements organisés.',
                         ],
-                        'progress' => 0,
+                        'progress' => 36, // De la campaña de Ghana
                         'target' => 50
                     ],
                 ],
@@ -626,7 +673,8 @@ Route::middleware(TrackVisitors::class)->group(function (){
                 $goal['short_title'] = $shortTitles[$goal['id']] ?? $goal['title'];
                 $goal['category_id'] = $category['id'];
                 $goal['category_title'] = $category['title'];
-                $goal['value'] = isset($goal['reported_value']) ? (int) $goal['reported_value'] : null;
+                $value = $goal['progress'] ?? null;
+                $goal['value'] = $value !== null ? (int) $value : null;
                 $goal['target'] = (int) ($goal['target'] ?? 0);
 
                 if ($goal['id'] === 'communication-1') {

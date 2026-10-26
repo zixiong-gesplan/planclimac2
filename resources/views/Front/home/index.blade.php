@@ -97,7 +97,7 @@
                     <span class="hidden" data-lang="fr">Budget d’exécution</span>
                 </span>
             </dt>
-            <dd class="project-fact-value">3.045.442,75 €</dd>
+            <dd class="project-fact-value">3.582.873,82 €</dd>
         </div>
 
         <div class="p-6 sm:p-8">
